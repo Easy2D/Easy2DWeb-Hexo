@@ -1,0 +1,40 @@
+.main.container
+	margin-top: 4em
+	margin-bottom: 4em
+	padding-right: 10px
+
+.ui.segment
+	box-shadow: none
+	border: none
+
+.right.ui.rail
+	min-height: 260px
+	margin: 0
+	.ui.sticky
+		padding-top: 20px
+
+.page-buttons
+	.page-left-btn
+		float: left
+	.page-right-btn
+		float: right
+
+img 
+	max-width: 100%
+
+@media only screen and (max-width: 700px) 
+	.main.container
+		margin-top: 3em
+		margin-bottom: 3em
+		padding-right: 0
+	.page-buttons
+		text-align: center
+		.page-left-btn
+			float: none
+			margin-bottom: 10px
+		.page-right-btn
+			float: none
+
+@media only screen and (max-width: 1000px) 
+	.right.ui.rail
+		display: none

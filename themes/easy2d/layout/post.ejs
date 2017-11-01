@@ -1,0 +1,28 @@
+<%- css('css/post') %>
+<div class="pusher">
+
+<%- partial('_partial/_widget/navbar-static', { type: 'post' }) %>
+<div class="ui main text container">
+	<h1><%- page.title %></h1>
+	<div class="post-meta">
+		<span class="post-time">
+			<i class="calendar outline icon"></i>
+			<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, null) %></time>
+		</span>
+		<% if (page.author) { %>
+			<span class="post-author">
+				<i class="user icon"></i>
+				<span><%= page.author %></span>
+			</span>
+		<% } %>
+	</div>
+	<br/><br/>
+	<%- page.content %>
+	<br/>
+	<% if (page.button && page.button_url) { %>
+		<a class="ui blue button" href="<%- page.button_url %>"><%- page.button %></a>
+	<% } %>
+	<a class="ui button" href="<%- theme.menu.News %>">返回</a>
+</div>
+
+</div>

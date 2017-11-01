@@ -1,0 +1,24 @@
+<div class="right ui rail">
+	<div class="ui sticky">
+		<h3 class="ui header">目录</h3>
+		<%- toc(page.content, { list_number: false }) %>
+	</div>
+</div>
+
+<style>
+.ui.segment {
+	border-radius: 0;
+	border-right: 1px solid #ddd;
+}
+@media only screen and (max-width: 700px) {
+	.ui.segment {
+		border-right: none;
+	}
+}
+</style>
+
+<script>
+$('.ui.sticky').sticky({
+	context: '<%- id_name %>'
+});
+</script>

@@ -1,0 +1,20 @@
+<style>
+.pushable>.pusher {
+	min-height: 70%;
+}
+</style>
+<div class="ui segment" id="page-content">
+	<div class="ui icon message">
+		<i class="notched circle loading icon"></i>
+		<div class="content">
+			<div class="header">请稍候 </div>
+			<p>正在打开下载链接...</p>
+			<a class="ui blue button" href="<%- theme.dist.release %>">没有反应？点击这里</a>
+		</div>
+	</div>
+</div>
+<script>
+	$('document').ready(function() {
+		window.open('<%- theme.dist.release %>', '_self');
+	});
+</script>

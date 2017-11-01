@@ -1,0 +1,8 @@
+<%- css('css/page') %>
+
+<div class="pusher">
+	<%- partial('_partial/_widget/navbar-static', { type: page.type }) %>
+	<div class="ui main text container">
+		<%- partial('_partial/' + page.type) %>
+	</div>
+</div>

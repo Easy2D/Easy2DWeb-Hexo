@@ -1,0 +1,50 @@
+<style>
+#submit {
+	margin:5px 0;
+	float: right;
+}
+@media only screen and (max-width: 700px) {
+	.ui.header.title {
+		text-align: center;
+	}
+	.feedback-block {
+		text-align: center;
+	}
+	.button-block {
+		text-align: center;
+	}
+	#submit {
+		width: 80%;
+		float: none;
+	}
+}
+</style>
+
+<div class="ui header title">问题反馈</div>
+<div class="ui container">
+	<div class="ui form">
+		<h4 class="ui header">使用Easy2D时遇到了困难？有些地方做的不够好？很高兴能倾听你的建议。</h4>
+		<div class="feedback-block">
+			<div class="field">
+				<textarea id="txadvice" placeholder="请写下你的意见或建议"></textarea>
+			</div>
+			<div class="button-block">
+				<div id="submit" class="ui green button">提交</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui small modal">
+	<div class="header">提交成功</div>
+	<div class="content">
+		<div class="description">
+		<p>感谢你对 Easy2D 的支持！</p>
+		</div>
+	</div>
+	<div class="actions">
+		<div id="submit-success" class="ui approve green button"><i class="checkmark icon"></i> 确认 </div>
+	</div>
+</div>
+
+<%- js('js/feedback') %>

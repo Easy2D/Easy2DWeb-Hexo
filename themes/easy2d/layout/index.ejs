@@ -1,0 +1,138 @@
+<%- css('css/home') %>
+<%- partial('_partial/_widget/navbar') %>
+
+<script>
+$(document).ready(function(){
+	$('.index-header-text').transition({
+		animation: 'scale',
+		onComplete: function() {
+			$('.index-header-buttons').transition('scale');
+		}
+	})
+});
+</script>
+
+<!-- Page Contents -->
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment" style="background: #000000 url(<%- theme.bg %>) no-repeat center center;background-size: cover;">
+
+		<div class="ui container">
+			<div class="ui large secondary inverted pointing menu" style="border:none">
+				<a class="toc item"><i class="sidebar icon"></i></a>
+			</div>
+		</div>
+
+		<div class="ui text container">
+			<div class="ui index-header-text" style="display:none;">
+				<h1 class="ui inverted header">Easy2D</h1>
+				<h2>专为 PC 游戏开发设计的 C++ 游戏框架</h2>
+			</div>
+			<div class="ui container index-header-buttons" style="display:none;">
+				<a class="ui huge primary button" href="/download" target="_blank"><%- theme.button.start %></a>
+				<a class="ui huge secondery button" href="<%- theme.dist.history %>" target="_blank"><%- theme.button.more %></a>
+			</div>
+		</div>
+
+    </div>
+
+    <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="row">
+        <div class="eight wide column">
+            <h3 class="ui header">简易的安装和使用方式</h3>
+            <p>安装程序可以自动识别你的 Visual Studio 版本并提供安装建议，只需要短短几分钟进行下载和安装，你就可以在项目中引入头文件并开始使用 Easy2D 引擎了。</p>
+            <h3 class="ui header">面向 C++ 初学者</h3>
+            <p>Easy2D 是专为 C++ 初学者设计的 Windows 桌面游戏的开发框架，简单易学，容易上手。你只需要为游戏场景中的每一个元素设置它们的属性，Easy2D 就可以自动处理它们，让一切变得井然有序。</p>
+        </div>
+        <div class="six wide right floated column index-epimg">
+            <img src="assets/images/index-img.png"  alt="示例图片" class="ui bordered rounded image" style="display:inline;">
+        </div>
+        </div>
+        <div class="row">
+        <div class="center aligned column">
+            <a class="ui huge button" href="<%- theme.menu.Start %>">了解更多</a>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+        <div class="column">
+            <h3>"Easy2D支持什么编译器?"</h3>
+            <p>引擎使用了许多 C++11 的新特性，为了保证引擎的稳定性，目前仅支持 Visual Studio 2015/2017 两种。</p>
+        </div>
+        <div class="column">
+            <h3>" 我需要多久学会它? "</h3>
+            <p>我们提供了帮助文档和许多示例代码，只要你做好了学习游戏开发的<b>准备</b>，几天内就可以适应 Easy2D 的开发模式。</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="ui vertical stripe segment">
+    <div class="ui text container">
+		<div class="index-posts">
+			<h4 class="ui horizontal header divider"><a href="<%- url_for(config.archive_dir) %>">近期消息</a></h4>
+			<% site.posts.sort('date', -1).limit(2).each(function(post){ %>
+			<div class="ui piled segment">
+				<h3 class="ui header"><%= post.title %></h3>
+				<p>
+				<% if (post.excerpt){ %>
+					<%- post.excerpt %>
+				<% } else { %>
+					<%- post.content.substr(0, 120) %>
+				<% } %>
+				</p>
+				<div class="index-readmore">
+					<a class="ui large button" href="<%- url_for(post.path) %>">阅读全文</a>
+				</div>
+			</div>
+			<% }) %>
+		</div>
+        
+		<div class="index-questionnaire">
+			<h4 class="ui horizontal header divider"><a>小调查</a></h4>
+			<h3 class="ui header">你喜欢 Easy2D 吗?</h3>
+			<p>我们想对你使用 Easy2D 时的感受做一个匿名调查。</p>
+			<div class="index-advice-buttons">
+				<a id="qnice" class="ui large blue button">非常棒！</a>
+				<a id="qadvice" class="ui large button">不喜欢</a>
+				<!--<a id="qdisappointed" class="ui large negative button">体验很差</a>-->
+			</div>
+		</div>
+    </div>
+    </div>
+</div>
+
+<div class="ui small first modal">
+	<i class="close icon"></i>
+	<div class="header">意见反馈</div>
+	<div class="content">
+		<div class="ui form">
+			<h4 class="ui header">使用Easy2D时遇到了困难？有些地方做的不够好？很高兴能倾听你的建议或意见。</h4>
+			<div class="field">
+				<textarea id="txadvice" placeholder="请写下你的意见或建议"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="actions">
+		<div id="cancel-sub" class="ui button">取消</div>
+		<div id="submit" class="ui green submit button">提交</div>
+	</div>
+</div>
+
+<div class="ui small second modal">
+	<div class="header">提交成功</div>
+	<div class="content">
+		<div class="description">
+		<p>感谢你对Easy2D的支持！</p>
+		</div>
+	</div>
+	<div class="actions">
+		<div id="submit-success" class="ui approve green button"><i class="checkmark icon"></i> 确认 </div>
+	</div>
+</div>
+
+<%- js('js/advice') %>

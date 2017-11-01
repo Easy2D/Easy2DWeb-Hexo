@@ -1,0 +1,52 @@
+.ui.navbar
+	padding-top: 20px
+	padding-bottom: 20px
+	background-color: transparent
+	transition: background-color ease 0.5s, padding ease 0.5s
+	img.logo
+		margin: 10px 5px
+		width: 30px
+		height: 30px
+
+.ui.menu 
+	border: none
+	box-shadow: none
+	.item:before
+		content: none
+
+.ui.navbar .menu>.item
+	border: none
+	color: #fff
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: 5px
+		margin-left: -15%
+		width: 30%
+		border: 1px solid transparent
+		opacity: 0.9
+		transition: border-color ease 0.5s
+	&:hover
+		color: #fff
+		background-color: transparent
+		&:after
+			border-color: #fff
+
+.ui.navbar.lightnav
+	box-shadow: 0 1px 2px 0 rgba(34,36,38,.35)
+	padding-top: 0
+	padding-bottom: 0
+	background-color: #fff
+	.menu>.item
+		color: #000
+		&:hover
+			&:after
+				border-color: #000
+
+@media only screen and (max-width: 700px) 
+	.ui.fixed.menu 
+		display: none !important
+	.secondary.pointing.menu .item,
+	.secondary.pointing.menu .menu
+		display: none

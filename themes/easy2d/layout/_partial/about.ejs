@@ -1,0 +1,25 @@
+<h1 class="ui header">关于 Easy2D</h1>
+<p>Easy2D 起初是以学习游戏引擎开发为初衷的一个尝试作品，诞生于2016年12月18日，因为引擎是基于 EasyX 图形库制作而得名。现在 Easy2D 已经可以用来制作一些简单的 Windows 游戏，但是仍有许多问题和不足。使用过程中如有疑问，请到问题反馈页面提交你的意见或建议。</p>
+<p>Easy2D 汲取了许多优秀的社会资源，通过开源的方式来回馈社区，发布在<a href="<%- theme.dist.github %>" target="_blank">Github</a>上。</p>
+<br/>
+
+<h1 class="ui header">关于开发团队</h1>
+<p>团队相识于网络，我们不以盈利为目的，完全自发组织维护 Easy2D 引擎的发展。</p>
+<p>我们欢迎对 Easy2D 感兴趣，并愿意支持它发展的新伙伴加入，请联系 QQ 569629550。</p>
+<br/>
+
+<div class="ui cards">
+	<% page.coders.forEach(function(item) { %>
+	<div class="card">
+		<div class="content">
+			<img class="right floated mini ui image" alt="avatar" src="<%- item.avatar %>">
+			<div class="header"><%- item.name %></div>
+			<div class="meta"><span class="role">负责<%- item.role %></span></div>
+			<i class="quote left icon"></i>
+			<div class="description"><%- item.description %></div>
+			<i class="right floated quote right icon"></i>
+		</div>
+		<a class="ui bottom attached button" href="<%- item.blog_url %>" target="_blank"><i class="book icon"></i> <%= item.blog %> </a>
+	</div>
+	<% }) %>
+</div>

@@ -1,0 +1,32 @@
+<%- css('css/archive') %>
+
+<div class="pusher">
+
+<%- partial('_partial/_widget/navbar-static', { type: 'post' }) %>
+
+<div class="ui main text container">
+	<h1>官方资讯</h1>
+	<div class="ui items">
+	<% page.posts.each(function(item) { %>
+		<div class="item">
+			<div class="content">
+				<a class="header" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
+				<div class="meta">
+					<i class="calendar outline icon"></i>
+					<time class="date"><%= item.date.format(config.date_format) %></time>
+				</div>
+			</div>
+		</div>
+	<% }) %>
+	</div>
+	<% if (page.total > 1) { %>
+		<div class="pagination" role="pagination">
+			<%- paginator({
+				prev_text: __('nav.prev_page'),
+				next_text: __('nav.next_page')
+			}) %>
+		</div>
+	<% } %>
+</div>
+
+</div>

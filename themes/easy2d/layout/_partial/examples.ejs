@@ -1,0 +1,11 @@
+<div class="ui four item stackable tabs menu">
+	<a class="<% if (page.page == 'basic') { %>active<% } %> item" href="<%- theme.menu.Examples %>">基础教程</a>
+	<a class="<% if (page.page == 'simple') { %>active<% } %> item" href="simple.html">简单示例</a>
+	<a class="<% if (page.page == 'advanced') { %>active<% } %> item" href="advanced.html">进阶教程</a>
+	<a class="<% if (page.page == 'more') { %>active<% } %> item" href="more.html">更多示例</a>
+</div>
+<div class="ui segment" id="page-content">
+	<h1><%- page.title %></h1>
+	<%- page.content %>
+	<%- partial('_widget/sticky', { id_name: '#page-content', page: page }) %>
+</div>
