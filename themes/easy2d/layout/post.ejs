@@ -1,7 +1,23 @@
+<%- css('css/page') %>
 <%- css('css/post') %>
 <div class="pusher">
 
-<%- partial('_partial/_widget/navbar-static', { type: 'post' }) %>
+<%- partial('_partial/_widget/navbar', { index: false }) %>
+
+<div class="ui inverted vertical masthead center aligned segment page-title-background">
+	<div class="ui container">
+		<div class="ui large secondary inverted pointing menu" style="border:none">
+			<a class="toc item"><i class="sidebar icon"></i></a>
+		</div>
+	</div>
+
+	<div class="ui text container">
+		<div class="ui page-header-text">
+			<h1 class="ui inverted header"><i class="ui newspaper icon"></i>官方资讯</h1>
+		</div>
+	</div>
+</div>
+
 <div class="ui main text container">
 	<h1><%- page.title %></h1>
 	<div class="post-meta">

@@ -1,29 +1,50 @@
-<%- css('css/archive') %>
+<%- css('css/page') %>
 
 <div class="pusher">
 
-<%- partial('_partial/_widget/navbar-static', { type: 'post' }) %>
+<%- partial('_partial/_widget/navbar', {index: false}) %>
+
+<div class="ui inverted vertical masthead center aligned segment page-title-background">
+	<div class="ui container">
+		<div class="ui large secondary inverted pointing menu" style="border:none">
+			<a class="toc item"><i class="sidebar icon"></i></a>
+		</div>
+	</div>
+
+	<div class="ui text container">
+		<div class="ui page-header-text">
+			<h1 class="ui inverted header"><i class="ui newspaper icon"></i>官方资讯</h1>
+		</div>
+	</div>
+</div>
 
 <div class="ui main text container">
-	<h1>官方资讯</h1>
-	<div class="ui items">
-	<% page.posts.each(function(item) { %>
-		<div class="item">
-			<div class="content">
-				<a class="header" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
-				<div class="meta">
-					<i class="calendar outline icon"></i>
-					<time class="date"><%= item.date.format(config.date_format) %></time>
+	<div class="ui two column grid">
+		<% i = 0; %>
+		<% page.posts.each(function(item) { %>
+		<% i++; %>
+		<% if (i != 1 && (i-1) % 2 == 0) { %>
+			</div><div class="ui two column grid">
+		<% } %>
+		<div class="column">
+			<div class="ui fluid card">
+				<div class="content">
+					<div class="header"><%= item.title %></div>
+					<div class="meta">
+						<i class="calendar outline icon"></i>
+						<time class="date"><%= item.date.format(config.date_format) %></time>
+					</div>
 				</div>
+				<a class="ui bottom attached blue button" href="<%- config.root %><%- item.path %>">查看详情 </a>
 			</div>
 		</div>
-	<% }) %>
+		<% }) %>
 	</div>
 	<% if (page.total > 1) { %>
-		<div class="pagination" role="pagination">
+		<div class="pagination">
 			<%- paginator({
-				prev_text: __('nav.prev_page'),
-				next_text: __('nav.next_page')
+				prev_text: '上一页',
+				next_text: '下一页'
 			}) %>
 		</div>
 	<% } %>

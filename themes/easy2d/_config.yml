@@ -2,26 +2,47 @@
 menu:
   Home: /
   Start: /start
+  Tutorial: /tutorial
   Examples: /examples
   Document: /doc
   News: /archives
   Feedback: /feedback
   About: /about
 
+# Index
+index:
+  subtitle: 快速开发高质量的 2D 小游戏
+  button:
+    last: v2.0.0-beta
+    more: 历史版本
+  examples:
+  - name: Flappy Bird
+    author: Nomango
+    image: /examples/FlappyBird/FlappyBird.png
+    description: 像素鸟是曾经超火的一款手机游戏，手残党勿入~
+    url: /examples/#FlappyBird
+  - name: Smart Clock
+    author: Nomango
+    image: /examples/SmartClock/SmartClock.png
+    description: 一个奇奇怪怪的时钟，感受时间在不知不觉中的流逝。
+    url: /examples/#SmartClock
+  - name: 推箱子
+    author: Nomango
+    image: /examples/PushBox/PushBox.png
+    description: 经典推箱子，一共有八关，自动保存最佳纪录，音效可关闭。
+    url: /examples/#PushBox
+
 # Miscellaneous
+local: true
 favicon: /assets/images/avatar.ico
 logo: /assets/images/logo.png
-bg: /assets/images/bg.png
 ICP: 蜀ICP备16028738号-4
-
-button:
-  start: 下载 v1.1.2
-  more: 历史版本
 
 # Dist
 dist:
-  release: https://gitee.com/werelone/Easy2D/attach_files/download?i=98208&u=http%3A%2F%2Ffiles.git.oschina.net%2Fgroup1%2FM00%2F02%2F09%2FPaAvDFnbHqKAYJPHACieJVd-PoA392.exe%3Ftoken%3D5e3d0886af68238037a85b9d7292d9aa%26ts%3D1507532456%26attname%3DEasy2D_v1.1.2.exe
+  release: https://gitee.com/werelone/Easy2D/attach_files/download?i=102858&u=http%3A%2F%2Ffiles.git.oschina.net%2Fgroup1%2FM00%2F02%2F3E%2FPaAvDFn-upyAT8PzABDMIOSx044116.exe%3Ftoken%3Dab25c392b28e4b6eff5d2d323863bc72%26ts%3D1509866142%26attname%3DEasy2D-v2.0.0-beta.exe
   history: https://gitee.com/werelone/Easy2D/releases
+  gitee: https://gitee.com/werelone/Easy2D/
   github: https://github.com/Nomango/Easy2D/
 
 # Plugins

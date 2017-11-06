@@ -1,5 +1,5 @@
 <%- css('css/home') %>
-<%- partial('_partial/_widget/navbar') %>
+<%- partial('_partial/_widget/navbar', {index: true}) %>
 
 <script>
 $(document).ready(function(){
@@ -9,12 +9,18 @@ $(document).ready(function(){
 			$('.index-header-buttons').transition('scale');
 		}
 	})
+
+	$('.examples.shape').shape();
+
+	$('.next-example.button').on('click', function() {
+		$('.examples.shape').shape('flip.back');
+	});
 });
 </script>
 
 <!-- Page Contents -->
 <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment" style="background: #000000 url(<%- theme.bg %>) no-repeat center center;background-size: cover;">
+    <div class="ui inverted vertical masthead center aligned segment index-bg">
 
 		<div class="ui container">
 			<div class="ui large secondary inverted pointing menu" style="border:none">
@@ -25,11 +31,17 @@ $(document).ready(function(){
 		<div class="ui text container">
 			<div class="ui index-header-text" style="display:none;">
 				<h1 class="ui inverted header">Easy2D</h1>
-				<h2>专为 PC 游戏开发设计的 C++ 游戏框架</h2>
+				<h2><%- theme.index.subtitle %></h2>
 			</div>
 			<div class="ui container index-header-buttons" style="display:none;">
-				<a class="ui huge primary button" href="/download" target="_blank"><%- theme.button.start %></a>
-				<a class="ui huge secondery button" href="<%- theme.dist.history %>" target="_blank"><%- theme.button.more %></a>
+				<a class="ui animated fade huge primary button" href="/download" target="_blank">
+  					<div class="visible content">下载最新版 </div>
+  					<div class="hidden content"><%- theme.index.button.last %> </div>
+				</a>
+				<a class="ui animated vertical huge secondery button" href="<%- theme.dist.history %>" target="_blank">
+  					<div class="visible content">历史版本 </div>
+  					<div class="hidden content"><%- theme.index.button.more %> </div>
+				</a>
 			</div>
 		</div>
 
@@ -42,10 +54,40 @@ $(document).ready(function(){
             <h3 class="ui header">简易的安装和使用方式</h3>
             <p>安装程序可以自动识别你的 Visual Studio 版本并提供安装建议，只需要短短几分钟进行下载和安装，你就可以在项目中引入头文件并开始使用 Easy2D 引擎了。</p>
             <h3 class="ui header">面向 C++ 初学者</h3>
-            <p>Easy2D 是专为 C++ 初学者设计的 Windows 桌面游戏的开发框架，简单易学，容易上手。你只需要为游戏场景中的每一个元素设置它们的属性，Easy2D 就可以自动处理它们，让一切变得井然有序。</p>
+            <p>Easy2D 是为 C++ 初学者设计的 Windows 桌面游戏的开发框架，你只需说明场景中的每个元素应该做什么，Easy2D 就可以自动处理它们，让一切变得井然有序。</p>
+			<h3 class="ui header">开放的引擎源代码</h3>
+            <p>Easy2D 汲取了许多优秀的社区资源，通过开源的方式回馈社区，其源代码发布在 <a href="<%- theme.dist.gitee %>" target="_blank">Gitee</a> 上。</p>
         </div>
         <div class="six wide right floated column index-epimg">
-            <img src="assets/images/index-img.png"  alt="示例图片" class="ui bordered rounded image" style="display:inline;">
+			<h3>示例游戏</h3>
+			<div class="ui examples shape">
+				<div class="ui sides">
+				<% example_index = 0; %>
+				<% theme.index.examples.forEach(function(item) { %>
+					<% example_index++; %>
+					<% if (example_index == 1) { %>
+						<div class="active side">
+					<% } else { %>
+						<div class="side">
+					<% } %>
+						<div class="ui card">
+							<div class="example-image" style="background-image:url(<%- item.image %>);"></div>
+							<div class="content">
+								<div class="header"><%- item.name %> </div>
+								<div class="meta">制作：<%- item.author %> </div>
+								<div class="description"><%- item.description %> </div>
+							</div>
+							<div class="extra content">
+								<span class="right floated"><a href="<%- item.url %>">查看详情 </a></span>
+							</div>
+						</div>
+					</div>
+				<% }); %>
+				</div>
+			</div>
+			<div class="ui buttons" style="width:290px;margin-top:5px;">
+				<div class="ui next-example button"><i class="ui refresh icon"></i>&nbsp;换一个</div>
+			</div>
         </div>
         </div>
         <div class="row">

@@ -1,11 +1,73 @@
+.masthead.segment
+	min-height: 200px
+	padding: 1em 0em
+
+.masthead
+	h1.ui.header
+		margin-top: 1.6em
+		margin-bottom: 0em
+		font-size: 2em
+		font-weight: normal
+
+.ui.masthead.page-title-background
+	background: #000000 url(/assets/images/page-title.jpg) no-repeat center top
+	background-size: cover
+
 .main.container
 	margin-top: 4em
 	margin-bottom: 4em
 	padding-right: 10px
+	img 
+		max-width: 100%
+	.ui.message
+		margin-left: 15px
+	figure.highlight
+		margin-left: 15px
+	p
+		padding-left: 15px
+	blockquote
+		margin-left: 15px
+		p
+			padding-left: 0
+	h2
+		position: relative
+		padding-left: 15px
+		margin-top: 30px
+		margin-bottom: 20px
+		font-weight: normal
+	h2:not(.no-before):before
+		content: ""
+		position: absolute
+		width: 5px
+		height: 22px
+		background-color: #2CA7F8
+		left: 0
+		top: 6px
 
 .ui.segment
 	box-shadow: none
 	border: none
+
+.ui.message
+	.header
+		margin-bottom: 10px
+	br
+		display: none
+
+.ui.main.container .pagination
+	text-align: center
+	margin-top: 50px
+	a
+		color: #888
+	a:hover
+		color: #444
+	.extend
+		padding: 15px
+	.page-number
+		padding: 10px 10px
+	.page-number.current
+		border-bottom: solid 1px
+		background-color: #eee
 
 .right.ui.rail
 	min-height: 260px
@@ -18,9 +80,6 @@
 		float: left
 	.page-right-btn
 		float: right
-
-img 
-	max-width: 100%
 
 @media only screen and (max-width: 700px) 
 	.main.container

@@ -1,24 +1,31 @@
-<div class="right ui rail">
-	<div class="ui sticky">
-		<h3 class="ui header">目录</h3>
-		<%- toc(page.content, { list_number: false }) %>
-	</div>
+<div class="ui left catalog">
+	<h3 class="ui header">目录</h3>
+	<%- toc(page.content, { list_number: false }) %>
 </div>
 
 <style>
-.ui.segment {
-	border-radius: 0;
-	border-right: 1px solid #ddd;
+.ui.catalog {
+	margin-top: 30px;
+}
+.ui.catalog .toc {
+	padding-left: 0;
+}
+.ui.catalog li.toc-item {
+	list-style-type: none;
+	padding-top: 10px;
+}
+.ui.catalog li.toc-item a {
+	color: #222;
+}
+.ui.catalog li.toc-item a:hover {
+	color: #138BCA;
 }
 @media only screen and (max-width: 700px) {
-	.ui.segment {
-		border-right: none;
+	.ui.catalog {
+		display: none;
 	}
 }
 </style>
 
 <script>
-$('.ui.sticky').sticky({
-	context: '<%- id_name %>'
-});
 </script>
