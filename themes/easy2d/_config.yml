@@ -33,7 +33,7 @@ index:
     url: /examples/#PushBox
 
 # Miscellaneous
-local: true
+local: false
 favicon: /assets/images/avatar.ico
 logo: /assets/images/logo.png
 ICP: 蜀ICP备16028738号-4

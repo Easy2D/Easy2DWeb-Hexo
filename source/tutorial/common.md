@@ -4,7 +4,6 @@ subtitle: 常用元素简介
 icon: idea
 toc: true
 type: "tutorial"
-page: "simple"
 ---
 
 ## ESprite 精灵类
