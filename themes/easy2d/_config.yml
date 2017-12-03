@@ -1,13 +1,15 @@
 # Header
 menu:
-  Home: /
-  Start: /start
-  Tutorial: /tutorial
-  Examples: /examples
-  Document: /doc
-  News: /archives
-  Feedback: /feedback
-  About: /about
+  home: /
+  download: /download
+  history: /history
+  start: /start
+  tutorial: /tutorial
+  examples: /examples
+  document: /doc
+  news: /archives
+  feedback: /feedback
+  about: /about
 
 # Dist
 dist:

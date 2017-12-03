@@ -2,9 +2,39 @@
 .pushable>.pusher {
 	min-height: 70%;
 }
+table {
+	width: 100%; /*表格宽度*/
+	max-width: 65em; /*表格最大宽度，避免表格过宽*/
+	border: 1px solid #dedede; /*表格外边框设置*/
+	margin: 15px auto; /*外边距*/
+	border-collapse: collapse; /*使用单一线条的边框*/
+	empty-cells: show; /*单元格无内容依旧绘制边框*/
+}
+table th,
+table td {
+	height: 35px; /*统一每一行的默认高度*/
+	border: 1px solid #dedede; /*内部边框样式*/
+	padding: 0 10px; /*内边距*/
+}
+table th {
+	font-weight: bold; /*加粗*/
+	text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
+	white-space: nowrap; /*表头内容强制在一行显示*/
+}
+/*table tbody tr:nth-child(2n) {
+	background-color: hsla(0,0%,71%,.1);
+}*/
+table tr:hover {
+	background: #efefef;
+}
+
+table td:nth-child(1) {
+	white-space: nowrap;
+}
 </style>
 <div class="ui segment" id="page-content">
 	<%- page.content %>
+	<!--
 	<br />
 	<div class="ui icon message">
 		<i class="notched circle loading icon"></i>
@@ -14,9 +44,5 @@
 			<a class="ui blue button" href="<%- theme.dist.release %>">没有反应？点击这里</a>
 		</div>
 	</div>
+	-->
 </div>
-<script>
-	$('document').ready(function() {
-		window.open('<%- theme.dist.release %>', '_self');
-	});
-</script>
