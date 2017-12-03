@@ -13,7 +13,7 @@ menu:
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    last: v2.0.0-beta
+    last: v2.0.0-beta2
     more: 历史版本
   examples:
   - name: Flappy Bird
@@ -40,7 +40,7 @@ ICP: 蜀ICP备16028738号-4
 
 # Dist
 dist:
-  release: https://gitee.com/werelone/Easy2D/attach_files/download?i=102858&u=http%3A%2F%2Ffiles.git.oschina.net%2Fgroup1%2FM00%2F02%2F3E%2FPaAvDFn-upyAT8PzABDMIOSx044116.exe%3Ftoken%3Dab25c392b28e4b6eff5d2d323863bc72%26ts%3D1509866142%26attname%3DEasy2D-v2.0.0-beta.exe
+  release: Easy2D-v2.0.0-beta2.exe
   history: https://gitee.com/werelone/Easy2D/releases
   gitee: https://gitee.com/werelone/Easy2D/
   github: https://github.com/Nomango/Easy2D/

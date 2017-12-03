@@ -18,13 +18,13 @@
 
 	<% if (page.toc) { %>
 		<div class="ui main container">
-			<div class="ui segment" id="page-content">
+			<div class="ui segment page-content">
 				<%- partial('_partial/' + page.type) %>
 			</div>
 		</div>
 	<% } else { %>
 		<div class="ui main text container">
-			<div class="ui segment" id="page-content">
+			<div class="ui segment page-content">
 				<%- partial('_partial/' + page.type) %>
 			</div>
 		</div>

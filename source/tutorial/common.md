@@ -106,59 +106,6 @@ auto text = new EText(L"balabalabalabalabala", L"宋体", 80, EColor::BLUE);
 
 <br/>
 
-## EButton 按钮类
-
-按钮是游戏中的常见元素，你可以把一段文字或者一个精灵变成按钮，它的使用方式很简单
-
-```cpp
-// 创建一个精灵
-auto btnSprite = new ESprite(L"按钮图片.png");
-// 创建点击按钮后的回调函数
-auto callback = []() {
-    // 点击按钮，进入一个新场景
-    EApp::enterScene(new EScene());
-};
-// 把精灵变成一个按钮，并设置点击按钮后的回调函数
-auto button = new EButton(btnSprite, callback);
-// 把按钮加入场景
-scene->add(button);
-```
-
-<div class="ui info message"><div class="header">Tips </div>
-关于回调函数的使用方法请参考 [关于回调函数](/tutorial/advanced.html#关于回调函数)。
-</div>
-
-你可以设置按钮在普通状态、鼠标移入状态、按下状态、禁用状态时，显示不同的精灵
-
-```cpp
-// 创建一个精灵，按钮普通状态显示
-auto btnNormal = new ESprite(L"按钮图片.png");
-// 创建一个精灵，按钮按下状态显示
-auto btnSelect = new ESprite(L"按下时图片.png");
-// 创建点击按钮后的回调函数
-auto callback = []() {
-    // 点击按钮，进入一个新场景
-    EApp::enterScene(new EScene());
-};
-// 创建按钮
-auto button = new EButton(btnNormal, btnSelect, callback);
-// 把按钮加入场景
-scene->add(button);
-```
-
-如果你想让一个按钮停止工作，可以把它设为禁用状态
-
-```cpp
-// 禁用按钮
-button->setDisable(true);
-```
-
-<div class="ui warning message"><div class="header">Warning </div>
-把精灵变为按钮后，不需要再将精灵加入到场景中，否则将产生错误。Debug 状态下引擎将检测这种错误，在错误产生时中断程序，并在控制台中给出提示。关于控制台的使用方法请参考 [关于控制台的使用](/tutorial/advanced.html#关于控制台的使用)。
-</div>
-
-<br/>
-
 ## ENode 节点类
 
 了解了精灵和文本，再来学习 ENode 就不是难事了。
@@ -226,6 +173,126 @@ node->addChild(node3, -1);
 ```
 
 例如上面的代码，虽然 node3 在 node2 后面添加，但是它的顺序为负数，比默认的 0 要小，所以绘制时 node2 将遮挡 node3。
+
+<br/>
+
+## EButton 按钮类
+
+按钮是游戏中的常见元素，你可以把一段文字或者一个精灵变成按钮，它的使用方式很简单
+
+```cpp
+// 创建一个精灵
+auto btnSprite = new ESprite(L"按钮图片.png");
+// 创建点击按钮后的回调函数
+auto callback = []() {
+    // 点击按钮，进入一个新场景
+    EApp::enterScene(new EScene());
+};
+// 把精灵变成一个按钮，并设置点击按钮后的回调函数
+auto button = new EButton(btnSprite, callback);
+// 把按钮加入场景
+scene->add(button);
+```
+
+<div class="ui info message"><div class="header">Tips </div>
+关于回调函数的使用方法请参考 [关于回调函数](/tutorial/advanced.html#关于回调函数)。
+</div>
+
+普通的按钮有四个状态：正常、鼠标移入、按下、禁用，你可以设置按钮在四种状态下显示不同的精灵或文本
+
+```cpp
+// 创建一个精灵，按钮普通状态显示
+auto btnNormal = new ESprite(L"按钮图片.png");
+// 创建一个精灵，按钮按下状态显示
+auto btnSelect = new ESprite(L"按下时图片.png");
+// 创建点击按钮后的回调函数
+auto callback = []() {
+    // 点击按钮，进入一个新场景
+    EApp::enterScene(new EScene());
+};
+// 创建按钮
+auto button = new EButton();
+button->setNormal(btnNormal);
+button->setSelected(btnSelect);
+button->setCallback(callback);
+// 把按钮加入场景
+scene->add(button);
+```
+
+如果你想让一个按钮停止工作，可以把它设为禁用状态
+
+```cpp
+// 禁用按钮
+button->setEnable(false);
+```
+
+<div class="ui warning message"><div class="header">Warning </div>
+把精灵变为按钮后，不需要再将精灵加入到场景中，否则将产生错误。Debug 状态下引擎将检测这种错误，在错误产生时中断程序，并在控制台中给出提示。关于控制台的使用方法请参考 [关于控制台的使用](/tutorial/advanced.html#关于控制台的使用)。
+</div>
+
+<br/>
+
+## EButtonToggle 开关按钮类
+
+开关按钮用来实现有 “开” 和 “关” 两种状态的按钮，所以它比普通按钮的状态更多，它可以有 “开” 状态的正常、鼠标移入、按下、禁用，以及 “关” 状态的正常、鼠标移入、按下、禁用。
+
+例如，下面的代码创建了一个可以控制背景音乐的播放与停止的按钮
+
+```cpp
+// 创建开状态文字
+auto btnTextOn = new EText(L"开");
+// 创建关状态文字
+auto btnTextOff = new EText(L"关");
+// 创建开关按钮
+auto button = new EButtonToggle(btnTextOn, btnTextOff);
+// 设置点击按钮的回调函数
+button->setCallback([=]() {
+    // 获取按钮是打开还是关闭
+    if (button->isToggleOn()) {
+        // 打开状态下，继续播放背景音乐
+        EMusicUtils::resumeBackgroundMusic();
+    }
+    else {
+        // 关闭状态下，暂停背景音乐
+        EMusicUtils::pauseBackgroundMusic();
+    }
+});
+```
+
+使用`toggle`函数可以切换开关的状态，切换后会自动执行按钮的回调函数。使用`setToggle`可以直接设置按钮的状态为开或者关，这个函数仅仅设置状态，不会执行回调函数。
+
+以刚才创建的按钮为例，下面的代码解释了两个函数的区别
+
+```cpp
+// 把按钮的状态设为关闭，此时按钮显示 “关” 文字
+button->setToggle(false);
+// 切换按钮的状态为打开，并继续播放背景音乐
+button->toggle();
+```
+
+<br/>
+
+## EMenu 菜单类
+
+按钮可以独立工作，也可以通过 `EMenu` 菜单类来统一管理多个按钮。
+
+例如，你的游戏暂停时弹出了一个菜单，上面有继续游戏和回主菜单两个按钮，但是你会发现，除了这两个按钮，游戏界面的其他按钮仍然可以点击，也就是这个弹出菜单没有将游戏界面的其他按钮屏蔽掉。
+
+使用 EMenu 可以解决此类问题，它可以直接控制多个按钮的状态，上述情况就可以将游戏界面的按钮全部放到一个 EMenu 里，然后把 EMenu 禁用。
+
+```cpp
+// 创建一个菜单
+auto menu = new EMenu();
+// 添加按钮
+menu->addButton(button1);
+menu->addButton(button2);
+// 禁用这个菜单，上面两个按钮将停止工作
+menu->setEnable(false);
+```
+
+<div class="ui info message"><div class="header">Tips </div>
+EMenu 的禁用和 EButton 的禁用是两个不同的概念，按钮的禁用可以表示出来，比如你可以用一张灰色的按钮图片表示这个按钮被禁用了，而 EMenu 的禁用更像是 “屏蔽”，即使按钮没有被禁用，它也无法响应。
+</div>
 
 <br/>
 
@@ -384,148 +451,6 @@ sprite->runAction(animation);
 auto action = new EActionLoop(animation);
 // 精灵执行循环的帧动画
 sprite->runAction(action);
-```
-</div>
-
-<br/>
-
-## ETimer定时器类
-
-引擎提供了高性能的定时器，可以每隔一段时间执行一次指定的回调函数。下面的代码将创建一个定时器，并将精灵不断的向右方移动。
-
-```cpp
-auto timer = new ETimer([=](int) {
-    sprite->movePosX(1);    // 定时器每执行一次，将精灵向右方移动 1 像素
-});
-timer->bindWith(sprite);    // 将这个定时器与精灵绑定
-```
-
-<div class="ui info message"><div class="header">Tips </div>
-定时器与节点绑定后才会开始执行，它的生命周期和绑定的节点相同。定时器也可以绑定在场景上，只要不切换场景，这个定时器将一直有效。
-</div>
-
-这个定时器永远不会停下来，除非你在某个地方调用了它的`stop`函数。除此之外，你也可以指定定时器的执行次数，它将在执行相应次数后自动停下来。
-
-```cpp
-timer->setRepeatTimes(2);   // 只执行两次
-```
-
-定时器的默认时间间隔为 0，也就是在画面的每一帧执行一次，你可以指定它每次执行的时间间隔，以毫秒为单位
-
-```cpp
-timer->setInterval(500);    // 每隔 500 毫秒执行一次
-```
-
-但是定时器并不会立即开始执行，而是在等待 500 毫秒后开始执行第一次。
-你可以设置定时器的构造函数的第四个参数为 true，让它在创建后立即执行一次。它的构造函数可以同时指定执行次数、时间间隔和是否立即执行。
-
-```cpp
-auto timer = new ETimer([=](int) {
-    sprite->movePosX(10);    // 定时器每执行一次，将精灵向右方移动 10 像素
-}, 2, 500, true);           // 总共执行 2 次，每隔 500 毫秒执行一次，且创建后立即执行一次
-timer->bindWith(sprite);    // 将这个定时器与精灵绑定
-```
-
-如果将定时器的执行次数设置为 -1，它将永远不会自动停止。定时器的回调函数提供了一个 int 变量，用来记录这个定时器的执行次数，第一次执行时，这个值是 0。
-
-```cpp
-auto timer = new ETimer([=](int times) {    // times 就是该定时器的执行次数
-    sprite->setPosX(times * 10);            // 定时器每执行一次，将精灵的横坐标移动到 10 的倍数
-});
-```
-
-<div class="ui info message"><div class="header">Tips </div>
-你可以给定时器命名，以在代码的任何地方通过名称操纵这个定时器。
-
-```cpp
-auto timer = new ETimer(
-    L"move_timer",  // 设置定时器的名称
-    [=](int) { sprite->movePosX(10); }
-);
-```
-`ETimerManager` 是定时器管理器，使用它可以控制全局的定时器
-
-```cpp
-ETimerManager::stopTimers(L"move_timer");   // 停止名称为 move_timer 的定时器
-```
-</div>
-
-<br/>
-
-## EListener 监听器类和其派生类
-
-监听器和定时器类似，但它不是每隔一段时间执行一次，而是遇到指定情况时自动触发。
-
-例如`EListenerMouse`类可以监听所有的鼠标消息，无论是鼠标移动还是按下鼠标左键，这个监听器都会自动触发，并执行设定好的回调函数。
-
-可以监听鼠标消息的监听器有：
-
-- `EListenerMouse` （监听所有的鼠标消息）
-- `EListenerMouseClick` （监听鼠标左键点击消息）
-- `EListenerMouseDoubleClick` （监听鼠标左键双击消息）
-- `EListenerMousePress` （监听鼠标左键按下消息）
-- `EListenerMouseDrag` （监听鼠标左键拖动消息）
-
-可以监听键盘消息的监听器有：
-
-- `EListenerKeyboard` （监听所有的键盘消息）
-- `EListenerKeyboardPress` （监听所有的按键消息）
-
-使用下面的代码，可以每按点击一次鼠标，将精灵旋转 15 度
-
-```cpp
-// 创建一个鼠标左键点击消息监听器
-// 回调函数中传入的参数是鼠标点击的位置
-auto listener = new EListenerMouseClick([=](EPoint p) {
-    sprite->setRotation(sprite->getRotation() + 15);    // 每监听到一次点击消息，将精灵旋转 15 度
-});
-// 把监听器和场景绑定
-listener->bindWith(scene);
-```
-
-<div class="ui info message"><div class="header">Tips </div>
-监听器与节点绑定后才会开始执行，它的生命周期和绑定的节点相同。监听器也可以绑定在场景上，只要不切换场景，这个监听器将一直有效。
-</div>
-
-`EMouseMsg`(鼠标消息类) 可以获取当前的鼠标消息，例如下面的代码可以在点击鼠标后，把精灵移动到鼠标点击的位置
-
-```cpp
-// 创建一个鼠标左键点击消息监听器
-auto listener = new EListenerMouseClick([=](EPoint) {
-    EPoint p = EMouseMsg::getPos(); // 获取鼠标当前位置
-    sprite->setPos(p);              // 修改精灵坐标
-});
-```
-
-`EKeyboardMsg`(键盘消息类) 可以获取当前的键盘消息，例如下面的代码可以按上下左右键移动精灵
-
-```cpp
-// 创建一个按键消息监听器
-auto listener = new EListenerKeyboardPress([=]() {
-    // 获取当前的按键
-    EKeyboardMsg::KEY key = EKeyboardMsg::getKeyValue();
-    // 对不同的按键进行处理
-    if (key == EKeyboardMsg::KEY::UP) {
-        sprite->movePosY(-1);   // 按上键，向上移动精灵
-    }
-    else if (key == EKeyboardMsg::KEY::DOWN) {
-        sprite->movePosY(1);   // 按下键，向下移动精灵
-    }
-    else if (key == EKeyboardMsg::KEY::RIGHT) {
-        sprite->movePosX(1);   // 按右键，向右移动精灵
-    }
-    else if (key == EKeyboardMsg::KEY::LEFT) {
-        sprite->movePosX(-1);   // 按左键，向左移动精灵
-    }
-});
-```
-
-<div class="ui info message"><div class="header">Tips </div>
-`EMsgManager`是消息管理器，它可以操纵全局的消息监听器，例如用下面的代码停止所有的鼠标和键盘消息监听器
-
-```cpp
-EMsgManager::stopAllMouseListeners();   // 停止所有鼠标消息监听器
-EMsgManager::stopAllKeyboardListeners();// 停止所有键盘消息监听器
 ```
 </div>
 

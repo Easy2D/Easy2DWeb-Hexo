@@ -207,7 +207,7 @@ auto button = new EButton();
 button->setCallback(callback);
 ```
 
-不同的地方需要的回调函数类型也不一样，例如，定时器需要回调函数中有一个 int 型参数，这个参数表示定时器执行的次数（关于定时器的使用方法请参考 [ETimer 定时器类](/tutorial/common.html#ETimer定时器类)）
+不同的地方需要的回调函数类型也不一样，例如，定时器需要回调函数中有一个 int 型参数，这个参数表示定时器执行的次数（关于定时器的使用方法请参考 [ETimer 定时器类](/tutorial/tools.html#ETimer-定时器类)）
 
 ```cpp
 // 创建一个定时器回调函数
