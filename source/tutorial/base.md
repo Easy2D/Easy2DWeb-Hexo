@@ -8,98 +8,102 @@ type: "tutorial"
 
 ## 第一个程序
 
-设计游戏前，我们需要在代码的开头初始化引擎，然后创建一个窗口。
+设计游戏前，我们需要在代码的开头初始化 Easy2D 的工作环境，并创建一个窗口。
 
-`EApp`是引擎的基础类，它在一个程序中只能被创建一次，用于控制和获取窗口的所有属性。例如，你可以新建一个 Win32 控制台程序，然后用下面的代码对 EApp 进行初始化。
+`EApp` 是 Easy2D 的核心类，它可以控制和获取游戏窗口的许多属性。例如，你可以新建一个 Win32 控制台程序，然后用下面的代码进行初始化。
 
 ```cpp
 #include <easy2d.h>
 
 int main()
 {
-	EApp app;
-
 	// 初始化一个标题为 Hello，大小为 640*480 的窗口
-	if (!app.init(_T("Hello"), 640, 480)) {
-		// 初始化失败时，退出游戏
-		return 0;
-	}
+	EApp::init(_T("Hello"), 640, 480);
 
 	return 0;
 }
 ```
 <div class="ui warning message"><div class="header">Warning </div>
-初始化的过程有可能失败，如果你传入了不适当的参数，这个函数将返回 false。
-只有当这个函数调用成功时，才能进行下一步动作。
+初始化的过程有可能失败，比如当你传入了不适当的参数时，这个函数将返回 false。
+只有当这个函数调用成功时才能进行下一步动作，所以一般来说，你应该这样使用 init 函数
+```cpp
+if (!EApp::init(_T("Hello"), 640, 480)) 
+	return -1;	// 初始化失败时，退出游戏
+```
 </div>
 
-但是即使初始化成功，这个窗口也不会显示，因为游戏还**没有开始**。
-
-游戏的开始是建立在`场景(EScene)`上的，一个场景代表游戏中的一个界面，你的游戏可以有类似主菜单、游戏界面、结束界面等多个场景。
+但是即使初始化成功，这个窗口也不会显示，因为游戏还**没有开始**，游戏的开始是建立在`场景(EScene)`上的，一个场景代表游戏中的一个界面。你可以像下面的代码一样，直接用 new 运算符去创建一个场景
 
 ```cpp
 // 创建一个空场景
 auto scene = new EScene();
 ```
 
-`EApp`类通过`enterScene`(进入新场景) 和`backScene`(返回上一场景) 函数控制场景之间的切换。进入刚刚创建的场景，我们就可以开始游戏了！
+`EApp`类通过`enterScene`(进入新场景) 和`backScene`(返回上一场景) 函数控制场景之间的切换。它们和`init`函数一样都是静态函数，所以你可以直接调用它们。进入刚刚创建的场景，我们就可以开始游戏了！
 
 ```cpp
 // 进入刚刚创建的场景
-app.enterScene(scene);
+EApp::enterScene(scene);
 // 开始游戏
-app.run();
+EApp::run();
 ```
 
-此时主函数中的代码看起来应是这样的：
+一般的，程序都应该以 `EApp::init` 开始，并以 `EApp::run` 函数结束。
+
+下面是最简单的 Demo 代码：
 
 ```cpp
-EApp app;
+#include <easy2d.h>
 
-// 初始化一个标题为 Hello，大小为 640*480 的窗口
-if (!app.init(_T("Hello"), 640, 480)) {
-	// 初始化失败时，退出游戏
-	return 0;
+int main()
+{
+	/* 初始化 */
+	if (!EApp::init(_T("Hello"), 640, 480)) return -1;
+
+	/* 设计游戏 */
+	auto scene = new EScene();	// 创建一个空场景
+	EApp::enterScene(scene);	// 进入刚刚创建的场景
+
+	/* 开始游戏 */
+	return EApp::run();		// 开始游戏
 }
-
-// 创建一个空场景
-auto scene = new EScene();
-
-// 进入刚刚创建的场景
-app.enterScene(scene);
-// 开始游戏
-app.run();
-
-return 0;
 ```
 
 <br/>
 
 ## 场景和节点
 
-Easy2D 使用树状模型，游戏中所有可以显示出来的元素都被称之为`ENode(节点)`。
-每个节点有自己特定的属性，并允许向其中添加任意数量的子节点。Easy2D 提供了许多游戏之中常用的元素，比如`EText(文本)`、`ESprite(精灵)`、`EButton(按钮)`等等，它们都是节点的一种。
+`EScene(场景)`代表游戏中的一个界面，你的游戏可以有类似主菜单、游戏界面、结束界面等多个场景。你可以直接用 new 运算符创建场景：
 
-控制根节点的类被称为`EScene(场景)`，它有一个默认的根节点，使用它的`add`函数可以给场景添加子节点，添加到场景下的节点将被显示在屏幕上。
+```cpp
+auto scene = new EScene();	// 创建一个空场景
+```
 
-下面的示意图解释了场景和节点的关系：
+场景中所有的元素都被称为`ENode(节点)`，比如场景中的一个按钮，或者一张图片，它们都是节点的一种。Easy2D 提供了许多游戏之中常用的节点，比如`EText(文本)`、`ESprite(精灵)`、`EButton(按钮)`等等，你可以像创建场景一样，直接用 new 运算符创建它们：
 
-![场景和节点的关系](/assets/images/tutorial/scene.png)
+```cpp
+auto text = new EText();     // 创建一个文本节点
+auto sprite = new ESprite(); // 创建一个精灵节点
+```
 
-<div class="ui info message"><div class="header">Tips </div>
-子节点的所有属性都是相对于父节点的。例如，父节点的旋转角度为 15 度，其子节点的旋转角度也为 15 度，则实际显示时，父节点旋转了 15 度，而子节点先围绕父节点旋转 15 度后，再自身旋转 15 度。
-</div>
+节点被创建后不会直接显示在屏幕上，你需要将它们加入到场景中，然后进入这个场景，它们才会出现在屏幕上。
+
+```cpp
+scene->add(text);         // 将节点加入到场景中
+scene->add(sprite);       // 将节点加入到场景中
+EApp::enterScene(scene);  // 进入场景
+```
 
 <br/>
 
-## 坐标系
+## 坐标系和节点坐标
 
 Easy2D 使用左手坐标空间，坐标系原点在屏幕的左上角，x轴向右为正，y轴向下为正。
 
 为了研究 Easy2D 的坐标系，我们将一张图片复制到工程目录下，并把它转化为`精灵(ESprite)`。
 
 <div class="ui info message"><div class="header">Tips </div>
-精灵是引擎中最常用的类之一，你可以随意的让它进行位移、缩放、透明度渐变等动画。
+精灵代表了一张图片，你可以随意的对它进行位移、缩放、旋转等操作。
 </div>
 
 ```cpp
@@ -113,9 +117,7 @@ scene->add(sprite);
 
 我们可以看到屏幕上显示了这张图片，如下图所示
 
-![运行后截图](/assets/images/tutorial/pivot3.png)
-
-## 节点中心点和坐标
+![场景示例](/assets/images/tutorial/pivot3.png)
 
 节点的`Pivot`(中心点) 是一个重要属性，它相当于节点的 “把手”，有了中心点，你就可以 “抓着” 它移动这个节点，或者旋转它。
 
@@ -137,7 +139,7 @@ sprite->setPivot(0.5f, 0.5f);
 
 运行结果如下图所示，可以看到精灵的一部分被遮住了
 
-![运行后截图](/assets/images/tutorial/pivot1.png)
+![修改了中心点后的精灵](/assets/images/tutorial/pivot1.png)
 
 这是因为引擎以 “精灵中心点的坐标为(0, 0)” 的方式显示了它。
 
@@ -173,7 +175,7 @@ sprite->setPos(width / 2, height / 2);
 
 运行后的效果如下图：
 
-![精灵居中](/assets/images/tutorial/pivot4.png)
+![精灵居中显示](/assets/images/tutorial/pivot4.png)
 
 <br/>
 
@@ -189,7 +191,7 @@ Easy2D 按照以下规律命名类：
 Easy2D 按照以下规律命名函数：
 
 - 所有函数都以小写字母开头，用大写字母区分后面的单词。如`EApp::showConsole`
-- 所有函数均按照`动词`+`名语`形式命名。如`ENode::addChild`和`MusicUtils::playMusic`
+- 所有函数均按照`动词`+`名语`形式命名。如`ENode::addChild`和`EMusicUtils::playMusic`
 - 获取对象的属性值：`get`+`属性名`。如`ESprite::getWidth`
 - 修改对象的属性值：`set`+`属性名`。如`EText::setText`
 - 获取对象的状态(bool值)：`is`+`状态名`。如`EApp::isPaused`

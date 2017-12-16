@@ -11,10 +11,8 @@ menu:
   feedback: /feedback
   about: /about
 
-# Dist
-dist:
-  release: http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta2.exe
-  history: https://gitee.com/werelone/Easy2D/releases
+# Social
+social:
   gitee: https://gitee.com/werelone/Easy2D/
   github: https://github.com/Nomango/Easy2D/
 
@@ -22,7 +20,8 @@ dist:
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    last: v2.0.0-beta2
+    last: v2.0.0-beta3
+    update: "2017-12-16"
     more: 历史版本
   examples:
   - name: Flappy Bird
@@ -49,6 +48,8 @@ ICP: 蜀ICP备16028738号-4
 
 # Plugins
 plugins:
+  lightgallery: true
+  justifiedgallery: true
   leancloud:
     app_id: vlit2JhV3ayuPyc63FSCqqYW-gzGzoHsz
     app_key: lLomVC08AvETTm7wnz2cV3R0

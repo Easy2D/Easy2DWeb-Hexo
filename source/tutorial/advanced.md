@@ -77,31 +77,24 @@ if (!app.init(L"Test", 640, 480, wStyle)) {
 
 ## EApp 和管理器的使用方法
 
-`EApp` 类在每个程序中只能被创建一次，它在调用 `init` 函数后被初始化，并在程序结束时销毁。
+`EApp` 类是单例模式运行的，它控制了游戏的流程，并且大部分函数都是静态函数。初始化 EApp 后，你可以在程序的任意地方控制它。
 
-EApp 的大部分函数都是静态函数，初始化 EApp 后，你可以在程序的任意地方获取和修改它的属性。例如，下面的代码可以在点击按钮后切换到一个新场景
+例如，下面的代码在点击按钮后切换到一个新场景
 
 ```cpp
-// 创建一个精灵
-auto btnNormal = new ESprite(L"按钮图片.png");
-// 创建一个按钮
-auto button = new EButton(btnNormal, []() {
-	// 创建一个场景
-	auto scene = new EScene();
-	// 调用 EApp 的静态函数，切换场景
-	EApp::enterScene(scene);
+auto btnNormal = new ESprite(L"按钮图片.png");	// 创建一个精灵
+auto button = new EButton(btnNormal, []() {     // 创建一个按钮
+	auto scene = new EScene();	// 创建一个场景
+	EApp::enterScene(scene);	// 调用 EApp 的函数切换场景
 });
 ```
 
-EApp 还可以完成更多的事情，比如让游戏暂停或者退出游戏
+下面的代码在点击按钮后退出游戏
 
 ```cpp
-// 创建一个文本
 auto btnNormal = new EText(L"退出");
-// 创建一个按钮
 auto button = new EButton(btnNormal, []() {
-	// 调用 EApp 的静态函数，结束游戏
-	EApp::quit();
+	EApp::quit();	// 调用 EApp 的 quit 函数，结束游戏
 });
 ```
 
@@ -182,7 +175,7 @@ node2->addChild(node1);
 
 ## 关于回调函数
 
-引擎中许多地方都要用到`回调函数(Callback)`，按下按钮要调用回调函数，定时器每过一段时间也会调用一次回调函数。请自行查阅相关资料了解回调函数的具体含义。
+引擎中许多地方都要用到`回调函数(Callback)`，按下按钮要调用回调函数，定时器每过一段时间也会调用一次回调函数。请自行查阅相关资料了解回调函数、std::function 和 std::bind。
 
 引擎推荐使用 `Lambda` 函数作为回调函数。Lambda 是一种匿名函数，你可以像创建一个对象一样创建它
 
@@ -227,7 +220,7 @@ auto listenerCallback = [](EPoint p) {};
 
 ## 关于对象释放池
 
-C++ 中使用 `new` 操作符创建的对象需要使用 `delete` 释放，否则会造成内存泄漏。引擎中使用了大量的指针，如果不妥善处理它们，程序占用的内存将成倍的增长。
+C++ 中使用 `new` 运算符创建的对象需要使用 `delete` 释放，否则会造成内存泄漏。引擎中使用了大量的指针，如果不妥善处理它们，程序占用的内存将成倍的增长。
 
 引擎中所有的对象都会被自动加入到`EObjectManager`(对象释放池) 中进行统一管理，它的实现方式类似于智能指针。每个对象都有引用计数，当一个对象被使用时，它的引用计数加一，不再使用时，它的引用计数减一。对象释放池会自动释放引用计数小于等于 0 的对象，所以你不需要考虑内存泄漏的问题。
 
@@ -388,9 +381,7 @@ listener->setAlwaysWorking(true);
 listener->bindWith(scene);
 ```
 
-另外，窗口失去焦点时，游戏会自动暂停，窗口获取焦点时，游戏会自动继续。
-
-你可以重写 EScene 的 `onActivate` 和 `onInactive` 函数，控制引擎是否执行自动暂停功能。
+如果你想实现窗口失去焦点时，游戏自动暂停，并在窗口获取焦点时，游戏自动继续，可以重写 EScene 的 `onActivate` 和 `onInactive` 函数，控制引擎是否执行自动暂停功能。
 
 ```cpp
 // TestScene.h
@@ -402,8 +393,8 @@ class TestScene : public EScene
 public:
 	TestScene();
 	// 重写下面这两个函数
-	bool onActivate() override;
 	bool onInactive() override;
+	bool onActivate() override;
 }
 ```
 
@@ -415,18 +406,18 @@ TestScene::TestScene()
 {
 }
 
-bool TestScene::onActivate()
-{
-	// 直接返回 false，游戏将不会在窗口获取焦点时自动继续游戏
-	// 你可以在这里设置窗口获取焦点时应该怎么做
-	return false;
-}
-
 bool TestScene::onInactive()
 {
-	// 直接返回 false，游戏将不会在窗口失去焦点时自动暂停
+	// 直接返回 true，游戏将在窗口失去焦点时自动暂停
 	// 你可以在这里设置窗口失去焦点时应该怎么做
-	return false;
+	return true;
+}
+
+bool TestScene::onActivate()
+{
+	// 直接返回 true，游戏将在窗口获取焦点时自动继续游戏
+	// 你可以在这里设置窗口获取焦点时应该怎么做
+	return true;
 }
 ```
 

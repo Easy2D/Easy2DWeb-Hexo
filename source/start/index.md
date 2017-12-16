@@ -6,30 +6,32 @@ type: "start"
 
 ## Easy2D 是什么 ?
 
-许多初学 `C` 和 `C++` 编程的同学都喜欢试着制作小游戏，但是 Windows 的图形操作晦涩难懂，初学者往往还没开始做游戏就被绘图函数搞得晕头转向了。
+对于编程而言，初学者最需要的不是技能，而是成就感。
 
-有没有这样一种库，让初学者可以专注游戏逻辑本身进行开发呢？
+很多朋友都喜欢用 C 语言编写自己的小游戏，然而脱离了那个“小黑框框”，前方完全是一片未知的领域。Win32、GUI、消息队列……，到处都是陌生的名词，真的是让人头大。
 
-`Easy2D` 就是为此而生游戏引擎，它可以帮助你快速开发高质量的 2D 小游戏，而无需你了解底层的技术。
+不过头疼之余，何不来试试 Easy2D 这个神器呢？
+
+Easy2D 大大简化了游戏流程，可以帮助你快速制作 Windows 上的 2D 小游戏。它的特点和它的名字一样，Everything is Easy！
 
 <br/>
 
 ## 如何安装 Easy2D ?
 
-[[点击下载]](/download) Easy2D 的安装包，打开后跟随提示安装即可。
+下载安装包，打开后跟随提示安装即可。
 
-安装程序会检测您已经安装的 `Visual Studio` 版本（目前仅支持2015和2017两个版本），并根据您的选择将对应的引擎库文件安装至 VS 的 include 和 lib 文件夹内。
+安装程序会检测您已经安装的 `Visual Studio` 版本，并根据您的选择将对应文件安装至 VS 的 include 和 lib 文件夹内。
 
-Easy2D 采用静态链接方式，不会给程序增加任何额外的 DLL 依赖。
+Easy2D 不支持 VC6.0，如果你使用的是这个版本，那你需要尝试一下新版的 [Visual Studio](https://www.visualstudio.com/) 了。
 
 > **安装环境**：
-> 操作系统版本：Windows 7 及以上操作系统。
-> 编译环境版本：Visual Studio 2015 和 2017 (x86 & x64)。
+> 操作系统：Windows 7 及以上操作系统。
+> 编译环境：Visual Studio 2010 (x86) 及以上版本。
 
 <br/>
 
 <div class="ui info message"><div class="header">Tips </div>
-如果需要手动安装，请将安装程序的扩展名改为 `.zip` 后解压缩，然后将安装包里的相关文件分别拷贝到 VS 对应的 include 和 lib 文件夹内。
+如果需要手动安装，可以下载 `.zip` 格式的压缩包，解压后将相关文件分别拷贝到 VS 对应的 include 和 lib 文件夹内，或者你的工程路径下即可。
 </div>
 
 
@@ -46,30 +48,20 @@ Easy2D 采用静态链接方式，不会给程序增加任何额外的 DLL 依�
 
 int main()
 {
-    // 创建 EApp 实例
-    EApp app;
-    
-    // 初始化程序，可以指定窗口的名称、宽高等属性
-    if (!app.init(L"Hello", 240, 100)) {
-        // 初始化失败时，退出游戏
-        return 0;
-    }
+    // 初始化游戏，可以指定窗口的名称、宽高等属性
+    EApp::init(L"Hello", 240, 100);
     
     // 创建一个场景
     auto scene = new EScene();
     // 进入该场景
-    app.enterScene(scene);
+    EApp::enterScene(scene);
 
     // 创建一个文本
-    auto text = new EText(L"Hello World");
-    // 设置文本在窗口上居中
-    text->setPos(app.getWidth() / 2, app.getHeight() / 2);
+    auto text = new EText(L"Hello Easy2D!");
     // 将这个文本添加到场景中
     scene->add(text);
 
     // 开始游戏
-    app.run();
-
-    return 0;
+    return EApp::run();
 }
 ```

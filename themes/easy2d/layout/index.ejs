@@ -3,13 +3,6 @@
 
 <script>
 $(document).ready(function(){
-	$('.index-header-text').transition({
-		animation: 'scale',
-		onComplete: function() {
-			$('.index-header-buttons').transition('scale');
-		}
-	})
-
 	$('.examples.shape').shape();
 
 	$('.next-example.button').on('click', function() {
@@ -29,19 +22,17 @@ $(document).ready(function(){
 		</div>
 
 		<div class="ui text container">
-			<div class="ui index-header-text" style="display:none;">
+			<div class="ui index-header-text">
 				<h1 class="ui inverted header">Easy2D</h1>
 				<h2><%- theme.index.subtitle %></h2>
 			</div>
-			<div class="ui container index-header-buttons" style="display:none;">
-				<a class="ui animated fade huge primary button" href="/download">
-  					<div class="visible content">下载最新版 </div>
-  					<div class="hidden content"><%- theme.index.button.last %> </div>
-				</a>
-				<a class="ui animated vertical huge secondery button" href="<%- theme.menu.history %>">
-  					<div class="visible content">历史版本 </div>
-  					<div class="hidden content"><%- theme.index.button.more %> </div>
-				</a>
+			<div class="ui container index-header-buttons">
+				<a class="ui huge primary button" href="/download">下载 <%- theme.index.button.last %> </a>
+				<div class="index-header-extend" style="display:block;margin-top:10px;">
+					<span><%- theme.index.button.update %> 更新 </span>
+					<span> | </span>
+					<span><a class="ui link history" href="<%- theme.menu.history %>">查看历史版本 </a></span>
+				</div>
 			</div>
 		</div>
 
@@ -52,11 +43,11 @@ $(document).ready(function(){
         <div class="row">
         <div class="eight wide column">
             <h3 class="ui header">简易的安装和使用方式</h3>
-            <p>安装程序可以自动识别你的 Visual Studio 版本并提供安装建议，只需要短短几分钟进行下载和安装，你就可以在项目中引入头文件并开始使用 Easy2D 引擎了。</p>
+            <p>安装程序可以自动识别你的 Visual Studio 版本并提供安装建议，只需要短短几分钟进行下载和安装，你就可以在项目中引入头文件并开始使用 Easy2D 了。</p>
             <h3 class="ui header">面向 C++ 初学者</h3>
             <p>Easy2D 是为 C++ 初学者设计的 Windows 桌面游戏的开发框架，你只需说明场景中的每个元素应该做什么，Easy2D 就可以自动处理它们，让一切变得井然有序。</p>
-			<h3 class="ui header">开放的引擎源代码</h3>
-            <p>Easy2D 汲取了许多优秀的社区资源，通过开源的方式回馈社区，其源代码发布在 <a href="<%- theme.dist.gitee %>" target="_blank">Gitee</a> 上。</p>
+			<h3 class="ui header">开放的源代码</h3>
+            <p>Easy2D 汲取了许多优秀的社区资源，通过开源的方式回馈社区，其源代码发布在 <a href="<%- theme.social.github %>" target="_blank">GitHub</a> 上。</p>
         </div>
         <div class="six wide right floated column index-epimg">
 			<h3>示例游戏</h3>

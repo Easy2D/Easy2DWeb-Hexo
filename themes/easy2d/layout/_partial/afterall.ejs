@@ -1,0 +1,20 @@
+<% if (theme.plugins.lightgallery) { %>
+    <!-- Import plugins lightGallery -->
+    <%- js('libs/lightgallery/js/lightgallery.min') %>
+    <%- js('libs/lightgallery/js/lg-thumbnail.min') %>
+    <%- js('libs/lightgallery/js/lg-autoplay.min') %>
+    <%- js('libs/lightgallery/js/lg-fullscreen.min') %>
+    <%- js('libs/lightgallery/js/lg-zoom.min') %>
+    <%- css('libs/lightgallery/css/lightgallery.min') %>
+    <%- js('js/lightGallery') %>
+<% } %>
+
+<% if (theme.plugins.justifiedgallery) { %>
+    <!-- Import plugins justifiedgallery -->
+    <%- css('libs/justified-gallery/justifiedGallery.min') %>
+    <%- js('libs/justified-gallery/jquery.justifiedGallery.min') %>
+    <%- js('js/justifiedGallery') %>
+<% } %>
+
+<!-- 返回顶部按钮 -->
+<%- partial('_widget/totop') %>

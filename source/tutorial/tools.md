@@ -163,21 +163,36 @@ EMsgManager::stopAllKeyboardListeners();// 停止所有键盘消息监听器
 
 ## EMusicUtils 音乐工具
 
-`EMusicUtils`可以方便地控制游戏中的音乐，下面是一段示例代码
+`EMusicUtils` 可以方便地控制游戏中的音乐，调用它的 `playMusic` 函数就可以播放音乐。
 
 ```cpp
-// 播放一个音效
+// 播放一个音乐
 EMusicUtils::playMusic(L"音乐文件名.wav");
+```
+
+`playMusic` 函数的返回值是一个整形变量，标识了这个音乐的 ID，你可以通过这个 ID 暂停它的播放。
+
+`pauseMusic` 、 `resumeMusic` 和 `stopMusic` 分别控制音乐的暂停、继续和停止。
+
+```cpp
+// 获取播放音乐的 ID
+UINT id = EMusicUtils::playMusic(L"音乐文件名.wav");
+// 通过 ID 暂停这个音乐
+EMusicUtils::pauseMusic(id);
+```
+
+你也可以通过传入文件名的方式暂停音乐，它们的效果是一样的
+
+```cpp
+// 暂停这个音乐
+EMusicUtils::pauseMusic(L"音乐文件名.wav");
+```
+
+调用 `preloadMusic` 函数可以预加载音乐文件，在游戏开始前调用它，可以防止游戏中播放音乐时卡顿。
+
+```cpp
 // 预加载音乐
 EMusicUtils::preloadMusic(L"音乐文件名.wav");
-// 播放背景音乐，同时只能播放一段背景音乐
-EMusicUtils::playBackgroundMusic(L"背景音乐名.wav");
-// 暂停背景音乐
-EMusicUtils::pauseBackgroundMusic();
-// 继续播放背景音乐
-EMusicUtils::resumeBackgroundMusic();
-// 停止背景音乐
-EMusicUtils::stopBackgroundMusic();
 ```
 
 <br/>
