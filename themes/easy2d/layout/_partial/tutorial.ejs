@@ -1,11 +1,21 @@
-<% if (page.toc) { %>
+<% if (page.subtitle) { %>
 <div class="ui large breadcrumb">
 	<a class="section" href="<%- theme.menu.home %>">首页</a>
 	<i class="right chevron icon divider"></i>
 	<a class="section" href="<%- theme.menu.tutorial %>">入门教程</a>
-	<i class="right chevron icon divider"></i>
-	<div class="active section"><%- page.subtitle %></div>
+    <% var index = 0; %>
+    <% for (var i = 0; i < page.subtitle.length; i++) { %>
+        <% index++; %>
+        <i class="right chevron icon divider"></i>
+        <% if (i+1 == page.subtitle.length) { %>
+	        <div class="active section"><%- page.subtitle[i] %></div>
+        <% } else { %>
+            <a class="section" href="<%- page.subtitle[i][1] %>"><%- page.subtitle[i][0] %></a>
+        <% } %>
+    <% } %>
 </div>
+<% } %>
+<% if (page.toc) { %>
 <div class="ui stackable grid" style="margin-top:0;">
 	<div class="four wide column page-toc">
 		<%- partial('_widget/toc', { page: page }) %>
@@ -14,6 +24,15 @@
 		<%- page.content %>
 	</div>
 </div>
+<% } else if (page.toclinker) { %>
+<div class="ui stackable grid" style="margin-top:0;">
+    <div class="four wide column page-toc">
+        <%- partial('_widget/toclinker', { toclinker: page.toclinker }) %>
+    </div>
+	<div class="twelve wide column lightGallery justifiedGallery">
+		<%- page.content %>
+	</div>
+</div>
 <% } else { %>
-<%- page.content %>
+    <%- page.content %>
 <% } %>

@@ -8,11 +8,9 @@ type: "start"
 
 对于编程而言，初学者最需要的不是技能，而是成就感。
 
-很多朋友都喜欢用 C 语言编写自己的小游戏，然而脱离了那个“小黑框框”，前方完全是一片未知的领域。Win32、GUI、消息队列……，到处都是陌生的名词，真的是让人头大。
+如果你喜欢用 C/C++ 编写自己的小游戏，那么 Easy2D 将是个不错的选择，它大大简化了游戏制作过程，可以帮助你快速开发 Windows 上的 2D 小游戏。
 
-不过头疼之余，何不来试试 Easy2D 这个神器呢？
-
-Easy2D 大大简化了游戏流程，可以帮助你快速制作 Windows 上的 2D 小游戏。它的特点和它的名字一样，Everything is Easy！
+它的特点和它的名字一样，Everything is Easy！
 
 <br/>
 
@@ -22,11 +20,11 @@ Easy2D 大大简化了游戏流程，可以帮助你快速制作 Windows 上的 
 
 安装程序会检测您已经安装的 `Visual Studio` 版本，并根据您的选择将对应文件安装至 VS 的 include 和 lib 文件夹内。
 
-Easy2D 不支持 VC6.0，如果你使用的是这个版本，那你需要尝试一下新版的 [Visual Studio](https://www.visualstudio.com/) 了。
+Easy2D 不支持 VS2012 以下的版本（包括 VC6.0），如果你使用的是低版本的 VS，那你需要尝试一下新版的 [Visual Studio](https://www.visualstudio.com/) 了。
 
 > **安装环境**：
 > 操作系统：Windows 7 及以上操作系统。
-> 编译环境：Visual Studio 2010 (x86) 及以上版本。
+> 编译环境：Visual Studio 2012 (x86 & x64) 及以上版本。
 
 <br/>
 
@@ -39,7 +37,7 @@ Easy2D 不支持 VC6.0，如果你使用的是这个版本，那你需要尝试�
 
 ## 开始使用！
 
-使用 VS 新建一个空的 Win32 控制台程序，在源文件开头引入`easy2d.h`头文件，即可开始使用。
+使用 VS 新建一个空的 C++ 控制台程序，在源文件开头引入`easy2d.h`头文件，即可开始使用。
 
 复制下面的代码以创建一个`Hello World`程序。
 
@@ -49,19 +47,24 @@ Easy2D 不支持 VC6.0，如果你使用的是这个版本，那你需要尝试�
 int main()
 {
     // 初始化游戏，可以指定窗口的名称、宽高等属性
-    EApp::init(L"Hello", 240, 100);
-    
-    // 创建一个场景
-    auto scene = new EScene();
-    // 进入该场景
-    EApp::enterScene(scene);
+    if (Game::init(L"Hello", 240, 100))
+    {
+        // 创建一个场景
+        auto scene = new Scene();
+        // 进入该场景
+        SceneManager::enterScene(scene);
 
-    // 创建一个文本
-    auto text = new EText(L"Hello Easy2D!");
-    // 将这个文本添加到场景中
-    scene->add(text);
+        // 创建一个文本
+        auto text = new Text(L"Hello Easy2D!");
+        // 将这个文本添加到场景中
+        scene->add(text);
 
-    // 开始游戏
-    return EApp::run();
+        // 开始游戏
+        Game::run();
+    }
+
+    // 游戏结束，回收游戏资源
+    Game::uninit();
+    return 0;
 }
 ```

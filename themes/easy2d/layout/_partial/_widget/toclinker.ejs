@@ -1,0 +1,26 @@
+<div class="ui left catalog">
+    <h3 class="ui header">目录</h3>
+    <ol class="toc">
+        <% toclinker.forEach(function(item) { %>
+            <li class="toc-item toc-level-2"><a class="toc-link" href="<%- item[1] %>"><span class="toc-text"><%- item[0] %></span></a></li>
+        <% }); %>
+    </ol>
+</div>
+<style>
+.ui.catalog {
+    margin-top: 30px;
+}
+.ui.catalog .toc {
+    padding-left: 0;
+}
+.ui.catalog li.toc-item {
+    list-style-type: none;
+    padding-top: 10px;
+}
+.ui.catalog li.toc-item a {
+    color: #222;
+}
+.ui.catalog li.toc-item a:hover {
+    color: #138BCA;
+}
+</style>

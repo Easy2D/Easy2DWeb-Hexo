@@ -20,23 +20,23 @@ social:
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    last: v2.0.0-beta3
-    update: "2017-12-16"
+    last: v2.0.0-beta4
+    update: "2018-2-8"
     more: 历史版本
   examples:
   - name: Flappy Bird
     author: Nomango
-    image: /examples/FlappyBird/FlappyBird.png
+    image: /assets/images/sample/FlappyBird.png
     description: 像素鸟是曾经超火的一款手机游戏，手残党勿入~
     url: /examples/#FlappyBird
   - name: Smart Clock
     author: Nomango
-    image: /examples/SmartClock/SmartClock.png
+    image: /assets/images/sample/SmartClock.png
     description: 一个奇奇怪怪的时钟，感受时间在不知不觉中的流逝。
     url: /examples/#SmartClock
   - name: 推箱子
     author: Nomango
-    image: /examples/PushBox/PushBox.png
+    image: /assets/images/sample/PushBox.png
     description: 经典推箱子，一共有八关，自动保存最佳纪录，音效可关闭。
     url: /examples/#PushBox
 
