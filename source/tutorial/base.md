@@ -30,6 +30,8 @@ int main()
 Game::init(L"Hello", 640, 480);
 ```
 
+这个函数必须在 main 函数的第一行调用，且只能调用一次。如果在 `Game::init` 前进行了其他操作，有可能出现未知的错误。
+
 <div class="ui info message"><div class="header">Tips </div>
 Easy2D 使用 Unicode 字符集，所以必须在字符串前加字母 L 标识它，比如 `L"Hello"`。
 </div>
@@ -48,7 +50,7 @@ Game 类的 `Game::uninit` 函数用来回收游戏资源，这个函数应在 `
 Game::uninit();
 ```
 
-上面的三个函数中，只有 `Game::init` 函数有返回值，因为初始化的过程有可能失败。当初始化失败时，应当回收游戏资源，结束游戏。
+上面的三个函数中，只有 `Game::init` 函数有返回值，因为初始化的过程有可能失败。初始化失败时，说明程序运行环境创建出现了问题，应当直接结束游戏。
 
 所以，一个最简单的 Easy2D 程序如下所示，运行后将显示一个无画面的黑窗口。
 
@@ -58,13 +60,17 @@ Game::uninit();
 int main()
 {
     /* 初始化 */
-    if (Game::init(L"Hello", 640, 480))
+    bool ret = Game::init(L"Hello", 640, 480);
+    if (!ret)
     {
-        /* 设计游戏内容 */
-
-        /* 开始游戏 */
-        Game::run();
+        /* 初始化失败 */
+        return -1;
     }
+
+    /* 设计游戏内容 */
+
+    /* 开始游戏 */
+    Game::run();
 
     /* 回收游戏资源 */
     Game::uninit();
@@ -115,19 +121,24 @@ scene->add(text);
 
 int main()
 {
-    if (Game::init(L"Hello", 640, 480))
+    bool ret = Game::init(L"Hello", 640, 480);
+    if (!ret)
     {
-        // 创建一个空场景
-        auto scene = new Scene();
-        // 进入 scene 场景
-        SceneManager::enterScene(scene);
-        // 创建一个文本节点
-        auto text = new Text(L"Hello Easy2D");
-        // 将文本添加到场景中
-        scene->add(text);
-
-        Game::run();
+        return -1;
     }
+
+    /* 设计游戏内容 */
+    // 创建一个空场景
+    auto scene = new Scene();
+    // 进入 scene 场景
+    SceneManager::enterScene(scene);
+    // 创建一个文本节点
+    auto text = new Text(L"Hello Easy2D");
+    // 将文本添加到场景中
+    scene->add(text);
+
+    Game::run();
+
     Game::uninit();
     return 0;
 }

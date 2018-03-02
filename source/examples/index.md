@@ -20,7 +20,7 @@ examples:
 - id: LevelSelectScene
   name: 选择关卡场景示例
   author: Nomango
-  image: /assets/images/sample/LevelSelectScene.png
+  image: /assets/images/sample/LevelSelectExample.png
   description: 点击左右按钮切换关卡，一个有三个关卡可以选择。
   exe_url: http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/LevelSelectExample/LevelSelectExample.7z
   src_url: http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/LevelSelectExample/LevelSelectExample-src.7z
