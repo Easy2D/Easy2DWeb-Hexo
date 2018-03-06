@@ -27,14 +27,10 @@ int main()
 
 ```cpp
 // 初始化
-Game::init(L"Hello", 640, 480);
+Game::init("Hello", 640, 480);
 ```
 
 这个函数必须在 main 函数的第一行调用，且只能调用一次。如果在 `Game::init` 前进行了其他操作，有可能出现未知的错误。
-
-<div class="ui info message"><div class="header">Tips </div>
-Easy2D 使用 Unicode 字符集，所以必须在字符串前加字母 L 标识它，比如 `L"Hello"`。
-</div>
 
 Game 类的 `Game::run` 函数用来开始游戏，它其实是一个循环，当窗口关闭或退出游戏时，这个函数才返回。
 
@@ -60,7 +56,7 @@ Game::uninit();
 int main()
 {
     /* 初始化 */
-    bool ret = Game::init(L"Hello", 640, 480);
+    bool ret = Game::init("Hello", 640, 480);
     if (!ret)
     {
         /* 初始化失败 */
@@ -91,11 +87,11 @@ Easy2D 中使用 new 运算符创建场景：
 auto scene = new Scene();
 ```
 
-`SceneManager(场景管理器)` 是控制场景间切换的类，使用 `SceneManager::enterScene` 函数可以进入你创建的场景中
+`SceneManager(场景管理器)` 是控制场景间切换的类，使用 `SceneManager::enter` 函数可以进入你创建的场景中
 
 ```cpp
 // 进入 scene 场景
-SceneManager::enterScene(scene);
+SceneManager::enter(scene);
 ```
 
 场景中所有的元素都被称为`Node(节点)`，比如场景中的一个按钮，或者一张图片，它们都是节点的一种。
@@ -104,7 +100,7 @@ Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(
 
 ```cpp
 // 创建一个文本节点
-auto text = new Text(L"Hello Easy2D");
+auto text = new Text("Hello Easy2D");
 ```
 
 将创建好的节点加入到场景中，它将显示在画面上
@@ -121,7 +117,7 @@ scene->add(text);
 
 int main()
 {
-    bool ret = Game::init(L"Hello", 640, 480);
+    bool ret = Game::init("Hello", 640, 480);
     if (!ret)
     {
         return -1;
@@ -131,9 +127,9 @@ int main()
     // 创建一个空场景
     auto scene = new Scene();
     // 进入 scene 场景
-    SceneManager::enterScene(scene);
+    SceneManager::enter(scene);
     // 创建一个文本节点
-    auto text = new Text(L"Hello Easy2D");
+    auto text = new Text("Hello Easy2D");
     // 将文本添加到场景中
     scene->add(text);
 
@@ -162,7 +158,7 @@ Easy2D 使用左手坐标空间，坐标系原点在屏幕的左上角，x 轴�
 // 创建一个场景
 auto scene = new Scene();
 // 创建一个精灵
-auto sprite = new Sprite(L"图片名.png");
+auto sprite = new Sprite("图片名.png");
 // 把精灵添加到场景中
 scene->add(sprite);
 ```
@@ -240,7 +236,7 @@ sprite->setPos(width / 2, height / 2);
 Easy2D 按照以下规律命名函数：
 
 - 小驼峰式命名法则，第一个单词小写，后面的单词首字母大写，如`Window::getWidth`
-- 所有函数均按照`动词`+`名语`形式命名，如`SceneManager::enterScene`
+- 所有函数均按照`动词`+`名语`形式命名，如`SceneManager::enter`
 - 获取对象的属性值：`get`+`属性名`，如`Node::getWidth`
 - 修改对象的属性值：`set`+`属性名`，如`Node::setPos`
 - 获取对象的状态(bool值)：`is`+`状态名`，如`Node::isVisiable`

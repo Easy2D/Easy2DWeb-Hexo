@@ -48,14 +48,14 @@ Point p2(10, 10);  // 创建一个 (10, 10) 坐标
 有时也许你需要区分不同的节点，那么可以设置它的名称
 
 ```cpp
-node->setName(L"name_test");    // 设置节点名称
+node->setName("name_test");    // 设置节点名称
 String name = node->getName();  // 获取节点名称
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
 `String`类表示一个字符串。
 ```cpp
-String str = L"Hello World";
+String str = "Hello World";
 ```
 </div>
 
@@ -108,3 +108,27 @@ node1->addChild(node3, 1);
 **根节点**是树型模型最顶端的节点，场景包含了根节点，所以屏幕上所有的节点都是它的子节点。将一个精灵添加入场景，其实是把精灵加入了场景的树型模型中。Easy2D 会遍历场景的树，对树上的所有节点做出处理。
 
 ![场景和节点的关系](/assets/images/tutorial/scene.png)
+
+节点类有一些简单的函数用来判断碰撞，`Node::isPointIn` 函数可以判断一个坐标点是否在节点内，如下所示
+
+```cpp
+// 假设存在节点 node
+// 创建一个坐标点
+Point p(200, 300);
+// 判断这个点是否在节点内部
+if (node->isPointIn(p))
+{
+    // 坐标点在节点内
+}
+```
+
+`Node::isIntersectWith` 函数可以判断两个节点是否相交（碰撞），如下所示
+
+```cpp
+// 假设存在节点 node1 和 node2
+// 判断两节点是否碰撞
+if (node1->isIntersectWith(node2))
+{
+    // 两节点发生碰撞
+}
+```

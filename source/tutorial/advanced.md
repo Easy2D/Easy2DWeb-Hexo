@@ -122,7 +122,7 @@ C++ 中使用 `new` 运算符创建的对象需要使用 `delete` 释放，否�
 
 ```cpp
 // 设置游戏的 AppName
-Game::init(L"game", 640, 480, nullptr, L"easy2d-game");
+Game::init("game", 640, 480, nullptr, "easy2d-game");
 ```
 
 <div class="ui warning message"><div class="header">Warning </div>
@@ -167,7 +167,7 @@ TestScene::TestScene()
 
 // 在合适的地方调用下面的代码进入 TestScene
 auto scene = new TestScene();
-SceneManager::enterScene(scene);
+SceneManager::enter(scene);
 ```
 
 这样使每个场景相对独立，不仅让代码更清晰，而且可以方便进行场景之间的切换。

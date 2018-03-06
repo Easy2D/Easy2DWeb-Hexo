@@ -23,13 +23,26 @@ toclinker:
 
 ```cpp
 // 假设存在动画 action 和精灵 sprite
+// 执行动画
 sprite->runAction(action);
 // 暂停动画
-sprite->pauseAction(action);
+action->pause();
 // 继续动画
-sprite->resumeAction(action);
+action->resume();
 // 停止动画
-sprite->stopAction(action);
+action->stop();
+```
+
+动作可以有自己的名称，然后你可以让所有相同名称的动画停止或继续
+
+```cpp
+// 假设存在动画 action 和精灵 sprite
+// 设置动画的名称
+action->setName("旋转动画");
+// 执行动画
+sprite->runAction(action);
+// 停止 sprite 的“旋转动画”
+sprite->stopAction("旋转动画");
 ```
 
 你也可以直接停止、暂停或继续一个节点的所有动画

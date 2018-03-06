@@ -21,7 +21,7 @@ type: "tutorial"
 
 int main()
 {
-	if (Game::init(L"Demo:Moving Man", 640, 480))
+	if (Game::init("Demo:Moving Man", 640, 480))
 	{
 		/* 设计游戏内容 */
 
@@ -50,7 +50,7 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man() : Sprite("man.png")
     {
         // Man 的构造函数
     }
@@ -67,7 +67,7 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man() : Sprite("man.png")
     {
         // Man 的构造函数
     }
@@ -75,12 +75,12 @@ public:
 
 int main()
 {
-	if (Game::init(L"Demo:Moving Man", 640, 480))
+	if (Game::init("Demo:Moving Man", 640, 480))
 	{
 		// 创建场景
 		auto scene = new Scene();
 		// 进入该场景
-		SceneManager::enterScene(scene);
+		SceneManager::enter(scene);
 
 		// 创建一个 Man 对象
 		auto hero = new Man();
@@ -102,7 +102,7 @@ int main()
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man() : Sprite("man.png")
     {
         // 居中显示在屏幕上
         this->setPivot(0.5, 0.5);
@@ -123,7 +123,7 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man() : Sprite("man.png")
     {
         // 居中显示在屏幕上
         this->setPivot(0.5, 0.5);
@@ -246,3 +246,65 @@ void onUpdate()
 ```
 
 运行游戏，一个按上下左右移动的小人就完成了！
+
+## 完整代码
+
+```cpp
+#include <easy2d.h>
+
+class Man : public Sprite
+{
+public:
+    Man() : Sprite("man.png")
+    {
+        // 居中显示在屏幕上
+        this->setPivot(0.5, 0.5);
+        this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
+    }
+
+    void onUpdate()
+    {
+        if (Input::isKeyDown(KeyCode::UP))
+        {
+            // Man 的 Y 坐标减少 2
+            this->movePosY(-2);
+        }
+        else if (Input::isKeyDown(KeyCode::DOWN))
+        {
+            // Man 的 Y 坐标增加 2
+            this->movePosY(2);
+        }
+
+        if (Input::isKeyDown(KeyCode::LEFT))
+        {
+            // Man 的 X 坐标减少 2
+            this->movePosX(-2);
+        }
+        else if (Input::isKeyDown(KeyCode::RIGHT))
+        {
+            // Man 的 X 坐标增加 2
+            this->movePosX(2);
+        }
+    }
+};
+
+int main()
+{
+	if (Game::init("Demo:Moving Man", 640, 480))
+	{
+		// 创建场景
+		auto scene = new Scene();
+		// 进入该场景
+		SceneManager::enter(scene);
+
+		// 创建一个 Man 对象
+		auto hero = new Man();
+		// 将 Man 添加到场景中
+		scene->add(hero);
+
+		Game::run();
+	}
+	Game::uninit();
+	return 0;
+}
+```

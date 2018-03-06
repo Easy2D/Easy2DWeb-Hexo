@@ -18,7 +18,7 @@ toclinker:
 Text 是节点的一种，它包含了一段文字。你可以把每段文字都当做一个对象进行处理，使用 new 运算符创建它。
 
 ```cpp
-auto text = new Text(L"Hello Easy2D!");
+auto text = new Text("Hello Easy2D!");
 ```
 
 ![Text示意图](/assets/images/tutorial/text1.png)
@@ -51,7 +51,7 @@ text->setOpacity(0.5f);
 如果文字比较多，你可以设置它自动换行：
 
 ```cpp
-auto text = new Text(L"Hello Easy2D!");
+auto text = new Text("Hello Easy2D!");
 text->setWordWrapping(true);    // 开启自动换行
 text->setWordWrappingWidth(70); // 设置文字自动换行的宽度
 ```

@@ -20,8 +20,8 @@ toclinker:
 例如，下面的代码创建了一个可以控制音乐的播放与停止的按钮
 
 ```cpp
-auto btnTextOn = new Text(L"开");   // 创建开状态文字
-auto btnTextOff = new Text(L"关");  // 创建关状态文字
+auto btnTextOn = new Text("开");   // 创建开状态文字
+auto btnTextOff = new Text("关");  // 创建关状态文字
 auto button = new ButtonToggle(btnTextOn, btnTextOff); // 创建开关按钮
 /* 设置点击按钮的回调函数 */
 button->setCallback([=]() {

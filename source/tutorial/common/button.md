@@ -19,11 +19,11 @@ Button 表示一个按钮，你可以把一段文字或者一个精灵变成按�
 
 ```cpp
 // 创建一个精灵
-auto btnSprite = new Sprite(L"按钮图片.png");
+auto btnSprite = new Sprite("按钮图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() {
     // 点击按钮，进入一个新场景
-    App::enterScene(new Scene());
+    App::enter(new Scene());
 };
 // 把精灵变成一个按钮，并设置点击按钮后的回调函数
 auto button = new Button(btnSprite, callback);
@@ -39,13 +39,13 @@ scene->add(button);
 
 ```cpp
 // 创建一个精灵，按钮普通状态显示
-auto btnNormal = new Sprite(L"按钮图片.png");
+auto btnNormal = new Sprite("按钮图片.png");
 // 创建一个精灵，按钮按下状态显示
-auto btnSelect = new Sprite(L"按下时图片.png");
+auto btnSelect = new Sprite("按下时图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() {
     // 点击按钮，进入一个新场景
-    App::enterScene(new Scene());
+    App::enter(new Scene());
 };
 // 创建按钮
 auto button = new Button();

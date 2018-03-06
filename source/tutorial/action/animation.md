@@ -27,9 +27,9 @@ toclinker:
 // 创建帧动画
 auto animation = new Animation();
 // 加载多个精灵帧
-animation->addFrame(new Image(L"第一帧.png"));
-animation->addFrame(new Image(L"第二帧.png"));
-animation->addFrame(new Image(L"第三帧.png"));
+animation->addFrame(new Image("第一帧.png"));
+animation->addFrame(new Image("第二帧.png"));
+animation->addFrame(new Image("第三帧.png"));
 // 精灵执行帧动画
 sprite->runAction(animation);
 ```

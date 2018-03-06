@@ -20,8 +20,8 @@ social:
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    last: v2.0.0-beta4
-    update: "2018-2-8"
+    last: v2.0.0-beta5
+    update: "2018-3-6"
     more: 历史版本
   examples:
   - name: Flappy Bird

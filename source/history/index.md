@@ -5,6 +5,24 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.0.0-beta5 （2018-3-6）
+
+- New Features
+  - `String`类支持ANSI到Unicode的默认转化
+  - Data::saveBool和Data::getBool函数用于储存和取出bool类型的值
+  - 单实例进程，防止同一个游戏打开多个窗口
+  - `Timer` 类更新，使操作更简易
+  - `Action` 类新增 Name 属性
+
+- Trim
+  - 取消 VS2010 的支持
+  - 所有API的float类型参数均改为double
+
+- Fixed
+  - 定时器修改节点属性时闪屏的问题
+
+<br />
+
 ### v2.0.0-beta4 （2018-2-11）
 
 - `新增` 支持 XAudio2 音效播放

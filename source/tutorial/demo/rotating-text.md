@@ -15,7 +15,7 @@ type: "tutorial"
 
 int main()
 {
-    if (Game::init(L"Demo:Rotating Text", 300, 300))
+    if (Game::init("Demo:Rotating Text", 300, 300))
     {
         /* 设计游戏内容 */
 
@@ -35,15 +35,15 @@ int main()
 
 int main()
 {
-    if (Game::init(L"Demo:Rotating Text", 300, 300))
+    if (Game::init("Demo:Rotating Text", 300, 300))
     {
         // 创建场景
         auto scene = new Scene();
         // 进入该场景
-        SceneManager::enterScene(scene);
+        SceneManager::enter(scene);
 
         // 创建一个 Text 对象
-        auto test = new Text(L"Hello Easy2D!");
+        auto test = new Text("Hello Easy2D!");
         // 将 Text 添加到场景中
         scene->add(test);
 
@@ -61,15 +61,15 @@ int main()
 
 int main()
 {
-    if (Game::init(L"Demo:Rotating Text", 300, 300))
+    if (Game::init("Demo:Rotating Text", 300, 300))
     {
         // 创建场景
         auto scene = new Scene();
         // 进入该场景
-        SceneManager::enterScene(scene);
+        SceneManager::enter(scene);
 
         // 创建一个 Text 对象
-        auto text = new Text(L"Hello Easy2D!");
+        auto text = new Text("Hello Easy2D!");
         // 将 Text 添加到场景中
         scene->add(text);
 
@@ -135,4 +135,41 @@ auto action = new ActionLoop(rotate);
 ```cpp
 // 让 Text 执行这个动作
 text->runAction(action);
+```
+
+## 完整代码
+
+```cpp
+#include <easy2d.h>
+
+int main()
+{
+    if (Game::init("Demo:Rotating Text", 300, 300))
+    {
+        // 创建场景
+        auto scene = new Scene();
+        // 进入该场景
+        SceneManager::enter(scene);
+
+        // 创建一个 Text 对象
+        auto text = new Text("Hello Easy2D!");
+        // 将 Text 添加到场景中
+        scene->add(text);
+
+        // 居中显示在屏幕上
+        text->setPivot(0.5, 0.5);
+        text->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
+
+        // 创建一个旋转动画，1 秒内顺时针旋转 60 度
+        auto rotate = new ActionRotateBy(1, 60);
+        // 创建一个循环动画
+        auto action = new ActionLoop(rotate);
+        // 让 Text 执行这个动作
+        text->runAction(action);
+
+        Game::run();
+    }
+    Game::uninit();
+    return 0;
+}
 ```
