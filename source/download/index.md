@@ -6,21 +6,21 @@ type: "download"
 ## 下载
 #### 版本号：Easy2D v2.0.0-beta5
 
-| 下载                    |   格式   |   大小   |          |
-| ----------------------- |:--------:|:--------:|:--------:|
-| Easy2D-v2.0.0-beta5.exe | .exe     | 3.32MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.exe) |
-| Easy2D-v2.0.0-beta5.zip | .zip     | 10.4MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.zip) |
+| 文件名                  |   大小   |          |
+| ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.0-beta5.exe | 3.21MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.exe) |
+| Easy2D-v2.0.0-beta5.7z  | 3.15MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.7z) |
 
 #### 旧版下载
 
-| 下载                    |   格式   |   大小   |          |
-| ----------------------- |:--------:|:--------:|:--------:|
-| Easy2D-v2.0.0-beta4.exe | .exe     | 3.00MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta4.exe) |
-| Easy2D-v2.0.0-beta4.zip | .zip     | 9.66MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta4.zip) |
-| Easy2D-v2.0.0-beta3.exe | .exe     | 908Kb   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta3.exe) |
-| Easy2D-v2.0.0-beta3.zip | .zip     | 1.54Mb   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta3.zip) |
-| Easy2D-v2.0.0-beta2.exe | .exe     | 1.07MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta2.exe) |
-| Easy2D-v2.0.0-beta2.zip | .zip     | 1.85MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta2.zip) |
+| 文件名                  |   大小   |          |
+| ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.0-beta4.exe | 3.00MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta4.exe) |
+| Easy2D-v2.0.0-beta4.zip | 9.66MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta4.zip) |
+| Easy2D-v2.0.0-beta3.exe | 908Kb   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta3.exe) |
+| Easy2D-v2.0.0-beta3.zip | 1.54Mb   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta3.zip) |
+| Easy2D-v2.0.0-beta2.exe | 1.07MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta2.exe) |
+| Easy2D-v2.0.0-beta2.zip | 1.85MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta2.zip) |
 
 ## 社区交流
 
