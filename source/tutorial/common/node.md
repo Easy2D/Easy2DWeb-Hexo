@@ -33,8 +33,8 @@ node->setPosX(posX);
 node->setPosY(posY);
 // 使用 get + Pos 可以获取节点坐标
 Point pos = node->getPos();
-float posX = node->getPosX();
-float posY = node->getPosY();
+double posX = node->getPosX();
+double posY = node->getPosY();
 ```
 
 <div class="ui info message"><div class="header">Tips </div>

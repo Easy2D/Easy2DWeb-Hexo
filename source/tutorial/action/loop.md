@@ -23,9 +23,9 @@ toclinker:
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
-auto fadeOut = new ActionFadeOut(1.5f);
+auto fadeOut = new ActionFadeOut(1.5);
 // 创建一个 0.5 秒的淡入动画
-auto fadeIn = new ActionFadeIn(0.5f);
+auto fadeIn = new ActionFadeIn(0.5);
 // 组合两个动画
 auto two = new ActionTwo(fadeOut, fadeIn);
 // 创建一个循环动画

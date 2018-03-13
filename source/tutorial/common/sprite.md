@@ -62,12 +62,12 @@ Sprite 具有节点的通用属性，你可以对它进行移动、旋转、缩�
 
 ```cpp
 /* 移动到屏幕中央 */
-sprite->setPivot(0.5f, 0.5f);
+sprite->setPivot(0.5, 0.5);
 sprite->setPos(App::getWidth() / 2, App::getHeight() / 2);
 /* 顺时针旋转 30 度 */
 sprite->setRotation(30);
 /* 放到至原来的两倍 */
 sprite->setScale(2);
 /* 不透明度设为 0.5 */
-sprite->setOpacity(0.5f);
+sprite->setOpacity(0.5);
 ```

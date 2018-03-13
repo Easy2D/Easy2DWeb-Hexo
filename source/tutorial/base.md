@@ -169,7 +169,7 @@ scene->add(sprite);
 
 节点的`Pivot`(中心点) 是一个重要属性，它相当于节点的 “把手”。有了中心点，你就可以 “抓着” 它移动这个节点，或者旋转它。
 
-`Node::setPivot` 函数用于设置节点的中心点，它需要两个 float 类型的参数，两个参数的取值范围都是 [0, 1]，代表了中心点的位置。中心点一定在节点的内部，中心点设置为（0, 0）代表节点的中心点在它的左上角，（1, 1）代表中心点在它的右下角，（0.5, 1）代表中心点在它的底部的中心位置。
+`Node::setPivot` 函数用于设置节点的中心点，它需要两个 double 类型的参数，两个参数的取值范围都是 [0, 1]，代表了中心点的位置。中心点一定在节点的内部，中心点设置为（0, 0）代表节点的中心点在它的左上角，（1, 1）代表中心点在它的右下角，（0.5, 1）代表中心点在它的底部的中心位置。
 
 例如，下图是一个精灵在中心点分别为 (0.5, 0.5) 和 (0, 0) 时进行旋转得到的结果：
 
@@ -195,12 +195,12 @@ sprite->setPivot(0.5, 0.5);
 
 ```cpp
 // 获取精灵的宽度
-float width = sprite->getWidth();
+double width = sprite->getWidth();
 // 获取精灵高度
-float height = sprite->getHeight();
+double height = sprite->getHeight();
 ```
 
-`Node::setPos` 函数用来直接设置节点在屏幕上的位置，它需要两个 float 类型的参数，分别表示节点的 x 坐标和 y 坐标。
+`Node::setPos` 函数用来直接设置节点在屏幕上的位置，它需要两个 double 类型的参数，分别表示节点的 x 坐标和 y 坐标。
 
 ```cpp
 // 移动精灵的位置
@@ -213,9 +213,9 @@ sprite->setPos(width / 2, height / 2);
 
 ```cpp
 // 获取窗口宽度
-float width = EApp::getWidth();
+double width = EApp::getWidth();
 // 获取窗口高度
-float height = EApp::getHeight();
+double height = EApp::getHeight();
 ```
 
 设置精灵的坐标，让它移动到屏幕的中心

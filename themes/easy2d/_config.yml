@@ -27,7 +27,7 @@ index:
   - name: Flappy Bird
     author: Nomango
     image: /assets/images/sample/FlappyBird.png
-    description: 像素鸟是曾经超火的一款手机游戏，手残党勿入~
+    description: 像素鸟是曾经超火的一款手机游戏，控制小鸟穿越水管，赚取更高分！
     url: /examples/#FlappyBird
   - name: Smart Clock
     author: Nomango
@@ -51,5 +51,5 @@ plugins:
   lightgallery: true
   justifiedgallery: true
   leancloud:
-    app_id: vlit2JhV3ayuPyc63FSCqqYW-gzGzoHsz
-    app_key: lLomVC08AvETTm7wnz2cV3R0
+    app_id: zJP8mgDyy0AdYxiVkIumCsPO-gzGzoHsz
+    app_key: m79XePr5OoBF5bjcsTcTTAb1

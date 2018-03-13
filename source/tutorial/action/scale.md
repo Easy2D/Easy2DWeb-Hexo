@@ -23,7 +23,7 @@ toclinker:
 
 ```cpp
 // 创建一个缩放动画，1 秒后缩放到原始大小的 0.5 倍
-auto scaleTo = new ActionScaleTo(1, 0.5f);
+auto scaleTo = new ActionScaleTo(1, 0.5);
 ```
 
 执行这个动画后，无论节点本来多大，它都会在 1 秒内逐渐变化成原始大小的 0.5 倍。
@@ -32,7 +32,7 @@ auto scaleTo = new ActionScaleTo(1, 0.5f);
 
 ```cpp
 // 创建一个缩放动画，1 秒后缩放倍数减少 0.3
-auto scaleBy = new ActionScaleBy(1, -0.3f);
+auto scaleBy = new ActionScaleBy(1, -0.3);
 ```
 
 例如下面的精灵的起始缩放倍数是 0.5，执行这个动画后，它会在 1 秒内逐渐缩小至原始大小的 0.2 倍。
@@ -41,7 +41,7 @@ auto scaleBy = new ActionScaleBy(1, -0.3f);
 // 创建一个精灵
 auto sprite = new Sprite();
 // 设置精灵的缩放为原来的 0.5 倍
-sprite->setScale(0.5f);
+sprite->setScale(0.5);
 // 让这个精灵执行位移动画
 sprite->runAction(scaleBy);
 ```

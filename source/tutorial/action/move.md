@@ -23,7 +23,7 @@ toclinker:
 
 ```cpp
 // 创建一个位移动画，2.5 秒后使节点移动到坐标 (100, 200) 处
-auto moveTo = new ActionMoveTo(2.5f, Point(100, 200));
+auto moveTo = new ActionMoveTo(2.5, Point(100, 200));
 ```
 
 调用节点的 `runAction` 函数，可以让节点执行动画。如下面的代码执行后，无论精灵在什么位置，它都会在 2.5 秒内移动到坐标 (100, 200) 处。
@@ -39,7 +39,7 @@ sprite->runAction(moveTo);
 
 ```cpp
 // 创建一个位移动画，2.5 秒内使节点移动横向移动 100 像素
-auto moveBy = new ActionMoveBy(2.5f, Vector(100, 0));
+auto moveBy = new ActionMoveBy(2.5, Vector(100, 0));
 ```
 
 执行这个动画后，节点会从它的起始位置开始，在 2.5 秒内向正右方移动 100 像素。

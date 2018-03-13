@@ -23,10 +23,14 @@
             </div>
             <div class="description"><%- item.description %> </div>
         </div>
+        <% if (item.src_url && item.exe_url) { %>
         <div class="ui bottom attached two buttons">
             <a class="ui button" href="<%- item.src_url %>">下载源码</a>
             <a class="ui blue button" href="<%- item.exe_url %>">下载游戏</a>
         </div>
+        <% } else { %>
+        <a class="ui blue button" href="<%- item.exe_url %>">下载游戏 &amp; 源码</a>
+        <% } %>
     </div>
 <% }); %>
 

@@ -165,7 +165,7 @@ void onUpdate()
     if (Input::isKeyDown(KeyCode::UP))
     {
         // 获取当前 Y 坐标
-        float y = this->getPosY();
+        double y = this->getPosY();
         // 重新设置它的坐标
         this->setPosY(y - 2);
     }

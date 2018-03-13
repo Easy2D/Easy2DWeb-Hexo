@@ -23,13 +23,13 @@ toclinker:
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
-auto fadeOut = new ActionFadeOut(1.5f);
+auto fadeOut = new ActionFadeOut(1.5);
 // 创建一个回调函数动画
 auto callback = new ActionCallback([=]() {
     sprite->setRotation(45);    // 在回调函数中修改精灵的旋转角度
 });
 // 创建一个 0.5 秒的淡入动画
-auto fadeIn = new ActionFadeIn(0.5f);
+auto fadeIn = new ActionFadeIn(0.5);
 // 组合三个动画成顺序动画
 auto sequence = new ActionSequence(3, fadeOut, callback, fadeIn);
 // 执行顺序动画

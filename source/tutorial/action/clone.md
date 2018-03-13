@@ -23,7 +23,7 @@ toclinker:
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
-auto fadeOut = new ActionFadeOut(1.5f);
+auto fadeOut = new ActionFadeOut(1.5);
 // 两个精灵执行同一个动画将出现错误
 sprite->runAction(fadeOut);
 sprite2->runAction(fadeOut);
@@ -33,7 +33,7 @@ sprite2->runAction(fadeOut);
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
-auto fadeOut = new ActionFadeOut(1.5f);
+auto fadeOut = new ActionFadeOut(1.5);
 // 第一个精灵执行动画
 sprite->runAction(fadeOut);
 // 第二个精灵执行这个动画的克隆动画

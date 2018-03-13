@@ -23,7 +23,7 @@ toclinker:
 
 ```cpp
 // 创建一个透明度渐变动画，1 秒后透明度变为 0.2
-auto opacityTo = new ActionOpacityTo(1, 0.2f);
+auto opacityTo = new ActionOpacityTo(1, 0.2);
 ```
 
 执行这个动画后，无论节点本来的透明度如何，它的透明度都会在 1 秒内变成 0.2。
@@ -32,7 +32,7 @@ auto opacityTo = new ActionOpacityTo(1, 0.2f);
 
 ```cpp
 // 创建一个透明度渐变动画，1 秒后透明度减少 0.5
-auto opacityBy = new ActionOpacityBy(1, -0.5f);
+auto opacityBy = new ActionOpacityBy(1, -0.5);
 ```
 
 例如下面的精灵的起始透明度是 0.5，执行这个动画后，它的透明度会在 1 秒内减少到 0。
@@ -41,7 +41,7 @@ auto opacityBy = new ActionOpacityBy(1, -0.5f);
 // 创建一个精灵
 auto sprite = new Sprite();
 // 设置精灵的透明度为 0.5
-sprite->setOpacity(0.5f);
+sprite->setOpacity(0.5);
 // 让这个精灵执行位移动画
 sprite->runAction(opacityBy);
 ```

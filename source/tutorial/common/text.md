@@ -34,14 +34,14 @@ Text 支持节点的所有通用属性，例如坐标、缩放、旋转角度、
 
 ```cpp
 /* 移动到屏幕中央 */
-text->setPivot(0.5f, 0.5f);
+text->setPivot(0.5, 0.5);
 text->setPos(App::getWidth() / 2, App::getHeight() / 2);
 /* 顺时针旋转 30 度 */
 text->setRotation(30);
 /* 放到至原来的两倍 */
 text->setScale(2);
 /* 不透明度设为 0.5 */
-text->setOpacity(0.5f);
+text->setOpacity(0.5);
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
