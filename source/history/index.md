@@ -5,6 +5,28 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.0.0-beta6 （2018-3-13）
+
+- New Features
+  - 添加 `Listener` 类和 `Input::add` 函数，用于监听用户输入
+  - `Data` 类储存数据方法增加字段属性
+
+- Trim
+  - `File` 类更名为 `Path` 类
+  - 空场景运行时不再创建默认场景
+  - 所有节点都包含一个默认形状（矩形）
+  - 节点发生碰撞时默认不再触发 onCollide 函数
+
+- Fixed
+  - 判断点与节点、节点与节点的关系时，也同时判断子节点
+  - 修复了VS2012对 std::function 支持不完全造成的问题
+  - 修复了 `String` 字符串操作时的一些问题
+
+- Remove
+  - 移除了 `String::append` 函数
+
+<br />
+
 ### v2.0.0-beta5 （2018-3-6）
 
 - New Features

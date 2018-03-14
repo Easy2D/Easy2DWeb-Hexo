@@ -13,11 +13,13 @@ date: 2018-03-06 15:47:08
 - 对于新手来说 Timer（定时器）的用法过于复杂
 - 没有判断节点碰撞的简单方法
 
+<!-- more -->
+
 ### 命名上的一些变化
 
 首先要说明的是函数命名上发生了一些变化
 
-例如，进入场景函数 `SceneManager::enterScene` 改为了 `SceneManager::enter`，改名的原因是太啰嗦，SceneManger 的 enter 函数肯定是进入场景用的，难不成还能进入其他的东西？
+例如，进入场景函数 `SceneManager::enterScene` 改为了 `SceneManager::enter`，改名的原因是太啰嗦，场景管理器的 enter 函数必然是进入场景，不用再加一个 Scene 后缀。
 
 更名的函数有
 
