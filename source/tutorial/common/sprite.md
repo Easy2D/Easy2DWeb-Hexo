@@ -17,11 +17,11 @@ toclinker:
 
 Sprite 可以说是引擎中最常见的类，它通常是一张图片，用来表示游戏中的一个物体。
 
-你可以用 `loadFrom` 函数选择本地文件的一张图片加载它。
+你可以用 `open` 函数打开本地文件的一张图片。
 
 ```cpp
 auto sprite = new Sprite();
-sprite->loadFrom("本地图片.png"); // 从本地图片加载
+sprite->open("本地图片.png"); // 从本地图片加载
 ```
 
 ![Sprite示意图](/assets/images/tutorial/sprite1.png)
@@ -54,20 +54,16 @@ sprite->clip(0, 0, sprite->getWidth(), sprite->getHeight() / 2);
 Sprite 具有节点的通用属性，你可以对它进行移动、旋转、缩放等操作
 
 <div class="jg-box">
-![Sprite移动到屏幕中央](/assets/images/tutorial/sprite4.png)
 ![Sprite旋转](/assets/images/tutorial/sprite5.png)
 ![Sprite放大](/assets/images/tutorial/sprite6.png)
 ![Sprite半透明](/assets/images/tutorial/sprite7.png)
 </div>
 
 ```cpp
-/* 移动到屏幕中央 */
-sprite->setPivot(0.5, 0.5);
-sprite->setPos(App::getWidth() / 2, App::getHeight() / 2);
-/* 顺时针旋转 30 度 */
+// 顺时针旋转 30 度
 sprite->setRotation(30);
-/* 放到至原来的两倍 */
+// 放到至原来的两倍
 sprite->setScale(2);
-/* 不透明度设为 0.5 */
+// 不透明度设为 0.5
 sprite->setOpacity(0.5);
 ```

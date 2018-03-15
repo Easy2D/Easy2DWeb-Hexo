@@ -26,21 +26,17 @@ auto text = new Text("Hello Easy2D!");
 Text 支持节点的所有通用属性，例如坐标、缩放、旋转角度、不透明度等
 
 <div class="jg-box">
-![Text移动到屏幕中央](/assets/images/tutorial/text2.png)
 ![Text旋转](/assets/images/tutorial/text3.png)
 ![Text放大](/assets/images/tutorial/text4.png)
 ![Text半透明](/assets/images/tutorial/text5.png)
 </div>
 
 ```cpp
-/* 移动到屏幕中央 */
-text->setPivot(0.5, 0.5);
-text->setPos(App::getWidth() / 2, App::getHeight() / 2);
-/* 顺时针旋转 30 度 */
+// 顺时针旋转 30 度
 text->setRotation(30);
-/* 放到至原来的两倍 */
+// 放到至原来的两倍
 text->setScale(2);
-/* 不透明度设为 0.5 */
+// 不透明度设为 0.5
 text->setOpacity(0.5);
 ```
 

@@ -29,7 +29,7 @@ Easy2D 不支持 VS2012 以下的版本（包括 VC6.0），如果你使用的�
 <br/>
 
 <div class="ui info message"><div class="header">Tips </div>
-如果需要手动安装，可以下载 `.zip` 格式的压缩包，解压后将相关文件分别拷贝到 VS 对应的 include 和 lib 文件夹内，或者你的工程路径下即可。
+如果需要手动安装，可以下载 `.7z` 格式的压缩包，解压后将相关文件分别拷贝到 VS 对应的 include 和 lib 文件夹内，或者你的工程路径下即可。
 </div>
 
 
@@ -47,15 +47,15 @@ Easy2D 不支持 VS2012 以下的版本（包括 VC6.0），如果你使用的�
 int main()
 {
     // 初始化游戏，可以指定窗口的名称、宽高等属性
-    if (Game::init(L"Hello", 240, 100))
+    if (Game::init("Hello", 240, 100))
     {
         // 创建一个场景
         auto scene = new Scene();
         // 进入该场景
-        SceneManager::enterScene(scene);
+        SceneManager::enter(scene);
 
         // 创建一个文本
-        auto text = new Text(L"Hello Easy2D!");
+        auto text = new Text("Hello Easy2D!");
         // 将这个文本添加到场景中
         scene->add(text);
 

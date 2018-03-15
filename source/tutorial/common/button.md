@@ -23,7 +23,7 @@ auto btnSprite = new Sprite("按钮图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() {
     // 点击按钮，进入一个新场景
-    App::enter(new Scene());
+    SceneManager::enter(new Scene());
 };
 // 把精灵变成一个按钮，并设置点击按钮后的回调函数
 auto button = new Button(btnSprite, callback);
@@ -45,7 +45,7 @@ auto btnSelect = new Sprite("按下时图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() {
     // 点击按钮，进入一个新场景
-    App::enter(new Scene());
+    SceneManager::enter(new Scene());
 };
 // 创建按钮
 auto button = new Button();

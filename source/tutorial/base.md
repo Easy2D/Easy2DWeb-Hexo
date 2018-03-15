@@ -213,9 +213,9 @@ sprite->setPos(width / 2, height / 2);
 
 ```cpp
 // 获取窗口宽度
-double width = EApp::getWidth();
+double width = Window::getWidth();
 // 获取窗口高度
-double height = EApp::getHeight();
+double height = Window::getHeight();
 ```
 
 设置精灵的坐标，让它移动到屏幕的中心
