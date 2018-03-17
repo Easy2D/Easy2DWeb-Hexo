@@ -48,7 +48,7 @@ text->setOpacity(0.5);
 
 ```cpp
 auto text = new Text("Hello Easy2D!");
-text->setWordWrapping(true);    // 开启自动换行
+text->setWordWrappingEnable(true);    // 开启自动换行
 text->setWordWrappingWidth(70); // 设置文字自动换行的宽度
 ```
 

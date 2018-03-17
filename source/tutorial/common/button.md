@@ -21,7 +21,8 @@ Button 表示一个按钮，你可以把一段文字或者一个精灵变成按�
 // 创建一个精灵
 auto btnSprite = new Sprite("按钮图片.png");
 // 创建点击按钮后的回调函数
-auto callback = []() {
+auto callback = []() 
+{
     // 点击按钮，进入一个新场景
     SceneManager::enter(new Scene());
 };
@@ -43,7 +44,8 @@ auto btnNormal = new Sprite("按钮图片.png");
 // 创建一个精灵，按钮按下状态显示
 auto btnSelect = new Sprite("按下时图片.png");
 // 创建点击按钮后的回调函数
-auto callback = []() {
+auto callback = []() 
+{
     // 点击按钮，进入一个新场景
     SceneManager::enter(new Scene());
 };
