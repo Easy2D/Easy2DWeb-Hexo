@@ -4,23 +4,23 @@ icon: download
 type: "download"
 ---
 ## 下载
-#### 版本号：2.0.0-beta6
+#### 版本号：2.0.0-beta7
 
 | 文件名                  |   大小   |          |
 | ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.0-beta6.exe | 3.48MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.exe) |
-| Easy2D-v2.0.0-beta6.7z  | 3.42MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.7z) |
+| Easy2D-v2.0.0-beta7.exe | 4.73MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.exe) |
+| Easy2D-v2.0.0-beta7.7z  | 4.66MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.7z) |
 
 #### 旧版下载
 
 | 文件名                  |   大小   |          |
 | ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.0-beta6.exe | 3.48MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.exe) |
+| Easy2D-v2.0.0-beta6.7z  | 3.42MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.7z) |
 | Easy2D-v2.0.0-beta5.exe | 3.21MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.exe) |
 | Easy2D-v2.0.0-beta5.7z  | 3.15MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.7z) |
 | Easy2D-v2.0.0-beta4.exe | 3.00MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta4.exe) |
 | Easy2D-v2.0.0-beta4.zip | 9.66MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta4.zip) |
-| Easy2D-v2.0.0-beta3.exe | 908Kb   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta3.exe) |
-| Easy2D-v2.0.0-beta3.zip | 1.54Mb   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta3.zip) |
 
 ## 社区交流
 
@@ -28,24 +28,38 @@ type: "download"
 
 ## 更新内容
 
-### v2.0.0-beta6 （2018-3-13）
+### v2.0.0-beta7 （2018-4-24）
 
 - New Features
-  - 添加 `Listener` 类和 `Input::add` 函数，用于监听用户输入
-  - `Data` 类储存数据方法增加字段属性
+  - `String::format` 方法创建格式化字符串
+  - `Renderer::showFps` 方法显示 FPS
+  - `Text` 增加文字描边、下划线、删除线、行间距、对齐方式等样式
+  - `Text::getLineCount` 获取文本显示行数
+  - 增加 `Shape` 形状类，用于绘制几何图形
+  - 增加 `ShapeStyle` 枚举，用于设置 `Shape` 样式
+  - 增加 `TextStyle` 枚举，用于设置 `Text` 样式
+  - 增加 `LineJoin` 枚举，用于设置相交线样式
+  - 增加 `ColliderType` 枚举，用于设置碰撞体类型
+  - 增加创建 `Action` 的静态方法
+  - `Color` 封装为结构体，并增加 Alpha 值
+  - 增加 `NodeProperty` 结构体，可以直接获取和设置节点的所有属性
+  - 增加 `CustomTextRenderer` 文字渲染器
+  - VS2012 以上版本支持以初始化列表的方式添加多个参数
+  - 支持 VS2010 ，但该版本功能受限
 
 - Trim
-  - `File` 类更名为 `Path` 类
-  - 空场景运行时不再创建默认场景
-  - 所有节点都包含一个默认形状（矩形）
-  - 节点发生碰撞时默认不再触发 onCollide 函数
+  - `Game::init` 方法不再设置窗口标题和大小
+  - `Game::start` 方法可设置参数使游戏结束时自动回收资源
+  - 原 `Shape` 形状类更名为 `Collider` 碰撞体
+  - `Timer` 定时器类重做
+  - 移除 `Listener` 监听器，其相关函数重做
+  - 部分枚举改为强枚举类型
+  - `Function` 封装为了伪函数类
+  - `Transition` 场景切换动画使用 `D2D1Layer` 重做
+  - 判断节点是否碰撞及点是否在节点内时，不再判断其子节点
 
 - Fixed
-  - 判断点与节点、节点与节点的关系时，也同时判断子节点
-  - 修复了VS2012对 std::function 支持不完全造成的问题
-  - 修复了 `String` 字符串操作时的一些问题
-
-- Remove
-  - 移除了 `String::append` 函数
+  - 修复了游戏结束时无法完全回收资源的问题
+  - `Game::init` 初始化失败时，自动回收过程中产生的资源
 
 <a class="ui button" href="/history">查看历史版本</a>
