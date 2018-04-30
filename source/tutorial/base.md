@@ -21,34 +21,30 @@ int main()
 }
 ```
 
-一个 Easy2D 游戏需要四个部分：**初始化**、**设计游戏内容**、**开始游戏**、**回收游戏资源**。
+`Game` 类用来控制游戏主流程，它可以完成开始游戏、暂停游戏、退出游戏等一系列操作。
 
-`Game` 类用来控制游戏流程，它可以完成开始游戏、暂停游戏、退出游戏等一系列操作。Game 类的 `Game::init` 函数用来初始化游戏并创建一个窗口，可以指定窗口的标题、宽度高度、图标等等属性，例如下面的代码创建了一个标题为 "Hello"，宽度为 640 像素，高度为 480 像素的窗口。
+`Game::init` 函数对游戏进行初始化，通常它需要在 main 函数的第一行调用，且只能调用一次。如果在初始化前进行了其他操作，有可能出现未知的错误。该函数返回 bool 类型的值，当初始化失败时，它返回 false ，这说明程序运行环境出现了问题，应当直接结束游戏。
 
 ```cpp
-// 初始化
-Game::init("Hello", 640, 480);
+int main()
+{
+    // 初始化
+    if (Game::init())
+    {
+        // 初始化成功
+    }
+    return 0;
+}
 ```
 
-这个函数必须在 main 函数的第一行调用，且只能调用一次。如果在 `Game::init` 前进行了其他操作，有可能出现未知的错误。
-
-Game 类的 `Game::run` 函数用来开始游戏，它其实是一个循环，当窗口关闭或退出游戏时，这个函数才返回。
+Game 类的 `Game::start` 函数用来开始游戏，一旦执行该函数，将进入到游戏主循环中，只有当窗口关闭或退出游戏时，这个函数才返回。
 
 ```cpp
 // 开始游戏
-Game::run();
+Game::start();
 ```
 
-Game 类的 `Game::uninit` 函数用来回收游戏资源，这个函数应在 `Game::run` 函数之后调用，回收游戏过程中产生的资源。
-
-```cpp
-// 回收游戏资源
-Game::uninit();
-```
-
-上面的三个函数中，只有 `Game::init` 函数有返回值，因为初始化的过程有可能失败。初始化失败时，说明程序运行环境创建出现了问题，应当直接结束游戏。
-
-所以，一个最简单的 Easy2D 程序如下所示，运行后将显示一个无画面的黑窗口。
+一个 Easy2D 程序应由 **初始化**、**设计游戏内容**、**开始游戏** 三个部分组成，下面的代码运行后将显示一个无画面的黑窗口。
 
 ```cpp
 #include <easy2d.h>
@@ -56,21 +52,53 @@ Game::uninit();
 int main()
 {
     /* 初始化 */
-    bool ret = Game::init("Hello", 640, 480);
-    if (!ret)
+    if (Game::init())
     {
-        /* 初始化失败 */
-        return -1;
+        /* 设计游戏内容 */
+
+        /* 开始游戏 */
+        Game::run();
     }
-
-    /* 设计游戏内容 */
-
-    /* 开始游戏 */
-    Game::run();
-
-    /* 回收游戏资源 */
-    Game::uninit();
     return 0;
+}
+```
+
+<br/>
+
+## 调整窗口
+
+`Window` 类用来控制窗口的属性，例如，你可以使用 `Window::setTitle` 函数修改窗口标题，并使用 `Window::setSize` 函数设置窗口的大小。
+
+```cpp
+if (Game::init())
+{
+    // 修改窗口标题
+    Window::setTitle("Demo");
+    // 修改窗口大小
+    Window::setSize(300, 300);
+
+    Game::start();
+}
+```
+
+`Window::getWidth` 和 `Window::getHeight` 函数可以获取窗口的宽度和高度，这两个函数可以帮助你对齐图片位置。
+
+另外，Easy2D 会默认关闭控制台（因为游戏不需要控制台），但你可以使用 `Window::showConsole` 函数重新打开它，这有助于帮助你 Debug。
+
+```cpp
+if (Game::init())
+{
+    // 显示控制台
+    Window::showConsole();
+
+    // 获取窗口的宽度和高度
+    double width = Window::getWidth();
+    double height = Window::getHeight();
+
+    // 将窗口的宽高输出在控制台上
+    printf("%lf %lf\n", width, height);
+
+    Game::start();
 }
 ```
 
@@ -86,6 +114,10 @@ Easy2D 中使用 new 运算符创建场景：
 // 创建一个空场景
 auto scene = new Scene();
 ```
+
+<div class="ui info message"><div class="header">Tips </div>
+Easy2D 中的对象内存都被统一管理，所以通常你使用 new 创建 Easy2D 对象后无需考虑何时 delete 它。
+</div>
 
 `SceneManager(场景管理器)` 是控制场景间切换的类，使用 `SceneManager::enter` 函数可以进入你创建的场景中
 
@@ -117,25 +149,22 @@ scene->add(text);
 
 int main()
 {
-    bool ret = Game::init("Hello", 640, 480);
-    if (!ret)
+    if (Game::init())
     {
-        return -1;
+        /* 设计游戏内容 */
+
+        // 创建一个空场景
+        auto scene = new Scene();
+        // 进入 scene 场景
+        SceneManager::enter(scene);
+
+        // 创建一个文本节点
+        auto text = new Text("Hello Easy2D");
+        // 将文本添加到场景中
+        scene->add(text);
+
+        Game::start();
     }
-
-    /* 设计游戏内容 */
-    // 创建一个空场景
-    auto scene = new Scene();
-    // 进入 scene 场景
-    SceneManager::enter(scene);
-    // 创建一个文本节点
-    auto text = new Text("Hello Easy2D");
-    // 将文本添加到场景中
-    scene->add(text);
-
-    Game::run();
-
-    Game::uninit();
     return 0;
 }
 ```
@@ -209,18 +238,11 @@ sprite->setPos(width / 2, height / 2);
 
 节点的中心点为它的正中心时，如果把它的 x 坐标设置为屏幕宽度的一半，y 坐标设置为屏幕高度的一半，那么它将显示在屏幕正中央。
 
-`Window` 类用于控制与窗口有关的内容，`Window::getWidth`和`Window::getHeight`函数可以获取窗口的宽度和高度，如下所示
-
 ```cpp
 // 获取窗口宽度
 double width = Window::getWidth();
 // 获取窗口高度
 double height = Window::getHeight();
-```
-
-设置精灵的坐标，让它移动到屏幕的中心
-
-```cpp
 // 移动精灵到屏幕中央
 sprite->setPos(width / 2, height / 2);
 ```
@@ -235,8 +257,8 @@ sprite->setPos(width / 2, height / 2);
 
 Easy2D 按照以下规律命名函数：
 
-- 小驼峰式命名法则，第一个单词小写，后面的单词首字母大写，如`Window::getWidth`
-- 所有函数均按照`动词`+`名语`形式命名，如`SceneManager::enter`
+- 小驼峰式命名法则，第一个单词小写，后面的单词首字母大写，如`Window::setTitle`
+- 所有函数均按照`动词`+`名语`形式命名，如`Window::showConsole`
 - 获取对象的属性值：`get`+`属性名`，如`Node::getWidth`
 - 修改对象的属性值：`set`+`属性名`，如`Node::setPos`
 - 获取对象的状态(bool值)：`is`+`状态名`，如`Node::isVisiable`

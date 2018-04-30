@@ -8,13 +8,14 @@ type: "history"
 ### v2.0.0-beta7 （2018-4-24）
 
 - New Features
+  - `Text` 增加文字描边、下划线、删除线、行间距、对齐方式等样式
+  - 增加 `Text::getLineCount` 方法获取文本显示行数
+  - 增加从程序资源加载图片和音乐的功能
   - `String::format` 方法创建格式化字符串
   - `Renderer::showFps` 方法显示 FPS
-  - `Text` 增加文字描边、下划线、删除线、行间距、对齐方式等样式
-  - `Text::getLineCount` 获取文本显示行数
   - 增加 `Shape` 形状类，用于绘制几何图形
   - 增加 `ShapeStyle` 枚举，用于设置 `Shape` 样式
-  - 增加 `TextStyle` 枚举，用于设置 `Text` 样式
+  - 增加 `TextStyle` 结构体，用于设置 `Text` 样式
   - 增加 `LineJoin` 枚举，用于设置相交线样式
   - 增加 `ColliderType` 枚举，用于设置碰撞体类型
   - 增加创建 `Action` 的静态方法
@@ -29,6 +30,7 @@ type: "history"
   - `Game::start` 方法可设置参数使游戏结束时自动回收资源
   - 原 `Shape` 形状类更名为 `Collider` 碰撞体
   - `Timer` 定时器类重做
+  - `Music` 音乐类重做
   - 移除 `Listener` 监听器，其相关函数重做
   - 部分枚举改为强枚举类型
   - `Function` 封装为了伪函数类
@@ -38,6 +40,11 @@ type: "history"
 - Fixed
   - 修复了游戏结束时无法完全回收资源的问题
   - `Game::init` 初始化失败时，自动回收过程中产生的资源
+
+- Remove
+  - 移除了 `Font` 结构体
+  - 移除了 `TimerManager` 类
+  - 移除了 `MusicManager` 类
 
 ### v2.0.0-beta6 （2018-3-13）
 
