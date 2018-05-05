@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [ [快速上手篇,/tutorial/demo/], 旋转的文字]
+subtitle: [ [快速上手,/tutorial/demo/], 旋转的文字]
 icon: idea
 toc: true
 type: "tutorial"
@@ -8,7 +8,7 @@ type: "tutorial"
 
 ## 准备
 
-在 VS 中写好我们基础篇里学习的基本代码，运行后显示一个 300*300 大小的窗口。
+在 VS 中写好我们新手入门里学习的基本代码，运行后显示一个 300*300 大小的窗口。
 
 ```cpp
 #include <easy2d.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-用我们在基础篇中学到的方法，修改文本中心点和文本坐标，让它在屏幕上居中显示
+用我们在新手入门中学到的方法，修改文本中心点和文本坐标，让它在屏幕上居中显示
 
 ```cpp
 #include <easy2d.h>

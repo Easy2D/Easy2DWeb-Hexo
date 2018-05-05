@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [基础篇]
+subtitle: [新手入门]
 icon: idea
 toc: true
 type: "tutorial"

@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [ [快速上手篇,/tutorial/demo/], 移动的小人]
+subtitle: [ [快速上手,/tutorial/demo/], 移动的小人]
 icon: idea
 toc: true
 type: "tutorial"
@@ -14,7 +14,7 @@ type: "tutorial"
 
 ![准备图片](/assets/images/tutorial/demo/moving-man/1.png)
 
-在 VS 中写好我们基础篇里学习的基本代码，运行后显示一个 640*480 大小的窗口。
+在 VS 中写好我们新手入门里学习的基本代码，运行后显示一个 640*480 大小的窗口。
 
 ```cpp
 #include <easy2d.h>
@@ -96,7 +96,7 @@ int main()
 
 运行后，程序将显示一个人物图片。
 
-我们用基础篇学过的方法，把居中的代码写在 Man 的构造函数中，让 Man 在屏幕上居中显示。
+我们用新手入门学过的方法，把居中的代码写在 Man 的构造函数中，让 Man 在屏幕上居中显示。
 
 ```cpp
 class Man : public Sprite

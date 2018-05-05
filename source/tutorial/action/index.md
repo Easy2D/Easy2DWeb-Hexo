@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [动画简介]
+subtitle: [节点动画]
 icon: idea
 type: "tutorial"
 ---

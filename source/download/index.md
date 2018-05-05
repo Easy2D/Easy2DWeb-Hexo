@@ -32,7 +32,9 @@ type: "download"
   - `Text` 增加文字描边、下划线、删除线、行间距、对齐方式等样式
   - 增加 `Text::getLineCount` 方法获取文本显示行数
   - 增加从程序资源加载图片和音乐的功能
-  - `String::format` 方法创建格式化字符串
+  - 增加字符串相关操作
+  - 增加 `Action` 生成器
+  - 增加 `Transition` 生成器
   - `Renderer::showFps` 方法显示 FPS
   - 增加 `Shape` 形状类，用于绘制几何图形
   - 增加 `ShapeStyle` 枚举，用于设置 `Shape` 样式
@@ -44,7 +46,6 @@ type: "download"
   - 增加 `NodeProperty` 结构体，可以直接获取和设置节点的所有属性
   - 增加 `CustomTextRenderer` 文字渲染器
   - VS2012 以上版本支持以初始化列表的方式添加多个参数
-  - 支持 VS2010 ，但该版本功能受限
 
 - Trim
   - `Game::init` 方法不再设置窗口标题和大小

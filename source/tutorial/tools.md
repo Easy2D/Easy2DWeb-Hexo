@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [常用工具简介]
+subtitle: [常用工具]
 icon: idea
 toc: true
 type: "tutorial"

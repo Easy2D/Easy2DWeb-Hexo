@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [快速上手篇]
+subtitle: [快速上手]
 icon: idea
 type: "tutorial"
 ---

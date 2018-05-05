@@ -1,17 +1,17 @@
 ---
 title: 入门教程
-subtitle: [ [常用元素简介, /tutorial/common/], Sprite精灵]
+subtitle: [ [常用元素, /tutorial/node/], Sprite精灵]
 icon: idea
 type: "tutorial"
 toclinker: 
-    [[Node 节点类,/tutorial/common/node.html],
-    [Text 文本类,/tutorial/common/text.html],
-    [Font 字体类,/tutorial/common/font.html],
-    [Sprite 精灵类,/tutorial/common/sprite.html],
-    [Image 图片类,/tutorial/common/image.html],
-    [Button 按钮类,/tutorial/common/button.html],
-    [ButtonToggle 开关按钮类,/tutorial/common/buttontoggle.html],
-    [Menu 菜单类,/tutorial/common/menu.html]]
+    [[Node 节点类,/tutorial/node/node.html],
+    [Text 文本类,/tutorial/node/text.html],
+    [Font 字体类,/tutorial/node/font.html],
+    [Sprite 精灵类,/tutorial/node/sprite.html],
+    [Image 图片类,/tutorial/node/image.html],
+    [Button 按钮类,/tutorial/node/button.html],
+    [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
+    [Menu 菜单类,/tutorial/node/menu.html]]
 ---
 ## Sprite 精灵类
 

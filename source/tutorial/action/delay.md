@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [ [动画简介, /tutorial/action/], 位移动画]
+subtitle: [ [节点动画, /tutorial/action/], 位移动画]
 icon: idea
 type: "tutorial"
 toclinker: 
