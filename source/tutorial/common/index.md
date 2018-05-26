@@ -4,7 +4,11 @@ subtitle: [基础功能]
 icon: idea
 type: "tutorial"
 ---
+# 这个页面正在建设 : (
 
+[点击这里](/2018/05/25/easy2d-release-2-0-0-beta7/) 查看新版本更新内容
+
+<!--
 ## 基本功能类
 
 - [Game 游戏](/tutorial/common/game.html)
@@ -23,3 +27,5 @@ type: "tutorial"
 - [Image 图片](/tutorial/common/image.html)
 - [TextStyle 文字样式](/tutorial/common/textstyle.html)
 - [Function 伪函数](/tutorial/common/function.html)
+
+-->

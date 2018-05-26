@@ -4,7 +4,11 @@ subtitle: [节点动画]
 icon: idea
 type: "tutorial"
 ---
+# 这个页面正在建设 : (
+    
+[点击这里](/2018/05/25/easy2d-release-2-0-0-beta7/) 查看新版本更新内容
 
+<!--
 ## 什么是动画
 
 直接修改节点的属性会立即生效，体现不出时间的概念，也没有渐变的效果。想让一个精灵执行一段连贯的动画，需要用到 Action 动画类。
@@ -51,3 +55,5 @@ Action 不是节点，它只是描述了节点需要执行的动画的过程。
 - [循环执行动画](/tutorial/action/loop.html)
 - [动画的停止、暂停和继续](/tutorial/action/start-pause-resume.html)
 - [动画的克隆](/tutorial/action/clone.html)
+
+-->

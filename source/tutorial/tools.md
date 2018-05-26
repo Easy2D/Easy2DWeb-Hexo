@@ -5,7 +5,11 @@ icon: idea
 toc: true
 type: "tutorial"
 ---
+# 这个页面正在建设 : (
 
+[点击这里](/2018/05/25/easy2d-release-2-0-0-beta7/) 查看新版本更新内容
+
+<!--
 ## Random 随机数类
 
 `Random` 类用于获取随机数，`Random::range`函数可以获取任意数值类型在任意范围内的随机数，如下所示
@@ -167,3 +171,5 @@ String data3 = Data::getString("data3", "");    // 获取 字符串 型的值
 </div>
 
 <br/>
+
+-->

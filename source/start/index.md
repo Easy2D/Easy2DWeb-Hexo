@@ -47,21 +47,20 @@ Easy2D 不支持 VS2012 以下的版本（包括 VC6.0），如果你使用的�
 int main()
 {
     // 初始化游戏
-    if (Game::init())
-    {
-        // 创建一个场景
-        auto scene = new Scene();
-        // 进入该场景
-        SceneManager::enter(scene);
+    Game::init();
 
-        // 创建一个文本
-        auto text = new Text("Hello Easy2D!");
-        // 将这个文本添加到场景中
-        scene->add(text);
+    // 创建一个场景
+    auto scene = Create<Scene>();
+    // 进入该场景
+    SceneManager::enter(scene);
 
-        // 开始游戏
-        Game::run();
-    }
+    // 创建一个文本
+    auto text = Create<Text>("Hello Easy2D!");
+    // 将这个文本添加到场景中
+    scene->add(text);
+
+    // 开始游戏
+    Game::run();
     return 0;
 }
 ```
