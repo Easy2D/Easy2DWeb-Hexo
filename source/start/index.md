@@ -56,11 +56,15 @@ int main()
 
     // 创建一个文本
     auto text = Create<Text>("Hello Easy2D!");
+    // 设置文本中心点
+    text->setPivot(0.5, 0.5);
+    // 文本位置居中
+    text->setPos(Window::getSize() / 2);
     // 将这个文本添加到场景中
     scene->add(text);
 
     // 开始游戏
-    Game::run();
+    Game::start();
     return 0;
 }
 ```

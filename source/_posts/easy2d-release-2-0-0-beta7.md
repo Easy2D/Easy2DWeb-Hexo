@@ -354,7 +354,4 @@ NodeProperty prop = node->getProperty();
 node->setProperty(prop);
 ```
 
-
-### 其他
-
-此次版本更新内容较多，更多新内容请到入门教程中查看。
+更多新内容请到入门教程中查看。

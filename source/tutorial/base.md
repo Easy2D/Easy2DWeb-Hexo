@@ -23,16 +23,13 @@ int main()
 
 `Game` 类用来控制游戏主流程，它可以完成开始游戏、暂停游戏、退出游戏等一系列操作。
 
-`Game::init` 函数对游戏进行初始化，通常它需要在 main 函数的第一行调用，且只能调用一次。如果在初始化前进行了其他操作，有可能出现未知的错误。该函数返回 bool 类型的值，当初始化失败时，它返回 false ，这说明程序运行环境出现了问题，应当直接结束游戏。
+`Game::init` 函数对游戏进行初始化，它必须在 main 函数的第一行调用，且只能调用一次。如果在初始化前进行了其他操作，有可能出现未知的错误。当初始化失败时，它会抛出异常中断程序。
 
 ```cpp
 int main()
 {
     // 初始化
-    if (Game::init())
-    {
-        // 初始化成功
-    }
+    Game::init();
     return 0;
 }
 ```
@@ -52,13 +49,11 @@ Game::start();
 int main()
 {
     /* 初始化 */
-    if (Game::init())
-    {
-        /* 设计游戏内容 */
+    Game::init();
+    /* 设计游戏内容 */
 
-        /* 开始游戏 */
-        Game::run();
-    }
+    /* 开始游戏 */
+    Game::run();
     return 0;
 }
 ```
@@ -70,56 +65,40 @@ int main()
 `Window` 类用来控制窗口的属性，例如，你可以使用 `Window::setTitle` 函数修改窗口标题，并使用 `Window::setSize` 函数设置窗口的大小。
 
 ```cpp
-if (Game::init())
-{
-    // 修改窗口标题
-    Window::setTitle("Demo");
-    // 修改窗口大小
-    Window::setSize(300, 300);
-
-    Game::start();
-}
+// 修改窗口标题
+Window::setTitle("Demo");
+// 修改窗口大小
+Window::setSize(300, 300);
 ```
 
 `Window::getWidth` 和 `Window::getHeight` 函数可以获取窗口的宽度和高度，这两个函数可以帮助你对齐图片位置。
 
-另外，Easy2D 会默认关闭控制台（因为游戏不需要控制台），但你可以使用 `Window::showConsole` 函数重新打开它，这有助于帮助你 Debug。
+`Window::showConsole` 函数可以打开或关闭控制台，这有助于帮助你 Debug。
 
 ```cpp
-if (Game::init())
-{
-    // 显示控制台
-    Window::showConsole();
+// 显示控制台
+Window::showConsole(true);
 
-    // 获取窗口的宽度和高度
-    double width = Window::getWidth();
-    double height = Window::getHeight();
+// 获取窗口的宽度和高度
+double width = Window::getWidth();
+double height = Window::getHeight();
 
-    // 将窗口的宽高输出在控制台上
-    printf("%lf %lf\n", width, height);
-
-    Game::start();
-}
+// 将窗口的宽高输出在控制台上
+printf("%.2lf %.2lf\n", width, height);
 ```
 
 <br/>
 
 ## 场景和节点
 
-`Scene(场景)` 代表游戏中的一个界面，你的游戏可以有类似主菜单、游戏界面、结束界面等多个场景。
-
-Easy2D 中使用 new 运算符创建场景：
+`Scene(场景)` 代表游戏中的一个界面，你的游戏可以有类似主菜单、游戏界面、结束界面等多个场景。你可以直接使用 `new` 运算符创建场景：
 
 ```cpp
 // 创建一个空场景
 auto scene = new Scene();
 ```
 
-<div class="ui info message"><div class="header">Tips </div>
-Easy2D 中的对象内存都被统一管理，所以通常你使用 new 创建 Easy2D 对象后无需考虑何时 delete 它。
-</div>
-
-`SceneManager(场景管理器)` 是控制场景间切换的类，使用 `SceneManager::enter` 函数可以进入你创建的场景中
+`SceneManager(场景管理器)` 是控制场景间切换的类，使用 `SceneManager::enter` 函数进入你创建的场景中
 
 ```cpp
 // 进入 scene 场景
@@ -128,7 +107,7 @@ SceneManager::enter(scene);
 
 场景中所有的元素都被称为`Node(节点)`，比如场景中的一个按钮，或者一张图片，它们都是节点的一种。
 
-Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(精灵)`、`Button(按钮)`等等，你可以像创建场景一样，直接用 new 运算符创建它们
+Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(精灵)`、`Button(按钮)`等等，你可以像创建场景一样，直接用 `new` 运算符创建它们
 
 ```cpp
 // 创建一个文本节点
@@ -142,31 +121,67 @@ auto text = new Text("Hello Easy2D");
 scene->add(text);
 ```
 
-上面的内容都属于**设计游戏内容**，所以上面这个 Demo 的完整代码如下所示
+上面的内容都属于 **设计游戏内容**，所以上面这个 Demo 的完整代码如下所示
 
 ```cpp
 #include <easy2d.h>
 
 int main()
 {
-    if (Game::init())
-    {
-        /* 设计游戏内容 */
+    Game::init();
 
-        // 创建一个空场景
-        auto scene = new Scene();
-        // 进入 scene 场景
-        SceneManager::enter(scene);
+    /* 设计游戏内容 */
+    // 创建一个空场景
+    auto scene = new Scene();
+    // 进入 scene 场景
+    SceneManager::enter(scene);
 
-        // 创建一个文本节点
-        auto text = new Text("Hello Easy2D");
-        // 将文本添加到场景中
-        scene->add(text);
+    // 创建一个文本节点
+    auto text = new Text("Hello Easy2D");
+    // 将文本添加到场景中
+    scene->add(text);
 
-        Game::start();
-    }
+    Game::start();
+
+    // 释放内存
+    delete scene;
+    delete text;
     return 0;
 }
+```
+
+<br/>
+
+## 内存管理与垃圾回收
+
+Easy2D 支持垃圾内存的自动回收，要使用这个功能，你需要使用 `Create` 函数创建对象。
+
+```cpp
+// 创建一个自动回收的场景
+auto scene = Create<Scene>();
+// 创建一个自动回收的文本
+auto text = Create<Text>("Hello Easy2D");
+```
+
+`Create` 函数是一个模版函数，使用它创建的对象将被 `垃圾回收装置(GC)` 跟踪，当这个对象不再被需要时，GC 会自动 delete 它。
+
+`GC` 判断一个对象是否需要被释放的方法如下：
+
+- Object 对象保存了一个引用计数，这个计数表示它被 “使用” 的次数，初始的引用计数为 0
+- 当引用计数 <= 0 时，GC 会认为这个对象可以被回收，并在适当的时候 delete 它
+- 当引用计数 > 0 时，GC 会认为这个对象正被使用着，不会对它采取任何操作
+- Object 的 `retain` 和 `release` 方法可以使引用计数加一或减一
+- `Game::destory` 方法会强制让 GC 回收所有对象
+
+比如我们使用 `Create` 函数创建了一个 `Scene` ，下面的代码展示了引用计数的变化
+
+```cpp
+// 创建一个场景，此时引用计数为 0
+auto scene = Create<Scene>();
+// 进入场景，它的引用计数变为 1
+SceneManager::enter(scene);
+// 退出场景，它的引用计数变回 0，GC 会自动将 scene 回收
+SceneManager::back();
 ```
 
 <br/>
@@ -185,9 +200,9 @@ Easy2D 使用左手坐标空间，坐标系原点在屏幕的左上角，x 轴�
 
 ```cpp
 // 创建一个场景
-auto scene = new Scene();
+auto scene = Create<Scene>();
 // 创建一个精灵
-auto sprite = new Sprite("图片名.png");
+auto sprite = Create<Sprite>("图片名.png");
 // 把精灵添加到场景中
 scene->add(sprite);
 ```

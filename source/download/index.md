@@ -8,8 +8,8 @@ type: "download"
 
 | 文件名                  |   大小   |          |
 | ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.0-beta7.exe | 5.52MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.exe) |
-| Easy2D-v2.0.0-beta7.7z  | 5.46MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.7z) |
+| Easy2D-v2.0.0-beta7.exe | 5.62MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.exe) |
+| Easy2D-v2.0.0-beta7.7z  | 5.69MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.7z) |
 
 #### 旧版下载
 
