@@ -5,15 +5,13 @@ type: "history"
 ---
 ## 更新日志
 
-### v2.0.0-beta7 （2018-4-24）
+### v2.0.0-beta7 （2018-5-27）
 
 - New Features
   - 增加 `Create` 模版函数，创建自动回收的对象
   - `Text` 增加文字描边、下划线、删除线、行间距、对齐方式等样式
   - 增加 `Collision` 类处理碰撞
   - 增加从程序资源加载图片和音乐的功能
-  - 增加 `Path::add` 方法，用于添加资源路径
-  - 增加 `Path::exists` 方法，用于检测文件夹或文件是否存在
   - 增加 `insert`、`replace`、`format` 等字符串相关操作
   - `Renderer::showFps` 方法显示 FPS
   - 增加 `Shape` 形状类，用于绘制几何图形
@@ -37,6 +35,9 @@ type: "history"
   - 增加 `Rect` 抽象矩形类
   - 增加 `Player` 音乐播放器
   - 增加 `Music::setFuncOnEnd` 设置播放结束时的执行回调函数
+  - 增加 `Path::add` 方法，用于添加资源路径
+  - 增加 `Path::exists` 方法，用于检测文件夹或文件是否存在
+  - 增加 `Path::extractResource` 方法，提取资源文件
 
 - Trim
   - `Game::init` 方法不再设置窗口标题和大小
@@ -60,6 +61,7 @@ type: "history"
   - `Image` 使用 `Rect` 类型的参数进行图片裁剪
   - `Window::createMutex` 整合到 `Game::init` 方法中
   - `Node::onFixedUpdate` 改为 protected 方法
+  - `String` 可强制转换为 `const wchar_t*`、`const char*` 类型
 
 - Fixed
   - 修复了游戏结束时无法完全回收资源的问题

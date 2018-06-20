@@ -6,7 +6,7 @@ type: "tutorial"
 ---
 # 这个页面正在建设 : (
 
-[点击这里](/2018/05/25/easy2d-release-2-0-0-beta7/) 查看新版本更新内容
+<a class="ui primary button" href="/2018/05/25/easy2d-release-2-0-0-beta7/">查看 beta7 更新内容</a>
 
 <!--
 ## 什么是节点

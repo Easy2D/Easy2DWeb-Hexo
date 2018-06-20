@@ -95,7 +95,7 @@ printf("%.2lf %.2lf\n", width, height);
 
 ```cpp
 // 创建一个空场景
-auto scene = new Scene();
+auto scene = new Scene;
 ```
 
 `SceneManager(场景管理器)` 是控制场景间切换的类，使用 `SceneManager::enter` 函数进入你创建的场景中
@@ -132,7 +132,7 @@ int main()
 
     /* 设计游戏内容 */
     // 创建一个空场景
-    auto scene = new Scene();
+    auto scene = new Scene;
     // 进入 scene 场景
     SceneManager::enter(scene);
 
@@ -182,6 +182,15 @@ auto scene = Create<Scene>();
 SceneManager::enter(scene);
 // 退出场景，它的引用计数变回 0，GC 会自动将 scene 回收
 SceneManager::back();
+```
+
+使用 new 运算符创建的对象可以手动调用 `autorelease` 函数，使 GC 对它进行跟踪。
+
+```cpp
+// 使用 new 创建对象
+auto scene = new Scene;
+// 调用 autorelease 函数，使 GC 自动对其进行回收
+scene->autorelease();
 ```
 
 <br/>

@@ -8,17 +8,17 @@ type: "download"
 
 | 文件名                  |   大小   |          |
 | ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.0-beta7.exe | 5.62MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.exe) |
-| Easy2D-v2.0.0-beta7.7z  | 5.69MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.7z) |
+| Easy2D-v2.0.0-beta7.exe | 5.95MB   | [<i class="download icon"></i>](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.exe) |
+| Easy2D-v2.0.0-beta7.7z  | 5.89MB   | [<i class="download icon"></i>](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta7.7z) |
 
 #### 旧版下载
 
 | 文件名                  |   大小   |          |
 | ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.0-beta6.exe | 3.48MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.exe) |
-| Easy2D-v2.0.0-beta6.7z  | 3.42MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.7z) |
-| Easy2D-v2.0.0-beta5.exe | 3.21MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.exe) |
-| Easy2D-v2.0.0-beta5.7z  | 3.15MB   | [下载](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.7z) |
+| Easy2D-v2.0.0-beta6.exe | 3.48MB   | [<i class="download icon"></i>](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.exe) |
+| Easy2D-v2.0.0-beta6.7z  | 3.42MB   | [<i class="download icon"></i>](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta6.7z) |
+| Easy2D-v2.0.0-beta5.exe | 3.21MB   | [<i class="download icon"></i>](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.exe) |
+| Easy2D-v2.0.0-beta5.7z  | 3.15MB   | [<i class="download icon"></i>](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/Easy2D-v2.0.0-beta5.7z) |
 
 ## 社区交流
 
@@ -26,15 +26,13 @@ type: "download"
 
 ## 更新内容
 
-### v2.0.0-beta7 （2018-4-24）
+### v2.0.0-beta7 （2018-5-27）
 
 - New Features
   - 增加 `Create` 模版函数，创建自动回收的对象
   - `Text` 增加文字描边、下划线、删除线、行间距、对齐方式等样式
   - 增加 `Collision` 类处理碰撞
   - 增加从程序资源加载图片和音乐的功能
-  - 增加 `Path::add` 方法，用于添加资源路径
-  - 增加 `Path::exists` 方法，用于检测文件夹或文件是否存在
   - 增加 `insert`、`replace`、`format` 等字符串相关操作
   - `Renderer::showFps` 方法显示 FPS
   - 增加 `Shape` 形状类，用于绘制几何图形
@@ -58,6 +56,9 @@ type: "download"
   - 增加 `Rect` 抽象矩形类
   - 增加 `Player` 音乐播放器
   - 增加 `Music::setFuncOnEnd` 设置播放结束时的执行回调函数
+  - 增加 `Path::add` 方法，用于添加资源路径
+  - 增加 `Path::exists` 方法，用于检测文件夹或文件是否存在
+  - 增加 `Path::extractResource` 方法，提取资源文件
 
 - Trim
   - `Game::init` 方法不再设置窗口标题和大小
@@ -81,6 +82,7 @@ type: "download"
   - `Image` 使用 `Rect` 类型的参数进行图片裁剪
   - `Window::createMutex` 整合到 `Game::init` 方法中
   - `Node::onFixedUpdate` 改为 protected 方法
+  - `String` 可强制转换为 `const wchar_t*`、`const char*` 类型
 
 - Fixed
   - 修复了游戏结束时无法完全回收资源的问题
