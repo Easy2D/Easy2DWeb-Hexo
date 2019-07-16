@@ -14,57 +14,29 @@ type: "start"
 
 <br/>
 
-## 如何安装 Easy2D ?
+## 开始使用 !
 
-下载安装包，打开后跟随提示安装即可。
+#### 运行 Hello World
 
-安装程序会检测您已经安装的 `Visual Studio` 版本，并根据您的选择将对应文件安装至 VS 的 include 和 lib 文件夹内。
+第一步，打开 [Github 地址](https://github.com/nomango/easy2d)，点击页面右上角的 `Clone or download`，克隆本仓库或者下载 zip 源码。
 
-Easy2D 不支持 VS2012 以下的版本（包括 VC6.0），如果你使用的是低版本的 VS，那你需要尝试一下新版的 [Visual Studio](https://www.visualstudio.com/) 了。
-
-> **安装环境**：
-> 操作系统：Windows 7 及以上操作系统。
-> 编译环境：Visual Studio 2012 (x86 & x64) 及以上版本。
-
-<br/>
-
-<div class="ui info message"><div class="header">Tips </div>
-如果需要手动安装，可以下载 `.7z` 格式的压缩包，解压后将相关文件分别拷贝到 VS 对应的 include 和 lib 文件夹内，或者你的工程路径下即可。
-</div>
-
-
-<br/>
-
-## 开始使用！
-
-使用 VS 新建一个空的 C++ 控制台程序，在源文件开头引入`easy2d.h`头文件，即可开始使用。
-
-复制下面的代码以创建一个`Hello World`程序。
-
-```cpp
-#include <easy2d.h>
-
-int main()
-{
-    // 初始化游戏
-    Game::init();
-
-    // 创建一个场景
-    auto scene = Create<Scene>();
-    // 进入该场景
-    SceneManager::enter(scene);
-
-    // 创建一个文本
-    auto text = Create<Text>("Hello Easy2D!");
-    // 设置文本中心点
-    text->setPivot(0.5, 0.5);
-    // 文本位置居中
-    text->setPos(Window::getSize() / 2);
-    // 将这个文本添加到场景中
-    scene->add(text);
-
-    // 开始游戏
-    Game::start();
-    return 0;
-}
 ```
+git clone https://github.com/nomango/easy2d.git
+```
+
+第二步，使用 Visual Studio 2012 或更高版本，打开目录下的 sln 文件。
+
+第三步，直接点击运行，在几分钟编译后就会自动打开 Hello World 程序。
+
+#### 在其他项目使用
+
+在其他项目使用 Easy2D 时，需要先编译 Easy2D 工程，它会在 `/Easy2D/output/` 目录生成 .lib 文件。
+
+在 VS 中打开你自己项目的项目属性，把 `C/C++` ==> `附加包含目录` 设置为 Easy2D 项目的 `/Easy2D/include/` 目录，再把 `链接器` ==> `附加库目录` 设置为 Easy2D 项目的 `/Easy2D/output/` 目录。
+
+然后就可以在你自己的项目中使用 Easy2D 的功能了。
+
+> 注意：必须先把 Easy2D 项目编译生成 .lib 文件
+
+
+<br/>

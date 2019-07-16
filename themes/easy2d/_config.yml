@@ -21,8 +21,7 @@ index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
     last: v2.0.0-beta7
-    update: "2018-5-27"
-    testing: beta7 测试邀请
+    update: "2019-7-16"
     more: 历史版本
   examples:
   - name: Flappy Bird
