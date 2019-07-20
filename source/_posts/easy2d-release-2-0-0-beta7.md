@@ -98,7 +98,7 @@ Sprite::create("image.png");
 beta7 版本新增了 `Create` 函数，它是一个模版函数，并拥有强大的扩展性。它的使用方法如下
 
 ```cpp
-auto sprite = Create<Sprite>("image.png");
+auto sprite = gcnew Sprite("image.png");
 ```
 
 使用 Create 函数创建的对象将被 `GC(垃圾回收装置)` 跟踪，当这个对象不再被需要时，GC 会自动 delete 它。
@@ -115,7 +115,7 @@ auto sprite = Create<Sprite>("image.png");
 
 ```cpp
 // 创建一个场景，此时引用计数为 0
-auto scene = Create<Scene>();
+auto scene = gcnew Scene;
 // 进入场景，它的引用计数变为 1
 SceneManager::enter(scene);
 // 退出场景，它的引用计数变为 0，GC 会自动将 scene 回收
@@ -152,7 +152,7 @@ Player::preload("music.wav");
 
 ```cpp
 // 创建一个音乐对象
-auto music = Create<Music>("music.wav");
+auto music = gcnew Music("music.wav");
 ```
 
 有了这个对象，你可以设置它的音量，判断它的播放状态，以及设置它播放结束时执行特定的函数。
@@ -171,7 +171,7 @@ music->setFuncOnEnd(func);
 ```cpp
 // 创建一个音乐对象并播放
 // 这个对象将在音乐结束时自动释放内存
-Create<Music>("music.wav")->play();
+gcnew Music("music.wav")->play();
 ```
 
 
@@ -285,7 +285,7 @@ Collision::addName("节点一", "节点二");
 // 创建一个伪函数类
 Function func = CollisionListen;
 // 创建一个监听器
-auto listener = Create<Listener>(func);
+auto listener = gcnew Listener(func);
 // 让监听器去监听碰撞事件
 Collision::addListener(listener);
 // 打开碰撞监听

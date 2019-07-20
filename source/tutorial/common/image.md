@@ -1,17 +1,24 @@
 ---
 title: 入门教程
-subtitle: [ [常用元素, /tutorial/node/], Image图片]
+subtitle: [ [基础功能, /tutorial/common/], Image图片类]
 icon: idea
 type: "tutorial"
 toclinker: 
-    [[Node 节点类,/tutorial/node/node.html],
-    [Text 文本类,/tutorial/node/text.html],
-    [Font 字体类,/tutorial/node/font.html],
-    [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
-    [Button 按钮类,/tutorial/node/button.html],
-    [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
-    [Menu 菜单类,/tutorial/node/menu.html]]
+    [
+        [Game 游戏类,/tutorial/common/game.html],
+        [Window 窗口类,/tutorial/common/window.html],
+        [Input 输入类,/tutorial/common/input.html],
+        [Time 时间类,/tutorial/common/time.html],
+        [Renderer 渲染器,/tutorial/common/renderer.html],
+        [Point 坐标点,/tutorial/common/point.html],
+        [Size 大小,/tutorial/common/size.html],
+        [String 字符串,/tutorial/common/string.html],
+        [Color 颜色,/tutorial/common/color.html],
+        [KeyCode 键值,/tutorial/common/keycode.html],
+        [Image 图片类,/tutorial/common/image.html],
+        [TextStyle 文字样式,/tutorial/common/textstyle.html],
+        [Function 函数封装器,/tutorial/common/function.html]
+    ]
 ---
 
 ## Image 图片类和图片预加载
@@ -27,7 +34,7 @@ Image 的另一个作用就是创建`Animation(帧动画)`，这个部分在动�
 将图片资源复制到内存中需要耗费一定的时间，为了避免在游戏过程中因为加载图片产生卡顿，你可以在游戏开始前调用 `Image::preload` 函数来提前将游戏中用到的图片加载到内存中。
 
 ```cpp
-Image::preload("图片1.png");
-Image::preload("图片2.png");
-Image::preload("图片3.png");
+Image::preload(L"图片1.png");
+Image::preload(L"图片2.png");
+Image::preload(L"图片3.png");
 ```

@@ -9,29 +9,29 @@ toclinker:
     [缩放动画,/tutorial/action/scale.html],
     [旋转动画,/tutorial/action/rotate.html],
     [帧动画,/tutorial/action/animation.html],
-    [在动画中执行函数,/tutorial/action/callback.html],
+    [在动画中执行函数,/tutorial/action/callfunc.html],
     [动画中的延时,/tutorial/action/delay.html],
-    [组合两个动画,/tutorial/action/two-actions.html],
     [顺序执行多个动画,/tutorial/action/sequence.html],
+    [同时执行多个动画,/tutorial/action/spawn.html],
     [循环执行动画,/tutorial/action/loop.html],
     [动画的停止、暂停和继续,/tutorial/action/start-pause-resume.html],
     [动画的克隆,/tutorial/action/clone.html]]
 ---
 ## 顺序执行多个动画
 
-`ActionSequence` 可以将多个动画组合成一个顺序执行的动画，你需要在它的构造函数中指定动画的个数和它组合的所有动画。
+`Sequence` 可以将多个动画组合成一个顺序执行的动画，你需要在它的构造函数中指定动画的个数和它组合的所有动画。
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
-auto fadeOut = new ActionFadeOut(1.5);
+auto fadeOut = gcnew FadeOut(1.5f);
 // 创建一个回调函数动画
-auto callback = new ActionCallback([=]() {
+auto callback = gcnew CallFunc([=]() {
     sprite->setRotation(45);    // 在回调函数中修改精灵的旋转角度
 });
 // 创建一个 0.5 秒的淡入动画
-auto fadeIn = new ActionFadeIn(0.5);
+auto fadeIn = gcnew FadeIn(0.5f);
 // 组合三个动画成顺序动画
-auto sequence = new ActionSequence(3, fadeOut, callback, fadeIn);
+auto sequence = gcnew Sequence(3, fadeOut, callback, fadeIn);
 // 执行顺序动画
 sprite->runAction(sequence);
 ```

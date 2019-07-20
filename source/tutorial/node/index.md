@@ -4,11 +4,7 @@ subtitle: [常用元素]
 icon: idea
 type: "tutorial"
 ---
-# 这个页面正在建设 : (
 
-<a class="ui primary button" href="/2018/05/25/easy2d-release-2-0-0-beta7/">查看 beta7 更新内容</a>
-
-<!--
 ## 什么是节点
 
 场景中所有的元素都被称为`Node(节点)`，比如场景中的一个按钮，或者一张图片，它们都是节点的一种。
@@ -23,4 +19,3 @@ Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(
 - [Button 按钮类](/tutorial/node/button.html)
 - [ButtonToggle 开关按钮类](/tutorial/node/buttontoggle.html)
 - [Menu 菜单类](/tutorial/node/menu.html)
--->

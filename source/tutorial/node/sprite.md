@@ -8,7 +8,6 @@ toclinker:
     [Text 文本类,/tutorial/node/text.html],
     [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
     [Menu 菜单类,/tutorial/node/menu.html]]
@@ -20,8 +19,8 @@ Sprite 可以说是引擎中最常见的类，它通常是一张图片，用来�
 你可以用 `open` 函数打开本地文件的一张图片。
 
 ```cpp
-auto sprite = new Sprite();
-sprite->open("本地图片.png"); // 从本地图片加载
+auto sprite = gcnew Sprite();
+sprite->open(L"本地图片.png"); // 从本地图片加载
 ```
 
 ![Sprite示意图](/assets/images/tutorial/sprite1.png)
@@ -40,7 +39,7 @@ sprite->clip(20, 10, 60, 80);
 
 ```cpp
 // 从本地图片加载精灵，并对图片进行裁剪
-auto sprite = new Sprite("本地图片.png", 20, 10, 60, 80);
+auto sprite = gcnew Sprite(L"本地图片.png", 20, 10, 60, 80);
 ```
 
 你可以更灵活的运用 `clip` 函数，比如下面的代码把精灵裁剪成了原来的一半
@@ -65,5 +64,5 @@ sprite->setRotation(30);
 // 放到至原来的两倍
 sprite->setScale(2);
 // 不透明度设为 0.5
-sprite->setOpacity(0.5);
+sprite->setOpacity(0.5f);
 ```

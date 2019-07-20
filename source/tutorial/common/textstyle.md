@@ -8,7 +8,6 @@ toclinker:
     [Text 文本类,/tutorial/node/text.html],
     [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
     [Menu 菜单类,/tutorial/node/menu.html]]
@@ -22,8 +21,8 @@ Font 不是节点，因为它仅仅描述了文本的样式。Font 不能显示�
 </div>
 
 ```cpp
-auto text = new Text("Hello Easy2D!");
-auto font = new Font("宋体", 40, Color::BLUE); // 创建一个Font，宋体、字号40、蓝色
+auto text = gcnew Text(L"Hello Easy2D!");
+auto font = gcnew Font(L"宋体", 40, Color::BLUE); // 创建一个Font，宋体、字号40、蓝色
 text->setFont(font);
 ```
 
@@ -33,7 +32,7 @@ text->setFont(font);
 
 ```cpp
 // 在创建文本的同时指定它的字体样式
-auto text = new Text("Hello Easy2D!", "宋体", 40, Color::BLUE);
+auto text = gcnew Text(L"Hello Easy2D!", L"宋体", 40, Color::BLUE);
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
@@ -43,7 +42,7 @@ auto text = new Text("Hello Easy2D!", "宋体", 40, Color::BLUE);
 多个 Text 可以共用一个 Font，例如下面的代码中 text1 和 text2 使用了同一个 Font 对象，这时如果你修改 font 的颜色，text1和 text2 会同时变色。
 
 ```cpp
-auto font = new Font("", 40);           // 系统默认字体、字号40
-auto text1 = new Text("Hello", font);   // text1 使用 font
-auto text2 = new Text("Easy2D", font);  // text2 也使用 font
+auto font = gcnew Font(L"", 40);           // 系统默认字体、字号40
+auto text1 = gcnew Text(L"Hello", font);   // text1 使用 font
+auto text2 = gcnew Text(L"Easy2D", font);  // text2 也使用 font
 ```

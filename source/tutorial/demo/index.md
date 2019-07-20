@@ -5,11 +5,6 @@ icon: idea
 type: "tutorial"
 ---
 
-# 这个页面正在建设 : (
-
-<a class="ui primary button" href="/2018/05/25/easy2d-release-2-0-0-beta7/">查看 beta7 更新内容</a>
-
-<!--
 ## 快速上手
 
 跟随本章教程，制作几个简单的游戏 Demo，帮助你快速了解 Easy2D 的使用方法。
@@ -21,8 +16,6 @@ type: "tutorial"
 
 ## 源码下载
 
-- [[ActionDemo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/ActionDemo.zip)
+- [[Demo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/Demo.zip)
 - [[InputDemo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/InputDemo.zip)
 - [[MusicDemo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/MusicDemo.zip)
-
--->

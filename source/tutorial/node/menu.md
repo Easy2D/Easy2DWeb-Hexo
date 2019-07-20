@@ -8,7 +8,6 @@ toclinker:
     [Text 文本类,/tutorial/node/text.html],
     [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
     [Menu 菜单类,/tutorial/node/menu.html]]
@@ -23,7 +22,7 @@ toclinker:
 
 ```cpp
 // 创建一个菜单
-auto menu = new Menu();
+auto menu = gcnew Menu();
 // 添加按钮
 menu->addButton(button1);
 menu->addButton(button2);

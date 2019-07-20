@@ -21,14 +21,18 @@ type: "tutorial"
 
 int main()
 {
-	if (Game::init("Demo:Moving Man", 640, 480))
-	{
-		/* 设计游戏内容 */
+    if (Game::init())
+    {
+        // 设置窗口标题和窗口大小
+        Window::setTitle(L"Moving Man");
+        Window::setSize(640, 480);
 
-		Game::run();
-	}
-	Game::uninit();
-	return 0;
+        /* 设计游戏内容 */
+
+        Game::start();
+    }
+    Game::destroy();
+    return 0;
 }
 ```
 
@@ -50,7 +54,7 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite("man.png")
+    Man() : Sprite(L"man.png")
     {
         // Man 的构造函数
     }
@@ -67,7 +71,7 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite("man.png")
+    Man() : Sprite(L"man.png")
     {
         // Man 的构造函数
     }
@@ -75,22 +79,26 @@ public:
 
 int main()
 {
-	if (Game::init("Demo:Moving Man", 640, 480))
-	{
-		// 创建场景
-		auto scene = new Scene();
-		// 进入该场景
-		SceneManager::enter(scene);
+    if (Game::init())
+    {
+        // 设置窗口标题和窗口大小
+        Window::setTitle(L"Moving Man");
+        Window::setSize(640, 480);
 
-		// 创建一个 Man 对象
-		auto hero = new Man();
-		// 将 Man 添加到场景中
-		scene->add(hero);
+        // 创建场景
+        auto scene = gcnew Scene();
+        // 进入该场景
+        SceneManager::enter(scene);
 
-		Game::run();
-	}
-	Game::uninit();
-	return 0;
+        // 创建一个 Man 对象
+        auto hero = gcnew Man();
+        // 将 Man 添加到场景中
+        scene->add(hero);
+
+        Game::start();
+    }
+    Game::destroy();
+    return 0;
 }
 ```
 
@@ -102,10 +110,10 @@ int main()
 class Man : public Sprite
 {
 public:
-    Man() : Sprite("man.png")
+    Man() : Sprite(L"man.png")
     {
         // 居中显示在屏幕上
-        this->setPivot(0.5, 0.5);
+        this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
     }
 };
@@ -123,10 +131,10 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite("man.png")
+    Man() : Sprite(L"man.png")
     {
         // 居中显示在屏幕上
-        this->setPivot(0.5, 0.5);
+        this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
     }
 
@@ -139,14 +147,14 @@ public:
 
 onUpdate 是一个特殊的函数，它在每一帧画面刷新前被 Easy2D 自动调用，所以这个函数在一秒钟里会被调用 60 次左右。我们可以在这个函数里判断有没有按键按下。
 
-`Input` 类用来获取用户的输入，`Input::isKeyDown` 函数用来判断一个键是否正被按下，这个函数需要一个 int 类型的参数，这个参数代表键盘上的一个键。
+`Input` 类用来获取用户的输入，`Input::isDown` 函数用来判断一个键是否正被按下，这个函数需要一个 int 类型的参数，这个参数代表键盘上的一个键。
 
-`KeyCode` 类枚举了常用按键的键值，例如 `KeyCode::UP` 代表上键。你可以用下面的代码判断上键是否被按下：
+`KeyCode` 类枚举了常用按键的键值，例如 `Key::Up` 代表上键。你可以用下面的代码判断上键是否被按下：
 
 ```cpp
 void onUpdate()
 {
-    if (Input::isKeyDown(KeyCode::UP))
+    if (Input::isDown(Key::Up))
     {
         // 上键被按下
     }
@@ -162,10 +170,10 @@ void onUpdate()
 ```cpp
 void onUpdate()
 {
-    if (Input::isKeyDown(KeyCode::UP))
+    if (Input::isDown(Key::Up))
     {
         // 获取当前 Y 坐标
-        double y = this->getPosY();
+        float y = this->getPosY();
         // 重新设置它的坐标
         this->setPosY(y - 2);
     }
@@ -177,7 +185,7 @@ Node 类的 `Node::movePos` 函数可以直接移动节点，所以上面的代�
 ```cpp
 void onUpdate()
 {
-    if (Input::isKeyDown(KeyCode::UP))
+    if (Input::isDown(Key::Up))
     {
         // Man 的 Y 坐标减少 2
         this->movePosY(-2);
@@ -190,25 +198,25 @@ void onUpdate()
 ```cpp
 void onUpdate()
 {
-    if (Input::isKeyDown(KeyCode::UP))
+    if (Input::isDown(Key::Up))
     {
         // Man 的 Y 坐标减少 2
         this->movePosY(-2);
     }
 
-    if (Input::isKeyDown(KeyCode::DOWN))
+    if (Input::isDown(Key::Down))
     {
         // Man 的 Y 坐标增加 2
         this->movePosY(2);
     }
 
-    if (Input::isKeyDown(KeyCode::LEFT))
+    if (Input::isDown(Key::Left))
     {
         // Man 的 X 坐标减少 2
         this->movePosX(-2);
     }
 
-    if (Input::isKeyDown(KeyCode::RIGHT))
+    if (Input::isDown(Key::Right))
     {
         // Man 的 X 坐标增加 2
         this->movePosX(2);
@@ -221,23 +229,23 @@ void onUpdate()
 ```cpp
 void onUpdate()
 {
-    if (Input::isKeyDown(KeyCode::UP))
+    if (Input::isDown(Key::Up))
     {
         // Man 的 Y 坐标减少 2
         this->movePosY(-2);
     }
-    else if (Input::isKeyDown(KeyCode::DOWN))
+    else if (Input::isDown(Key::Down))
     {
         // Man 的 Y 坐标增加 2
         this->movePosY(2);
     }
 
-    if (Input::isKeyDown(KeyCode::LEFT))
+    if (Input::isDown(Key::Left))
     {
         // Man 的 X 坐标减少 2
         this->movePosX(-2);
     }
-    else if (Input::isKeyDown(KeyCode::RIGHT))
+    else if (Input::isDown(Key::Right))
     {
         // Man 的 X 坐标增加 2
         this->movePosX(2);
@@ -255,32 +263,32 @@ void onUpdate()
 class Man : public Sprite
 {
 public:
-    Man() : Sprite("man.png")
+    Man() : Sprite(L"man.png")
     {
         // 居中显示在屏幕上
-        this->setPivot(0.5, 0.5);
+        this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
     }
 
     void onUpdate()
     {
-        if (Input::isKeyDown(KeyCode::UP))
+        if (Input::isDown(Key::Up))
         {
             // Man 的 Y 坐标减少 2
             this->movePosY(-2);
         }
-        else if (Input::isKeyDown(KeyCode::DOWN))
+        else if (Input::isDown(Key::Down))
         {
             // Man 的 Y 坐标增加 2
             this->movePosY(2);
         }
 
-        if (Input::isKeyDown(KeyCode::LEFT))
+        if (Input::isDown(Key::Left))
         {
             // Man 的 X 坐标减少 2
             this->movePosX(-2);
         }
-        else if (Input::isKeyDown(KeyCode::RIGHT))
+        else if (Input::isDown(Key::Right))
         {
             // Man 的 X 坐标增加 2
             this->movePosX(2);
@@ -290,21 +298,25 @@ public:
 
 int main()
 {
-	if (Game::init("Demo:Moving Man", 640, 480))
-	{
-		// 创建场景
-		auto scene = new Scene();
-		// 进入该场景
-		SceneManager::enter(scene);
+    if (Game::init())
+    {
+        // 设置窗口标题和窗口大小
+        Window::setTitle(L"Moving Man");
+        Window::setSize(640, 480);
 
-		// 创建一个 Man 对象
-		auto hero = new Man();
-		// 将 Man 添加到场景中
-		scene->add(hero);
+        // 创建场景
+        auto scene = gcnew Scene();
+        // 进入该场景
+        SceneManager::enter(scene);
 
-		Game::run();
-	}
-	Game::uninit();
-	return 0;
+        // 创建一个 Man 对象
+        auto hero = gcnew Man();
+        // 将 Man 添加到场景中
+        scene->add(hero);
+
+        Game::start();
+    }
+    Game::destroy();
+    return 0;
 }
 ```

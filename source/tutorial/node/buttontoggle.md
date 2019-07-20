@@ -8,7 +8,6 @@ toclinker:
     [Text 文本类,/tutorial/node/text.html],
     [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
     [Menu 菜单类,/tutorial/node/menu.html]]
@@ -33,20 +32,20 @@ bool state = button->getState();
 例如，下面的代码创建了一个可以控制音乐的播放与停止的按钮
 
 ```cpp
-auto btnTextOn = new Text("开");   // 创建开状态文字
-auto btnTextOff = new Text("关");  // 创建关状态文字
-auto button = new ButtonToggle(btnTextOn, btnTextOff); // 创建开关按钮
+auto btnTextOn = gcnew Text(L"开");   // 创建开状态文字
+auto btnTextOff = gcnew Text(L"关");  // 创建关状态文字
+auto button = gcnew ButtonToggle(btnTextOn, btnTextOff); // 创建开关按钮
 /* 设置点击按钮的回调函数 */
 button->setCallback([=]() {
     if (button->getState()) {               // 获取按钮是打开还是关闭
-        MusicManager::resume("music.wav");  // 打开状态下，继续播放音乐
+        Player::resume(L"music.wav");  // 打开状态下，继续播放音乐
     }
     else {
-        MusicManager::pause("music.wav");   // 关闭状态下，暂停音乐
+        Player::pause(L"music.wav");   // 关闭状态下，暂停音乐
     }
 });
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
-关于音乐的播放方法请参考 [[使用 MusicManager 播放音乐]](/tutorial/tools.html#使用-MusicManager-播放音乐)。
+关于音乐的播放方法请参考 [[使用 Player 播放音乐]](/tutorial/tools.html#使用-Player-播放音乐)。
 </div>

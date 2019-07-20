@@ -17,26 +17,20 @@ toclinker:
     [动画的停止、暂停和继续,/tutorial/action/start-pause-resume.html],
     [动画的克隆,/tutorial/action/clone.html]]
 ---
-## 循环执行动画
 
-`Loop` 可以让一个动画循环执行，例如下面的代码，精灵执行动画后就会不断的消失，又浮现。
+## 同时执行多个动画
+
+`Spawn` 可以将多个动画组合在一起，并让它们同时开始运行。
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
 auto fadeOut = gcnew FadeOut(1.5f);
-// 创建一个 0.5 秒的淡入动画
-auto fadeIn = gcnew FadeIn(0.5f);
+// 创建一个 0.5 秒的旋转动画
+auto rotateBy = gcnew RotateBy(0.5f, 60);
 // 组合两个动画
-auto two = gcnew Two(fadeOut, fadeIn);
-// 创建一个循环动画
-auto loop = gcnew Loop(two);
-// 让一个精灵执行
-sprite->runAction(loop);
+auto two = gcnew Spawn({ fadeOut, rotateBy });
+// 执行组合动画
+sprite->runAction(two);
 ```
 
-循环动画可以设置它的构造函数的第二个参数，指定它的循环次数。例如下面的代码中，循环动画只会循环 3 次。
-
-```cpp
-// 创建一个循环动画
-auto loop = gcnew Loop(two, 3);
-```
+上面的代码将淡入和旋转动画组合成一个动画，精灵执行后就会一边慢慢消失，一边旋转 60 度。

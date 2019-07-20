@@ -8,7 +8,6 @@ toclinker:
     [Text 文本类,/tutorial/node/text.html],
     [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
     [Menu 菜单类,/tutorial/node/menu.html]]
@@ -19,10 +18,10 @@ toclinker:
 Node 是一个抽象的含义，它表示场景中的一个元素。
 
 ```cpp
-auto node = new Node();    // 创建一个空节点
+auto node = gcnew Node();    // 创建一个空节点
 ```
 
-节点的常用属性有`名称(name)`、`坐标(pos)`、`宽度(width)`、`高度(height)`、`缩放程度(scale)`、`旋转角度(rotation)`、`不透明度(opacity)`、`中心点(pivot)`等。
+节点的常用属性有`名称(name)`、`坐标(pos)`、`宽度(width)`、`高度(height)`、`缩放程度(scale)`、`旋转角度(rotation)`、`不透明度(opacity)`、`锚点(anchor)`等。
 使用`get`+`属性名`的函数可以获取节点的属性，`set`+`属性名`的函数可以修改它的属性，如下所示。
 
 ```cpp
@@ -33,8 +32,8 @@ node->setPosX(posX);
 node->setPosY(posY);
 // 使用 get + Pos 可以获取节点坐标
 Point pos = node->getPos();
-double posX = node->getPosX();
-double posY = node->getPosY();
+float posX = node->getPosX();
+float posY = node->getPosY();
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
@@ -48,7 +47,7 @@ Point p2(10, 10);  // 创建一个 (10, 10) 坐标
 有时也许你需要区分不同的节点，那么可以设置它的名称
 
 ```cpp
-node->setName("name_test");    // 设置节点名称
+node->setName(L"name_test");    // 设置节点名称
 String name = node->getName();  // 获取节点名称
 ```
 
@@ -66,8 +65,8 @@ String str = "Hello World";
 `Node::addChild`函数用来添加子节点。例如，下面的代码将 node2 作为了 node1 的子节点：
 
 ```cpp
-auto node1 = new Node();
-auto node2 = new Node();
+auto node1 = gcnew Node();
+auto node2 = gcnew Node();
 node1->addChild(node2);    // 添加子节点
 ```
 

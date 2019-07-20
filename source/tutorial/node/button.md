@@ -8,7 +8,6 @@ toclinker:
     [Text 文本类,/tutorial/node/text.html],
     [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Image 图片类,/tutorial/node/image.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
     [Menu 菜单类,/tutorial/node/menu.html]]
@@ -19,15 +18,15 @@ Button 表示一个按钮，你可以把一段文字或者一个精灵变成按�
 
 ```cpp
 // 创建一个精灵
-auto btnSprite = new Sprite("按钮图片.png");
+auto btnSprite = gcnew Sprite(L"按钮图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() 
 {
     // 点击按钮，进入一个新场景
-    SceneManager::enter(new Scene());
+    SceneManager::enter(gcnew Scene());
 };
 // 把精灵变成一个按钮，并设置点击按钮后的回调函数
-auto button = new Button(btnSprite, callback);
+auto button = gcnew Button(btnSprite, callback);
 // 把按钮加入场景
 scene->add(button);
 ```
@@ -40,17 +39,17 @@ scene->add(button);
 
 ```cpp
 // 创建一个精灵，按钮普通状态显示
-auto btnNormal = new Sprite("按钮图片.png");
+auto btnNormal = gcnew Sprite(L"按钮图片.png");
 // 创建一个精灵，按钮按下状态显示
-auto btnSelect = new Sprite("按下时图片.png");
+auto btnSelect = gcnew Sprite(L"按下时图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() 
 {
     // 点击按钮，进入一个新场景
-    SceneManager::enter(new Scene());
+    SceneManager::enter(gcnew Scene());
 };
 // 创建按钮
-auto button = new Button();
+auto button = gcnew Button();
 button->setNormal(btnNormal);
 button->setSelected(btnSelect);
 button->setCallback(callback);
