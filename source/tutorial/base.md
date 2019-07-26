@@ -94,11 +94,11 @@ printf(L"%.1f %.1f\n", width, height);
 
 `Scene(场景)` 代表游戏中的一个界面，你的游戏可以有类似主菜单、游戏界面、结束界面等多个场景。
 
-你可以直接使用 `gcnew` 关键字创建场景：
+你可以直接使用 `new` 关键字创建场景：
 
 ```cpp
 // 创建一个空场景
-auto scene = gcnew Scene;
+auto scene = new Scene;
 // 记得删除场景
 delete scene;
 ```
@@ -114,11 +114,11 @@ SceneManager::back();
 
 场景中所有的元素都被称为`Node(节点)`，比如场景中的一个按钮，或者一张图片，它们都是节点的一种。
 
-Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(精灵)`、`Button(按钮)`等等，你可以像创建场景一样，直接用 `gcnew` 运算符创建它们
+Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(精灵)`、`Button(按钮)`等等，你可以像创建场景一样，直接用 `new` 关键字创建它们
 
 ```cpp
 // 创建一个文本节点
-auto text = gcnew Text(L"Hello Easy2D");
+auto text = new Text(L"Hello Easy2D");
 ```
 
 将创建好的节点加入到场景中，它将显示在画面上
@@ -139,12 +139,12 @@ int main()
     {
         /* 设计游戏内容 */
         // 创建一个空场景
-        auto scene = gcnew Scene;
+        auto scene = new Scene;
         // 进入 scene 场景
         SceneManager::enter(scene);
 
         // 创建一个文本节点
-        auto text = gcnew Text(L"Hello Easy2D");
+        auto text = new Text(L"Hello Easy2D");
         // 将文本添加到场景中
         scene->add(text);
 
