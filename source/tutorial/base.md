@@ -11,7 +11,7 @@ type: "tutorial"
 相信你已经配置好了 Easy2D 的环境，让我们新建一个空的控制台程序，从这里起步。
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -42,7 +42,7 @@ int main()
 有了这三个函数，我们就可以构建一个没有任何画面的窗口程序了。一个 Easy2D 程序应由 **初始化**、**设计游戏内容**、**开始游戏**、**销毁资源** 四个部分组成，下面的代码运行后将显示一个无画面的黑窗口。
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -131,7 +131,7 @@ scene->addChild(text);
 上面的内容都属于 **设计游戏内容**，所以上面这个 Demo 的完整代码如下所示
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -163,7 +163,7 @@ int main()
 
 ## 内存管理与垃圾回收
 
-Easy2D 支持垃圾内存的自动回收，要使用这个功能，你需要使用 `gcnew` 代替 `gcnew` 来创建对象。
+Easy2D 支持垃圾内存的自动回收，要使用这个功能，你需要使用 `gcnew` 代替 `new` 来创建对象。
 
 ```cpp
 // 创建一个自动回收的场景

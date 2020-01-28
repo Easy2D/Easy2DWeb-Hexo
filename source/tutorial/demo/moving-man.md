@@ -17,7 +17,7 @@ type: "tutorial"
 在 VS 中写好我们新手入门里学习的基本代码，运行后显示一个 640*480 大小的窗口。
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -66,7 +66,7 @@ public:
 添加后的完整代码如下所示
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 class Man : public Sprite
 {
@@ -258,7 +258,7 @@ void onUpdate()
 ## 完整代码
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 class Man : public Sprite
 {

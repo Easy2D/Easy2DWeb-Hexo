@@ -5,6 +5,12 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.0.0 （2020-1-28）
+
+Easy2D v2.0.0 正式版发布。
+
+<br />
+
 ### v2.0.0-beta7 （2018-5-27）
 
 - New Features
@@ -78,6 +84,8 @@ type: "history"
   - 移除了 `Node::onCollide` 和 `Scene::onCollide` 函数
   - 移除了 `Node::onEnter` 和 `Node::onExit` 函数
   - 移除了所有可变参数的方法
+
+<br />
 
 ### v2.0.0-beta6 （2018-3-13）
 

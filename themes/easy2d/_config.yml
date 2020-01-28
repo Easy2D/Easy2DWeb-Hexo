@@ -14,14 +14,14 @@ menu:
 # Social
 social:
   gitee: https://gitee.com/werelone/Easy2D/
-  github: https://github.com/Nomango/Easy2D/
+  github: https://github.com/Easy2D/
 
 # Index
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    last: v2.0.0-beta7
-    update: "2019-7-16"
+    last: v2.0.0
+    update: "2020-1-28"
     more: 历史版本
   examples:
   - name: Flappy Bird

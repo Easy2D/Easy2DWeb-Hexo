@@ -11,7 +11,7 @@ type: "tutorial"
 在 VS 中写好我们新手入门里学习的基本代码，运行后显示一个 300*300 大小的窗口。
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
 在**设计游戏内容**的部分，创建一个场景和一个 Text 对象，然后文本添加到场景中。
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -65,7 +65,7 @@ int main()
 用我们在新手入门中学到的方法，修改文本中心点和文本坐标，让它在屏幕上居中显示
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {
@@ -152,7 +152,7 @@ text->runAction(action);
 ## 完整代码
 
 ```cpp
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 int main()
 {

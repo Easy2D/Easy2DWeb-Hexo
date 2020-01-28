@@ -143,7 +143,7 @@ Easy2D 可以灵活使用，但是建议你为每个场景都新建一个类，�
 ```cpp
 // TestScene.h
 #pragma once
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 class TestScene : public Scene
 {
