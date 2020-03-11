@@ -13,7 +13,7 @@ menu:
 
 # Social
 social:
-  gitee: https://gitee.com/werelone/Easy2D/
+  gitee: https://gitee.com/Easy2D/
   github: https://github.com/Easy2D/
 
 # Index
@@ -44,7 +44,7 @@ index:
 local: false
 favicon: /assets/images/avatar.ico
 logo: /assets/images/logo.png
-ICP: 蜀ICP备16028738号-4
+ICP: 津ICP备20001052号-3
 
 # Plugins
 plugins:
