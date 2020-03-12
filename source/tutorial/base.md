@@ -193,11 +193,11 @@ SceneManager::enter(scene);
 SceneManager::back();
 ```
 
-使用 gcnew 运算符创建的对象可以手动调用 `autorelease` 函数，使 GC 对它进行跟踪。
+使用 new 运算符创建的对象可以手动调用 `autorelease` 函数，使 GC 对它进行跟踪。
 
 ```cpp
-// 使用 gcnew 创建对象
-auto scene = gcnew Scene;
+// 使用 new 创建对象
+auto scene = new Scene;
 // 调用 autorelease 函数，使 GC 自动对其进行回收
 scene->autorelease();
 ```
