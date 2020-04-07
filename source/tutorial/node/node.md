@@ -18,7 +18,7 @@ toclinker:
 Node 是一个抽象的含义，它表示场景中的一个元素。
 
 ```cpp
-auto node = gcnew Node();    // 创建一个空节点
+auto node = gcnew Node;    // 创建一个空节点
 ```
 
 节点的常用属性有`名称(name)`、`坐标(pos)`、`宽度(width)`、`高度(height)`、`缩放程度(scale)`、`旋转角度(rotation)`、`不透明度(opacity)`、`锚点(anchor)`等。
@@ -65,8 +65,8 @@ String str = "Hello World";
 `Node::addChild`函数用来添加子节点。例如，下面的代码将 node2 作为了 node1 的子节点：
 
 ```cpp
-auto node1 = gcnew Node();
-auto node2 = gcnew Node();
+auto node1 = gcnew Node;
+auto node2 = gcnew Node;
 node1->addChild(node2);    // 添加子节点
 ```
 

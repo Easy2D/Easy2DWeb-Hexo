@@ -23,7 +23,7 @@ auto btnSprite = gcnew Sprite(L"按钮图片.png");
 auto callback = []() 
 {
     // 点击按钮，进入一个新场景
-    SceneManager::enter(gcnew Scene());
+    SceneManager::enter(gcnew Scene);
 };
 // 把精灵变成一个按钮，并设置点击按钮后的回调函数
 auto button = gcnew Button(btnSprite, callback);
@@ -46,10 +46,10 @@ auto btnSelect = gcnew Sprite(L"按下时图片.png");
 auto callback = []() 
 {
     // 点击按钮，进入一个新场景
-    SceneManager::enter(gcnew Scene());
+    SceneManager::enter(gcnew Scene);
 };
 // 创建按钮
-auto button = gcnew Button();
+auto button = gcnew Button;
 button->setNormal(btnNormal);
 button->setSelected(btnSelect);
 button->setCallback(callback);

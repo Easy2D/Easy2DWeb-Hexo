@@ -25,7 +25,7 @@ toclinker:
 
 ```cpp
 // 创建帧动画
-auto animation = gcnew Animation();
+auto animation = gcnew Animation;
 // 加载多个精灵帧
 animation->addFrame(gcnew Image(L"第一帧.png"));
 animation->addFrame(gcnew Image(L"第二帧.png"));

@@ -19,6 +19,8 @@ type: "tutorial"
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 int main()
 {
     if (Game::init())
@@ -54,9 +56,10 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man()
     {
-        // Man 的构造函数
+        // 加载图片
+        this->open(L"man.png");
     }
 };
 ```
@@ -68,12 +71,15 @@ public:
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man()
     {
-        // Man 的构造函数
+        // 加载图片
+        this->open(L"man.png");
     }
 };
 
@@ -86,12 +92,12 @@ int main()
         Window::setSize(640, 480);
 
         // 创建场景
-        auto scene = gcnew Scene();
+        auto scene = gcnew Scene;
         // 进入该场景
         SceneManager::enter(scene);
 
         // 创建一个 Man 对象
-        auto hero = gcnew Man();
+        auto hero = gcnew Man;
         // 将 Man 添加到场景中
         scene->add(hero);
 
@@ -110,8 +116,10 @@ int main()
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man()
     {
+        // 加载图片
+        this->open(L"man.png");
         // 居中显示在屏幕上
         this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
@@ -131,8 +139,10 @@ public:
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man()
     {
+        // 加载图片
+        this->open(L"man.png");
         // 居中显示在屏幕上
         this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
@@ -149,12 +159,12 @@ onUpdate 是一个特殊的函数，它在每一帧画面刷新前被 Easy2D 自
 
 `Input` 类用来获取用户的输入，`Input::isDown` 函数用来判断一个键是否正被按下，这个函数需要一个 int 类型的参数，这个参数代表键盘上的一个键。
 
-`KeyCode` 类枚举了常用按键的键值，例如 `Key::Up` 代表上键。你可以用下面的代码判断上键是否被按下：
+`KeyCode` 类枚举了常用按键的键值，例如 `KeyCode::Up` 代表上键。你可以用下面的代码判断上键是否被按下：
 
 ```cpp
 void onUpdate()
 {
-    if (Input::isDown(Key::Up))
+    if (Input::isDown(KeyCode::Up))
     {
         // 上键被按下
     }
@@ -170,7 +180,7 @@ void onUpdate()
 ```cpp
 void onUpdate()
 {
-    if (Input::isDown(Key::Up))
+    if (Input::isDown(KeyCode::Up))
     {
         // 获取当前 Y 坐标
         float y = this->getPosY();
@@ -185,7 +195,7 @@ Node 类的 `Node::movePos` 函数可以直接移动节点，所以上面的代�
 ```cpp
 void onUpdate()
 {
-    if (Input::isDown(Key::Up))
+    if (Input::isDown(KeyCode::Up))
     {
         // Man 的 Y 坐标减少 2
         this->movePosY(-2);
@@ -198,25 +208,25 @@ void onUpdate()
 ```cpp
 void onUpdate()
 {
-    if (Input::isDown(Key::Up))
+    if (Input::isDown(KeyCode::Up))
     {
         // Man 的 Y 坐标减少 2
         this->movePosY(-2);
     }
 
-    if (Input::isDown(Key::Down))
+    if (Input::isDown(KeyCode::Down))
     {
         // Man 的 Y 坐标增加 2
         this->movePosY(2);
     }
 
-    if (Input::isDown(Key::Left))
+    if (Input::isDown(KeyCode::Left))
     {
         // Man 的 X 坐标减少 2
         this->movePosX(-2);
     }
 
-    if (Input::isDown(Key::Right))
+    if (Input::isDown(KeyCode::Right))
     {
         // Man 的 X 坐标增加 2
         this->movePosX(2);
@@ -229,23 +239,23 @@ void onUpdate()
 ```cpp
 void onUpdate()
 {
-    if (Input::isDown(Key::Up))
+    if (Input::isDown(KeyCode::Up))
     {
         // Man 的 Y 坐标减少 2
         this->movePosY(-2);
     }
-    else if (Input::isDown(Key::Down))
+    else if (Input::isDown(KeyCode::Down))
     {
         // Man 的 Y 坐标增加 2
         this->movePosY(2);
     }
 
-    if (Input::isDown(Key::Left))
+    if (Input::isDown(KeyCode::Left))
     {
         // Man 的 X 坐标减少 2
         this->movePosX(-2);
     }
-    else if (Input::isDown(Key::Right))
+    else if (Input::isDown(KeyCode::Right))
     {
         // Man 的 X 坐标增加 2
         this->movePosX(2);
@@ -260,11 +270,15 @@ void onUpdate()
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 class Man : public Sprite
 {
 public:
-    Man() : Sprite(L"man.png")
+    Man()
     {
+        // 加载图片
+        this->open(L"man.png");
         // 居中显示在屏幕上
         this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
@@ -272,23 +286,23 @@ public:
 
     void onUpdate()
     {
-        if (Input::isDown(Key::Up))
+        if (Input::isDown(KeyCode::Up))
         {
             // Man 的 Y 坐标减少 2
             this->movePosY(-2);
         }
-        else if (Input::isDown(Key::Down))
+        else if (Input::isDown(KeyCode::Down))
         {
             // Man 的 Y 坐标增加 2
             this->movePosY(2);
         }
 
-        if (Input::isDown(Key::Left))
+        if (Input::isDown(KeyCode::Left))
         {
             // Man 的 X 坐标减少 2
             this->movePosX(-2);
         }
-        else if (Input::isDown(Key::Right))
+        else if (Input::isDown(KeyCode::Right))
         {
             // Man 的 X 坐标增加 2
             this->movePosX(2);
@@ -305,12 +319,12 @@ int main()
         Window::setSize(640, 480);
 
         // 创建场景
-        auto scene = gcnew Scene();
+        auto scene = gcnew Scene;
         // 进入该场景
         SceneManager::enter(scene);
 
         // 创建一个 Man 对象
-        auto hero = gcnew Man();
+        auto hero = gcnew Man;
         // 将 Man 添加到场景中
         scene->add(hero);
 

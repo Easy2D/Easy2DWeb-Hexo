@@ -13,6 +13,8 @@ type: "tutorial"
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 int main()
 {
     return 0;
@@ -43,6 +45,8 @@ int main()
 
 ```cpp
 #include <easy2d/easy2d.h>
+
+using namespace easy2d;
 
 int main()
 {
@@ -132,6 +136,8 @@ scene->addChild(text);
 
 ```cpp
 #include <easy2d/easy2d.h>
+
+using namespace easy2d;
 
 int main()
 {

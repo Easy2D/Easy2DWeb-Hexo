@@ -13,6 +13,8 @@ type: "tutorial"
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 int main()
 {
     if (Game::init())
@@ -37,6 +39,8 @@ int main()
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 int main()
 {
     if (Game::init())
@@ -46,7 +50,7 @@ int main()
         Window::setSize(300, 300);
 
         // 创建场景
-        auto scene = gcnew Scene();
+        auto scene = gcnew Scene;
         // 进入该场景
         SceneManager::enter(scene);
 
@@ -67,6 +71,8 @@ int main()
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 int main()
 {
     if (Game::init())
@@ -76,7 +82,7 @@ int main()
         Window::setSize(300, 300);
 
         // 创建场景
-        auto scene = gcnew Scene();
+        auto scene = gcnew Scene;
         // 进入该场景
         SceneManager::enter(scene);
 
@@ -154,6 +160,8 @@ text->runAction(action);
 ```cpp
 #include <easy2d/easy2d.h>
 
+using namespace easy2d;
+
 int main()
 {
     if (Game::init())
@@ -163,7 +171,7 @@ int main()
         Window::setSize(300, 300);
 
         // 创建场景
-        auto scene = gcnew Scene();
+        auto scene = gcnew Scene;
         // 进入该场景
         SceneManager::enter(scene);
 

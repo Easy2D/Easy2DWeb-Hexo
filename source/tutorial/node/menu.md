@@ -22,7 +22,7 @@ toclinker:
 
 ```cpp
 // 创建一个菜单
-auto menu = gcnew Menu();
+auto menu = gcnew Menu;
 // 添加按钮
 menu->addButton(button1);
 menu->addButton(button2);
