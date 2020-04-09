@@ -23,7 +23,7 @@ type: "start"
 Easy2D 不支持 VS2012 及以下的版本（包括 VC6.0），如果你使用的是低版本的 VS，那你需要尝试一下新版的 [Visual Studio](https://www.visualstudio.com/) 了。
 
 > **安装环境**：
-> 操作系统：Windows 8 及以上操作系统。
+> 操作系统：Windows 7 及以上操作系统。
 > 编译环境：Visual Studio 2013 (x86 & x64) 及以上版本。
 
 <br/>

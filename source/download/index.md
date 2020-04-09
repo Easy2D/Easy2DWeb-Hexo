@@ -4,21 +4,27 @@ icon: download
 type: "download"
 ---
 ## 下载
-#### 版本号：2.0.4
+#### 版本号：2.0.8
 
 | 文件名                  |   大小   |   链接   |
 | ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.4-installer.exe | 5.21MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.4-installer.exe) |
-| Easy2D-v2.0.4.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.4.7z) |
+| Easy2D-v2.0.8-installer.exe | 5.21MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-installer.exe) |
+| Easy2D-v2.0.8.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8.7z) |
+| Easy2D-v2.0.8-win7-installer.exe | 4.76MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-win7-installer.exe) |
+| Easy2D-v2.0.8-win7.7z  | 4.72MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-win7.7z) |
 
 #### 常见问题
 
 浏览器可能将安装器（installer.exe）识别为不安全的文件，如果您担心电脑因此受到损害，请下载 .7z 格式的压缩包，运行里面的 install.bat 文件进行安装。
 
+在 Win7 环境下请下载 Win7 专用安装包，由于 Win7 下不支持 XAudio2 组件，Win7 专用包将该组件替换成了 MCI，使用时需要在头文件前添加 `E2D_WIN7` 宏。
+
 #### 旧版下载
 
 | 文件名                  |   大小   |   链接   |
 | ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.4-installer.exe | 5.21MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.4-installer.exe) |
+| Easy2D-v2.0.4.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.4.7z) |
 | Easy2D-v2.0.0-installer.exe | 4.99MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.0-installer.exe) |
 | Easy2D-v2.0.0.7z  | 4.96MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.0.7z) |
 
