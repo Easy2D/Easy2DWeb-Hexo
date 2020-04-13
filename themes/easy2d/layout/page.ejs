@@ -16,7 +16,13 @@
 		</div>
     </div>
 
-	<% if (page.toc || page.toclinker) { %>
+	<% if (page.nocontainer) { %>
+		<div class="ui main">
+			<div class="ui segment page-content">
+				<%- partial('_partial/' + page.type) %>
+			</div>
+		</div>
+	<% } else if (page.toc || page.toclinker) { %>
 		<div class="ui main container">
 			<div class="ui segment page-content">
 				<%- partial('_partial/' + page.type) %>

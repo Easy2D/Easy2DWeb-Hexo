@@ -2,6 +2,7 @@
 title: 示例代码
 icon: code
 type: "examples"
+nocontainer: true
 examples:
 - id: SmartClock
   name: SmartClock
@@ -41,5 +42,26 @@ examples:
   description: 经典的推箱子游戏，一共有八关，自动保存最佳纪录，音效可以关闭。
   exe_url: https://gitee.com/Easy2D/PushBox-Easy2D
   # http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/PushBox.7z
+  src_url:
+- id: TetrisNew
+  name: 俄罗斯方块
+  author: 大猫
+  image: /assets/images/sample/TetrisNew.png
+  description: 经典的俄罗斯方块游戏
+  exe_url: https://gitee.com/Easy2D/TetrisNew-Easy2D
+  src_url:
+- id: MineSweeping
+  name: 扫雷
+  author: Shenyuan
+  image: /assets/images/sample/MineSweeping.png
+  description: 经典的Windows版扫雷游戏
+  exe_url: https://gitee.com/Easy2D/MineSweeping-Easy2D
+  src_url:
+- id: TinyPlane
+  name: 是男人撑过20秒
+  author: Hong
+  image: /assets/images/sample/TinyPlane.png
+  description: 控制飞机躲避子弹，是男人就撑过20秒！
+  exe_url: https://gitee.com/Easy2D/TinyPlane-Easy2D
   src_url:
 ---

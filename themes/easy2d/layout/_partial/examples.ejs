@@ -1,13 +1,26 @@
 <style>
 .example-cards {
     text-align: center;
+    padding: 4em 2em;
 }
 .ui.card {
-    margin: 1em auto;
+    margin: 1em 5px;
     margin-bottom: 35px;
+    display: inline-block;
+}
+.ui.card .content {
+    min-height: 128px;
 }
 .ui.card .description {
     margin-top: 10px;
+}
+.ui.card .image {
+  width: 290px;
+  height: 330px;
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-position: center;
+  background-size: cover;
 }
 </style>
 
@@ -15,7 +28,7 @@
 
 <% page.examples.forEach(function(item) { %>
     <div class="ui card" id="<%- item.id %>">
-        <div class="image"><img src="<%- item.image %>"></div>
+        <div class="image" style="background-image:url(<%- item.image %>);"></div>
         <div class="content">
             <div class="header"><%- item.name %></div>
             <div class="meta">
