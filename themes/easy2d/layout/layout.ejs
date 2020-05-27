@@ -1,8 +1,16 @@
-<%- partial('_partial/head') %>
-<body>
-      <%- partial('_partial/header') %>
-      <%- body %>
-      <%- partial('_partial/footer') %>
-	  <%- partial('_partial/afterall') %>
-</body>
+<!DOCTYPE html>
+<html>
+
+<% if (theme.simple_home && page.path == 'index.html') { %>
+      <%- partial('index_simple') %>
+<% } else { %>
+      <%- partial('_partial/head') %>
+      <body>
+            <%- partial('_partial/header') %>
+            <%- body %>
+            <%- partial('_partial/footer') %>
+            <%- partial('_partial/afterall') %>
+      </body>
+<% } %>
+
 </html>
