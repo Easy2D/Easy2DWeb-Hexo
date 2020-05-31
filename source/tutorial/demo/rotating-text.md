@@ -57,7 +57,7 @@ int main()
         // 创建一个 Text 对象
         auto test = gcnew Text(L"Hello Easy2D!");
         // 将 Text 添加到场景中
-        scene->add(test);
+        scene->addChild(test);
 
         Game::start();
     }
@@ -89,7 +89,7 @@ int main()
         // 创建一个 Text 对象
         auto text = gcnew Text(L"Hello Easy2D!");
         // 将 Text 添加到场景中
-        scene->add(text);
+        scene->addChild(text);
 
         // 居中显示在屏幕上
         text->setAnchor(0.5f, 0.5f);
@@ -178,7 +178,7 @@ int main()
         // 创建一个 Text 对象
         auto text = gcnew Text(L"Hello Easy2D!");
         // 将 Text 添加到场景中
-        scene->add(text);
+        scene->addChild(text);
 
         // 居中显示在屏幕上
         text->setAnchor(0.5f, 0.5f);

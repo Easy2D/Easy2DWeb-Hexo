@@ -99,7 +99,7 @@ int main()
         // 创建一个 Man 对象
         auto hero = gcnew Man;
         // 将 Man 添加到场景中
-        scene->add(hero);
+        scene->addChild(hero);
 
         Game::start();
     }
@@ -326,7 +326,7 @@ int main()
         // 创建一个 Man 对象
         auto hero = gcnew Man;
         // 将 Man 添加到场景中
-        scene->add(hero);
+        scene->addChild(hero);
 
         Game::start();
     }

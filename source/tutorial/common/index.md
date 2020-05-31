@@ -7,11 +7,12 @@ type: "tutorial"
 
 ## 基本功能类
 
-- [Game 游戏](/tutorial/common/game.html) （该页面正在建设...）
-- [Window 窗口](/tutorial/common/window.html) （该页面正在建设...）
-- [Input 输入](/tutorial/common/input.html) （该页面正在建设...）
-- [Time 时间](/tutorial/common/time.html) （该页面正在建设...）
-- [Renderer 渲染器](/tutorial/common/renderer.html) （该页面正在建设...）
+- [Game 游戏](/tutorial/common/game.html)
+- [Window 窗口](/tutorial/common/window.html)
+- [Input 输入](/tutorial/common/input.html)
+- [Time 时间](/tutorial/common/time.html)
+- [Renderer 渲染器](/tutorial/common/renderer.html)
+- [Logger 日志](/tutorial/common/logger.html) （该页面正在建设...）
 
 ## 基本属性类
 

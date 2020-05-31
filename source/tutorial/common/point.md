@@ -10,6 +10,7 @@ toclinker:
         [Input 输入类,/tutorial/common/input.html],
         [Time 时间类,/tutorial/common/time.html],
         [Renderer 渲染器,/tutorial/common/renderer.html],
+        [Logger 日志,/tutorial/common/logger.html],
         [Point 坐标点,/tutorial/common/point.html],
         [Size 大小,/tutorial/common/size.html],
         [String 字符串,/tutorial/common/string.html],

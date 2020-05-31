@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [ [基础功能, /tutorial/common/], Size大小]
+subtitle: [ [基础功能, /tutorial/common/], Logger 日志]
 icon: idea
 type: "tutorial"
 toclinker: 
