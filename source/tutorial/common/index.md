@@ -15,4 +15,4 @@ type: "tutorial"
 - [Image 图片](/tutorial/common/image.html)
 - [Font 字体](/tutorial/common/font.html)
 - [TextStyle 文字样式](/tutorial/common/textstyle.html) （该页面正在建设...）
-- [Function 伪函数](/tutorial/common/function.html) （该页面正在建设...）
+- [Function 函数包装器](/tutorial/common/function.html)

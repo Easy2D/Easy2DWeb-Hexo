@@ -14,7 +14,7 @@ toclinker:
         [Image 图片类,/tutorial/common/image.html],
         [Font 字体,/tutorial/common/font.html],
         [TextStyle 文字样式,/tutorial/common/textstyle.html],
-        [Function 函数封装器,/tutorial/common/function.html]
+        [Function 函数包装器,/tutorial/common/function.html]
     ]
 ---
 
