@@ -6,7 +6,6 @@ type: "tutorial"
 toclinker: 
     [[Node 节点类,/tutorial/node/node.html],
     [Text 文本类,/tutorial/node/text.html],
-    [Font 字体类,/tutorial/node/font.html],
     [Sprite 精灵类,/tutorial/node/sprite.html],
     [Button 按钮类,/tutorial/node/button.html],
     [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],

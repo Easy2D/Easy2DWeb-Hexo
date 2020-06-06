@@ -8,9 +8,13 @@ type: "tutorial"
 
 - [[新手入门]](/tutorial/base.html)
 - [[快速上手]](/tutorial/demo/)
-- [[基础功能]](/tutorial/common/)
+
+- [[基础类型]](/tutorial/common/)
+- [[基础功能]](/tutorial/base/)
+
 - [[常用元素]](/tutorial/node/)
 - [[节点动画]](/tutorial/action/)
+
 - [[常用工具]](/tutorial/tools.html)
 - [[进阶内容]](/tutorial/advanced.html)
 

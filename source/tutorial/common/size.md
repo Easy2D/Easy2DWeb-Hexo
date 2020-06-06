@@ -1,25 +1,40 @@
 ---
 title: 入门教程
-subtitle: [ [基础功能, /tutorial/common/], Size大小]
+subtitle: [ [基础类型, /tutorial/common/], Size大小]
 icon: idea
 type: "tutorial"
 toclinker: 
     [
-        [Game 游戏类,/tutorial/common/game.html],
-        [Window 窗口类,/tutorial/common/window.html],
-        [Input 输入类,/tutorial/common/input.html],
-        [Time 时间类,/tutorial/common/time.html],
-        [Renderer 渲染器,/tutorial/common/renderer.html],
-        [Logger 日志,/tutorial/common/logger.html],
         [Point 坐标点,/tutorial/common/point.html],
         [Size 大小,/tutorial/common/size.html],
         [String 字符串,/tutorial/common/string.html],
         [Color 颜色,/tutorial/common/color.html],
         [KeyCode 键值,/tutorial/common/keycode.html],
+        [MouseCode 鼠标键值,/tutorial/common/mousecode.html],
         [Image 图片类,/tutorial/common/image.html],
+        [Font 字体,/tutorial/common/font.html],
         [TextStyle 文字样式,/tutorial/common/textstyle.html],
         [Function 函数封装器,/tutorial/common/function.html]
     ]
 ---
 
-## 这个页面正在建设... :(
+## Size 大小
+
+Size 类表示一个二维坐标系中的物体大小，具有 `width` 和 `height` 两个属性。
+
+```cpp
+// 创建一个宽度为 10，高度为 20 的大小
+Size size = Size(10, 20);
+```
+
+Size 之间可以做加减乘除运算：
+
+```cpp
+Size size1 = Size(10, 20);
+Size size2 = Size(0, -5);
+// 将两大小相加
+Point size3 = size1 + size2;
+// 输出 size3 的宽高
+// 输出结果为 (10, 15)
+Logger::messageln(L"(%f, %f)", size3.width, size3.height);
+```

@@ -45,7 +45,7 @@ local: false
 favicon: /assets/images/avatar.ico
 logo: /assets/images/logo.png
 ICP: 津ICP备20001052号-3
-simple_home: true
+simple_home: false
 
 # Plugins
 plugins:
