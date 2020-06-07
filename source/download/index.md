@@ -3,15 +3,15 @@ title: 下载 Easy2D
 icon: download
 type: "download"
 ---
+
 ## 下载
-#### 版本号：2.0.8
 
 | 文件名                  |   大小   |   链接   |
-| ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.8-installer.exe | 5.21MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-installer.exe) |
-| Easy2D-v2.0.8.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8.7z) |
-| Easy2D-v2.0.8-win7-installer.exe | 4.76MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-win7-installer.exe) |
-| Easy2D-v2.0.8-win7.7z  | 4.72MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-win7.7z) |
+| ---------------------- |:-------:|:--------:|
+| Easy2D-v2.0.10-installer.exe | 5.20MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.10-installer.exe) |
+| Easy2D-v2.0.10.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.10.7z) |
+| Easy2D-v2.0.10-win7-installer.exe | 4.75MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.10-win7-installer.exe) |
+| Easy2D-v2.0.10-win7.7z  | 4.72MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.10-win7.7z) |
 
 #### 常见问题
 
@@ -23,6 +23,10 @@ type: "download"
 
 | 文件名                  |   大小   |   链接   |
 | ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.8-installer.exe | 5.21MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-installer.exe) |
+| Easy2D-v2.0.8.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8.7z) |
+| Easy2D-v2.0.8-win7-installer.exe | 4.76MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-win7-installer.exe) |
+| Easy2D-v2.0.8-win7.7z  | 4.72MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.8-win7.7z) |
 | Easy2D-v2.0.4-installer.exe | 5.21MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.4-installer.exe) |
 | Easy2D-v2.0.4.7z  | 5.17MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.4.7z) |
 | Easy2D-v2.0.0-installer.exe | 4.99MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.0-installer.exe) |
