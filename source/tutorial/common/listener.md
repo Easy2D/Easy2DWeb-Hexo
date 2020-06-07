@@ -1,6 +1,6 @@
 ---
 title: 入门教程
-subtitle: [ [基础类型, /tutorial/common/], Size大小]
+subtitle: [ [基础类型, /tutorial/common/], Listener监听器]
 icon: idea
 type: "tutorial"
 toclinker: 
@@ -18,23 +18,4 @@ toclinker:
     ]
 ---
 
-## Size 大小
-
-Size 类表示一个二维坐标系中的物体大小，具有 `width` 和 `height` 两个属性。
-
-```cpp
-// 创建一个宽度为 10，高度为 20 的大小
-Size size = Size(10, 20);
-```
-
-Size 之间可以做加减乘除运算：
-
-```cpp
-Size size1 = Size(10, 20);
-Size size2 = Size(0, -5);
-// 将两大小相加
-Point size3 = size1 + size2;
-// 输出 size3 的宽高
-// 输出结果为 (10, 15)
-Logger::messageln(L"(%f, %f)", size3.width, size3.height);
-```
+## :( 这个页面正在建设...

@@ -4,12 +4,15 @@ subtitle: [ [常用元素, /tutorial/node/], Node节点]
 icon: idea
 type: "tutorial"
 toclinker: 
-    [[Node 节点类,/tutorial/node/node.html],
-    [Text 文本类,/tutorial/node/text.html],
-    [Sprite 精灵类,/tutorial/node/sprite.html],
-    [Button 按钮类,/tutorial/node/button.html],
-    [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
-    [Menu 菜单类,/tutorial/node/menu.html]]
+    [
+        [Node 节点类,/tutorial/node/node.html],
+        [Text 文本类,/tutorial/node/text.html],
+        [Sprite 精灵类,/tutorial/node/sprite.html],
+        [Button 按钮类,/tutorial/node/button.html],
+        [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
+        [Menu 菜单类,/tutorial/node/menu.html],
+        [Shape 形状类,/tutorial/node/shape.html]
+    ]
 ---
 
 ## Node 节点类
@@ -57,6 +60,8 @@ String str = "Hello World";
 ```
 </div>
 
+### 节点的父子结构
+
 节点以树形模型储存，每个节点都只能有一个父节点，和任意数量的子节点，一个树状模型如下图所示。
 
 ![节点的树型模型](/assets/images/tutorial/tree.png)
@@ -89,6 +94,8 @@ node->removeChild(node2);
 int num = node->getChildrenCount();
 ```
 
+### 节点的顺序
+
 另外，添加子节点时，先被添加的节点会被后添加的节点遮挡。例如，下面的代码中，node3 将遮挡 node2。
 
 ```cpp
@@ -106,6 +113,14 @@ node1->addChild(node3, 1);
 **根节点**是树型模型最顶端的节点，场景包含了根节点，所以屏幕上所有的节点都是它的子节点。将一个精灵添加入场景，其实是把精灵加入了场景的树型模型中。Easy2D 会遍历场景的树，对树上的所有节点做出处理。
 
 ![场景和节点的关系](/assets/images/tutorial/scene.png)
+
+### 节点的事件监听
+
+节点可以收到 `鼠标点击事件`、`键盘按下事件`、`键盘抬起事件` 等等事件，并且使用 `Listener（监听器）` 来监听某一事件的发生。
+
+有关监听器的更多用法，请查阅 [Listener 监听器](/tutorial/common/listener.html)
+
+### 节点的更多功能
 
 节点类有一些简单的函数用来判断碰撞，`Node::isPointIn` 函数可以判断一个坐标点是否在节点内，如下所示
 
