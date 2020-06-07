@@ -15,7 +15,7 @@ type: "tutorial"
 - [[常用元素]](/tutorial/node/)
 - [[节点动画]](/tutorial/action/)
 
-- [[常用工具]](/tutorial/tools.html)
+- [[实用工具]](/tutorial/utils/)
 - [[进阶内容]](/tutorial/advanced.html)
 
 ## 新手入门
@@ -24,7 +24,7 @@ type: "tutorial"
 
 学习游戏引擎其实是学习使用它的工具，Easy2D 提供了许多辅助类（如精灵、文本等）来实现游戏中的功能，[[常用元素]](/tutorial/node) 介绍了游戏中常用元素的使用方法，可以让你对如何使用 Easy2D 有初步的了解。[[节点动画]](/tutorial/action) 介绍了游戏中动画的实现方法。
 
-[[常用工具]](/tutorial/tools.html) 介绍了常用工具类的使用方法，将元素和工具组合使用，可以实现大部分 2D 游戏的需求。
+[[实用工具]](/tutorial/utils/) 介绍了实用工具类的使用方法，将元素和工具组合使用，可以实现大部分 2D 游戏的需求。
 
 ## 成长篇
 

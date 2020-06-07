@@ -178,28 +178,7 @@ auto scene = gcnew Scene;
 auto text = gcnew Text(L"Hello Easy2D");
 ```
 
-使用 `gcnew` 创建的对象将被 `垃圾回收器(GC)` 跟踪，当这个对象不再被需要时，GC 会自动 delete 它。
-
-`GC` 判断一个对象是否需要被释放的方法如下：
-
-- Object 基类对象保存了一个引用计数，这个计数表示它被 “使用” 的次数，初始的引用计数为 1
-- 当引用计数 > 0 时，对象被保留，引用计数 <= 0 时，对象被 delete
-- Object 的 `retain` 和 `release` 方法可以使引用计数加一或减一，这两个方法应成对使用
-- Object 的 `autorelease` 方法会把对象放入对象池中，gcnew 会自动调用 autorelease()
-- GC 会在画面下一帧调用对象池中所有对象的 `release` 方法，并清空对象池，以保证没有被引用的对象被及时删除
-
-比如我们使用 `gcnew` 创建了一个 `Scene` ，下面的代码展示了引用计数的变化
-
-```cpp
-// 创建一个场景，此时引用计数为 1
-auto scene = gcnew Scene;
-// 进入场景，它的引用计数变为 2
-SceneManager::enter(scene);
-// 退出场景，它的引用计数变回 1，GC 会在下一帧将 scene 回收
-SceneManager::back();
-```
-
-使用 new 运算符创建的对象可以手动调用 `autorelease` 函数，使 GC 对它进行跟踪。
+使用 new 运算符创建的对象也可以手动调用 `autorelease` 函数，使其可以自动被回收。
 
 ```cpp
 // 使用 new 创建对象
@@ -207,6 +186,8 @@ auto scene = new Scene;
 // 调用 autorelease 函数，使 GC 自动对其进行回收
 scene->autorelease();
 ```
+
+有关垃圾回收的更多内容，请参阅 [[关于垃圾回收]](/tutorial/advanced.html#关于垃圾回收)
 
 <br/>
 
