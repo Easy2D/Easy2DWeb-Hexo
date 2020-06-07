@@ -51,4 +51,6 @@ Logger::errorln(L"这是一条错误，同时输出一个字符串 %s", L"字符
 Logger::showConsole(true);
 ```
 
-当然，这个函数应该只在调试时使用，发布游戏前应去除这个函数。
+<div class="ui info message"><div class="header">Tips </div>
+这个函数应该只在调试时使用，发布游戏前应去除这个函数。
+</div>

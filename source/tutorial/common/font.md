@@ -13,14 +13,13 @@ toclinker:
         [MouseCode 鼠标键值,/tutorial/common/mousecode.html],
         [Image 图片类,/tutorial/common/image.html],
         [Font 字体,/tutorial/common/font.html],
-        [TextStyle 文字样式,/tutorial/common/textstyle.html],
         [Function 函数包装器,/tutorial/common/function.html]
     ]
 ---
 
 ## Font 字体类
 
-如果你想设置 [Text](/tutorial/node/text.html) 的字体、颜色、字号等等属性，就需要为它创建一个 Font 。
+如果你想设置 [Text](/tutorial/node/text.html) 的字体、粗细、字号等等属性，就需要为它创建一个 Font 。
 
 <div class="ui info message"><div class="header">Tips </div>
 Font 不是节点，因为它仅仅描述了文本的样式。Font 不能显示在屏幕上，也不能进行旋转之类的操作。
@@ -28,7 +27,17 @@ Font 不是节点，因为它仅仅描述了文本的样式。Font 不能显示�
 
 ```cpp
 auto text = gcnew Text(L"Hello Easy2D!");
-auto font = gcnew Font(L"宋体", 40, Color::BLUE); // 创建一个Font，宋体、字号40、蓝色
+
+// 创建一个字体，宋体、字号40、粗体、斜体
+Font font = Font();
+font.family = L"宋体";
+font.size = 40;
+font.weight = Font::Weight::Bold;
+font.italic = true;
+// 也可以用下面的代码创建字体，效果和上面一样
+Font font = Font(L"宋体", 40, Font::Weight::Bold, true);
+
+// 设置字体
 text->setFont(font);
 ```
 
@@ -38,17 +47,19 @@ text->setFont(font);
 
 ```cpp
 // 在创建文本的同时指定它的字体样式
-auto text = gcnew Text(L"Hello Easy2D!", L"宋体", 40, Color::BLUE);
+auto text = gcnew Text(L"Hello Easy2D!", Font(L"宋体", 40, Font::Weight::Bold));
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
 没有设置 Text 的字体时，它会自动创建一个默认字体并使用。
 </div>
 
-多个 Text 可以共用一个 Font，例如下面的代码中 text1 和 text2 使用了同一个 Font 对象，这时如果你修改 font 的颜色，text1和 text2 会同时变色。
+多个 Text 可以使用一个 Font，例如下面的代码中 text1 和 text2 使用了同一个 Font 对象。
+
+text1 和 text2 在内部会各自拷贝一份 Font，所以创建文字后再修改 font 不会影响 text1 和 text2。
 
 ```cpp
-auto font = gcnew Font(L"", 40);           // 系统默认字体、字号40
-auto text1 = gcnew Text(L"Hello", font);   // text1 使用 font
-auto text2 = gcnew Text(L"Easy2D", font);  // text2 也使用 font
+Font font = Font(L"", 40);                  // 系统默认字体、字号40
+auto text1 = gcnew Text(L"Hello", font);    // text1 使用 font
+auto text2 = gcnew Text(L"Easy2D", font);   // text2 也使用 font
 ```
