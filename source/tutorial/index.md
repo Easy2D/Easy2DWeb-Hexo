@@ -6,16 +6,21 @@ type: "tutorial"
 
 ## 教程目录
 
+### 入门篇
+
 - [[新手入门]](/tutorial/base.html)
 - [[快速上手]](/tutorial/demo/)
 
+### 基础篇
+
 - [[基础类型]](/tutorial/common/)
 - [[基础功能]](/tutorial/base/)
-
 - [[常用元素]](/tutorial/node/)
 - [[节点动画]](/tutorial/action/)
-
 - [[实用工具]](/tutorial/utils/)
+
+### 进阶篇
+
 - [[进阶内容]](/tutorial/advanced.html)
 
 ## 新手入门
@@ -26,7 +31,7 @@ type: "tutorial"
 
 [[实用工具]](/tutorial/utils/) 介绍了实用工具类的使用方法，将元素和工具组合使用，可以实现大部分 2D 游戏的需求。
 
-## 成长篇
+## 进阶成长
 
 刚刚熟悉 Easy2D 中的内容时，你会发现很多时候都只能对照教程复制粘贴代码，很难加入自己的设计。这时你需要打开思路，而不仅仅局限于从教程中寻找你想实现的功能。
 
