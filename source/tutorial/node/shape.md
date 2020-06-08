@@ -100,7 +100,7 @@ public:
     // 默认构造函数
     MyCircle();
 
-    // 指定半径的原型
+    // 指定半径的圆形
     MyCircle(float radius);
 
     // 获取半径
