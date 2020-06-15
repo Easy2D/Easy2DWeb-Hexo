@@ -34,6 +34,6 @@ type: "download"
 
 ## 社区交流
 
-游戏制作方面的学习交流欢迎加QQ群 1084339438（easy2d学习交流）或 608406540（Kiwano游戏引擎）
+游戏制作方面的学习交流欢迎加QQ群 1084339438（easy2d学习交流）或 608406540（Kiwano游戏引擎大群）
 
 <a class="ui button" href="/history">查看历史版本</a>

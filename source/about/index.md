@@ -33,4 +33,4 @@ Easy2D 起初是以学习开发游戏引擎为初衷的一个尝试作品，汲�
 
 ## 新计划
 
-新的游戏引擎 Kiwano 正在开发中，相关信息请到 [Kiwano Game Engine](//kiwanoengine.com) 查看。
+新的游戏引擎 Kiwano 正在开发中，相关信息请到 [Kiwano Game Engine](//kiwanoengine.com) 查看，也欢迎到 **Kiwano 游戏开发QQ大群**：608406540 一起交流~
