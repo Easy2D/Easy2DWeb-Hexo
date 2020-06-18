@@ -19,7 +19,18 @@ toclinker:
 ---
 ## 循环执行动画
 
-`Loop` 可以让一个动画循环执行，例如下面的代码，精灵执行动画后就会不断的消失，又浮现。
+`Loop` 可以让一个动画循环执行，例如下面的代码，精灵执行动画后会持续不断的旋转
+
+```cpp
+// 创建一个旋转动画，1 秒内顺时针旋转 60 度
+auto rotateBy = gcnew RotateBy(1, 60);
+// 创建一个循环动画
+auto loop = gcnew Loop(rotateBy);
+// 让一个精灵执行
+sprite->runAction(loop);
+```
+
+配合组合动画，可以实现更复杂的动画循环，例如下面的代码，精灵执行动画后就会不断的消失，又浮现
 
 ```cpp
 // 创建一个 1.5 秒的淡出动画
@@ -27,9 +38,9 @@ auto fadeOut = gcnew FadeOut(1.5f);
 // 创建一个 0.5 秒的淡入动画
 auto fadeIn = gcnew FadeIn(0.5f);
 // 组合两个动画
-auto two = gcnew Two(fadeOut, fadeIn);
+auto seq = gcnew Sequence({ fadeOut, fadeIn });
 // 创建一个循环动画
-auto loop = gcnew Loop(two);
+auto loop = gcnew Loop(seq);
 // 让一个精灵执行
 sprite->runAction(loop);
 ```
@@ -38,5 +49,5 @@ sprite->runAction(loop);
 
 ```cpp
 // 创建一个循环动画
-auto loop = gcnew Loop(two, 3);
+auto loop = gcnew Loop(action, 3);
 ```

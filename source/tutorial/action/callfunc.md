@@ -19,10 +19,16 @@ toclinker:
 ---
 ## 在动画中执行函数
 
-`CallFunc` 在运行时立即执行一个函数，你需要为它指定一个可执行的函数
+`CallFunc` 在运行时立即执行一个函数，你需要为它指定一个可执行的回调函数
 
 ```cpp
-// 创建一个动画，这个动画执行一个指定的函数
+void Test() { ... }
+// 创建一个动画，这个动画立即执行 Test 函数
+auto action = gcnew CallFunc(Test);
+```
+
+```cpp
+// 另外一种方法，执行 lambda 函数
 auto action = gcnew CallFunc([]() {});
 ```
 

@@ -24,23 +24,28 @@ toclinker:
 用 Image (图片类) 可以给精灵创建帧动画，下面是一段示例代码
 
 ```cpp
-// 创建帧动画
-auto animation = gcnew Animation;
+// 创建帧动画的序列帧，每 0.1 秒切换一帧
+auto animation = gcnew Animation(0.1);
 // 加载多个精灵帧
-animation->addFrame(gcnew Image(L"第一帧.png"));
-animation->addFrame(gcnew Image(L"第二帧.png"));
-animation->addFrame(gcnew Image(L"第三帧.png"));
+animation->add(gcnew Image(L"第一帧.png"));
+animation->add(gcnew Image(L"第二帧.png"));
+animation->add(gcnew Image(L"第三帧.png"));
+
+// 创建帧动画
+auto animate = gcnew Animate(animation);
 // 精灵执行帧动画
-sprite->runAction(animation);
+sprite->runAction(animate);
 ```
 
-<div class="ui info message"><div class="header">Tips </div>
-这个动画只执行一次就结束了，如果想让它循环执行帧动画，需要用 Loop 实现
+<div class="ui info warning"><div class="header">Warning </div>
+注意，只能由精灵执行帧动画
+</div>
+
+这个动画只执行一次就结束了，如果想让它循环执行帧动画，需要用 Loop 动画组合实现
 
 ```cpp
 // 把已建好的帧动画组合成循环动画
-auto action = gcnew Loop(animation);
+auto action = gcnew Loop(animate);
 // 精灵执行循环的帧动画
 sprite->runAction(action);
 ```
-</div>

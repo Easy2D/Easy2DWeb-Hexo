@@ -31,7 +31,7 @@ auto callback = gcnew CallFunc([=]() {
 // 创建一个 0.5 秒的淡入动画
 auto fadeIn = gcnew FadeIn(0.5f);
 // 组合三个动画成顺序动画
-auto sequence = gcnew Sequence(3, fadeOut, callback, fadeIn);
+auto sequence = gcnew Sequence({ fadeOut, callback, fadeIn });
 // 执行顺序动画
 sprite->runAction(sequence);
 ```
