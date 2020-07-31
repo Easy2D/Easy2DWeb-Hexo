@@ -11,17 +11,12 @@ menu:
   feedback: /feedback
   about: /about
 
-# Social
-social:
-  gitee: https://gitee.com/Easy2D/
-  github: https://github.com/Easy2D/
-
 # Index
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    last: v2.0.10
-    update: "2020-6-7"
+    last: v2.0.11
+    update: "2020-7-31"
     more: 历史版本
   examples:
   - name: Flappy Bird
@@ -39,6 +34,11 @@ index:
     image: /assets/images/sample/PushBox.png
     description: 经典推箱子，一共有八关，自动保存最佳纪录，音效可关闭。
     url: /examples/#PushBox
+
+# Social
+social:
+  gitee: https://gitee.com/Easy2D/
+  github: https://github.com/Easy2D/
 
 # Miscellaneous
 local: false
