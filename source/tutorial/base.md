@@ -152,7 +152,7 @@ int main()
         // 创建一个文本节点
         auto text = new Text(L"Hello Easy2D");
         // 将文本添加到场景中
-        scene->add(text);
+        scene->addChild(text);
 
         Game::start();
 
@@ -209,7 +209,7 @@ auto scene = gcnew Scene;
 // 创建一个精灵
 auto sprite = gcnew Sprite(L"图片名.png");
 // 把精灵添加到场景中
-scene->add(sprite);
+scene->addChild(sprite);
 ```
 
 ![场景示例](/assets/images/tutorial/anchor3.png)

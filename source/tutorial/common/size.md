@@ -33,7 +33,7 @@ Size 之间可以做加减乘除运算：
 Size size1 = Size(10, 20);
 Size size2 = Size(0, -5);
 // 将两大小相加
-Point size3 = size1 + size2;
+Size size3 = size1 + size2;
 // 输出 size3 的宽高
 // 输出结果为 (10, 15)
 Logger::messageln(L"(%f, %f)", size3.width, size3.height);

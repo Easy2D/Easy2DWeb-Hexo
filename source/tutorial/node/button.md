@@ -30,7 +30,7 @@ auto callback = []()
 // 把精灵变成一个按钮，并设置点击按钮后的回调函数
 auto button = gcnew Button(btnSprite, callback);
 // 把按钮加入场景
-scene->add(button);
+scene->addChild(button);
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
@@ -56,7 +56,7 @@ button->setNormal(btnNormal);
 button->setSelected(btnSelect);
 button->setCallback(callback);
 // 把按钮加入场景
-scene->add(button);
+scene->addChild(button);
 ```
 
 如果你想让一个按钮停止工作，可以把它设为禁用状态
