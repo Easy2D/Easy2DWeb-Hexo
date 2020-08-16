@@ -9,7 +9,7 @@ toclinker:
         [Text 文本类,/tutorial/node/text.html],
         [Sprite 精灵类,/tutorial/node/sprite.html],
         [Button 按钮类,/tutorial/node/button.html],
-        [ButtonToggle 开关按钮类,/tutorial/node/buttontoggle.html],
+        [ToggleButton 开关按钮类,/tutorial/node/togglebutton.html],
         [Menu 菜单类,/tutorial/node/menu.html],
         [Shape 形状类,/tutorial/node/shape.html]
     ]
@@ -54,7 +54,7 @@ auto callback = []()
 auto button = gcnew Button;
 button->setNormal(btnNormal);
 button->setSelected(btnSelect);
-button->setCallback(callback);
+button->setClickFunc(callback);
 // 把按钮加入场景
 scene->addChild(button);
 ```
@@ -63,7 +63,7 @@ scene->addChild(button);
 
 ```cpp
 // 禁用按钮
-button->setnable(false);
+button->setEnable(false);
 ```
 
 <div class="ui warning message"><div class="header">Warning </div>
