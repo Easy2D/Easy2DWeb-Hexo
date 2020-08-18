@@ -39,7 +39,7 @@ sprite->runAction(moveTo);
 
 ```cpp
 // 创建一个位移动画，2.5 秒内使节点移动横向移动 100 像素
-auto moveBy = gcnew MoveBy(2.5f, Vector(100, 0));
+auto moveBy = gcnew MoveBy(2.5f, Vector2(100, 0));
 ```
 
 执行这个动画后，节点会从它的起始位置开始，在 2.5 秒内向正右方移动 100 像素。
