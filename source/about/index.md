@@ -8,8 +8,8 @@ coders:
   role: 引擎开发
   join_date: 2016.12
   description: 热衷于学习游戏引擎技术的苦逼程序员
-  blog: Nomango 的 Github
-  blog_url: https://github.com/Nomango
+  blog: Nomango 的博客
+  blog_url: https://nomango.cn
 - name: 益文友 Allen
   avatar: /assets/images/avatar/Allen.jpg
   role: 引擎测试
