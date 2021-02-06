@@ -25,7 +25,7 @@ Easy2D 仅提供了四种简单图形，分别是
 
 - RectShape 矩形
 - RoundRectShape 圆角矩形
-- MyCircle 圆形
+- CircleShape 圆形
 - EllipseShape 椭圆形
 
 创建四种形状的方式分别为：
@@ -36,7 +36,7 @@ auto rect = gcnew RectShape(Size(10, 20));
 // 创建一个宽高为 (10,20) ，圆角角度为 (40,20) 的圆角矩形
 auto roundRect = gcnew RoundRectShape(Size(10, 20), 40, 20);
 // 创建一个半径为 10 的圆形
-auto circle = gcnew MyCircle(10);
+auto circle = gcnew CircleShape(10);
 // 创建一个半径为 (10,20) 的椭圆形
 auto ellipse = gcnew EllipseShape(10, 20);
 ```
