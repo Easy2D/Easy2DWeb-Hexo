@@ -8,10 +8,10 @@ type: "download"
 
 | 文件名                  |   大小   |   链接   |
 | ---------------------- |:-------:|:--------:|
-| Easy2D-v2.0.24-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24-installer.exe) |
-| Easy2D-v2.0.24.7z  | 4.92MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24.7z) |
-| Easy2D-v2.0.24-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24-win7-installer.exe) |
-| Easy2D-v2.0.24-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24-win7.7z) |
+| Easy2D-v2.0.25-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.25-installer.exe) |
+| Easy2D-v2.0.25.7z  | 4.92MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.25.7z) |
+| Easy2D-v2.0.25-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.25-win7-installer.exe) |
+| Easy2D-v2.0.25-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.25-win7.7z) |
 
 #### 常见问题
 
@@ -23,6 +23,10 @@ type: "download"
 
 | 文件名                  |   大小   |   链接   |
 | ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.24-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24-installer.exe) |
+| Easy2D-v2.0.24.7z  | 4.92MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24.7z) |
+| Easy2D-v2.0.24-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24-win7-installer.exe) |
+| Easy2D-v2.0.24-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.24-win7.7z) |
 | Easy2D-v2.0.21-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.21-installer.exe) |
 | Easy2D-v2.0.21.7z  | 4.92MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.21.7z) |
 | Easy2D-v2.0.21-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.21-win7-installer.exe) |
