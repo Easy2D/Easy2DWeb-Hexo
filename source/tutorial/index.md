@@ -13,8 +13,8 @@ type: "tutorial"
 
 ### 基础篇
 
-- [[基础类型]](/tutorial/common/)
 - [[基础功能]](/tutorial/base/)
+- [[基础类型]](/tutorial/common/)
 - [[常用元素]](/tutorial/node/)
 - [[节点动画]](/tutorial/action/)
 - [[实用工具]](/tutorial/utils/)
