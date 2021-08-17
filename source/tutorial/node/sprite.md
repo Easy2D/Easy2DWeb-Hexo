@@ -27,12 +27,12 @@ sprite->open(L"本地图片.png"); // 从本地图片加载
 
 ![Sprite示意图](/assets/images/tutorial/sprite1.png)
 
-如果你只需要图片中的一部分，可以使用 `clip` 函数对它进行裁剪
+如果你只需要图片中的一部分，可以使用 `crop` 函数对它进行裁剪
 
 ```cpp
 // 从原图片的像素坐标 (20, 10) 处开始裁剪
 // 裁剪宽度为 60 像素，高度为 80 像素
-sprite->clip(20, 10, 60, 80);
+sprite->crop(Rect(20, 10, 60, 80));
 ```
 
 ![裁剪后的精灵](/assets/images/tutorial/sprite2.png)
@@ -44,10 +44,10 @@ sprite->clip(20, 10, 60, 80);
 auto sprite = gcnew Sprite(L"本地图片.png", 20, 10, 60, 80);
 ```
 
-你可以更灵活的运用 `clip` 函数，比如下面的代码把精灵裁剪成了原来的一半
+你可以更灵活的运用 `crop` 函数，比如下面的代码把精灵裁剪成了原来的一半
 
 ```cpp
-sprite->clip(0, 0, sprite->getWidth(), sprite->getHeight() / 2);
+sprite->crop(Rect(0, 0, sprite->getWidth(), sprite->getHeight() / 2));
 ```
 
 ![裁剪后的精灵](/assets/images/tutorial/sprite3.png)
