@@ -129,7 +129,7 @@ node1->addChild(node3, 1);
 // 创建一个坐标点
 Point p(200, 300);
 // 判断这个点是否在节点内部
-if (node->isPointIn(p))
+if (node->containsPoint(p))
 {
     // 坐标点在节点内
 }
@@ -138,9 +138,12 @@ if (node->isPointIn(p))
 `Node::isIntersectWith` 函数可以判断两个节点是否相交（碰撞），如下所示
 
 ```cpp
-// 假设存在节点 node1 和 node2
-// 判断两节点是否碰撞
-if (node1->isIntersectWith(node2))
+// 假设存在节点 node1 和 node2，判断两节点是否碰撞
+// 先获取两节点的外包围盒
+auto box1 = node1->getBoundingBox();
+auto box2 = node2->getBoundingBox();
+// 判断包围盒是否相交，相交即认为碰撞
+if (box1.intersects(box2))
 {
     // 两节点发生碰撞
 }
