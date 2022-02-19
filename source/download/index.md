@@ -8,10 +8,10 @@ type: "download"
 
 | 文件名                  |   大小   |   链接   |
 | ---------------------- |:-------:|:--------:|
-| Easy2D-v2.0.25-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25-installer.exe) |
-| Easy2D-v2.0.25.7z  | 4.92MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25.7z) |
-| Easy2D-v2.0.25-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25-win7-installer.exe) |
-| Easy2D-v2.0.25-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25-win7.7z) |
+| Easy2D-v2.0.28-installer.exe | 5.24MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.28-installer.exe) |
+| Easy2D-v2.0.28.7z  | 5.21MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.28.7z) |
+| Easy2D-v2.0.28-win7-installer.exe | 5.05MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.28-win7-installer.exe) |
+| Easy2D-v2.0.28-win7.7z  | 5.02MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.28-win7.7z) |
 
 #### 常见问题
 
@@ -23,22 +23,14 @@ type: "download"
 
 | 文件名                  |   大小   |   链接   |
 | ----------------------- |:--------:|:--------:|
+| Easy2D-v2.0.25-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25-installer.exe) |
+| Easy2D-v2.0.25.7z  | 4.92MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25.7z) |
+| Easy2D-v2.0.25-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25-win7-installer.exe) |
+| Easy2D-v2.0.25-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.25-win7.7z) |
 | Easy2D-v2.0.24-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.24-installer.exe) |
 | Easy2D-v2.0.24.7z  | 4.92MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.24.7z) |
 | Easy2D-v2.0.24-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.24-win7-installer.exe) |
 | Easy2D-v2.0.24-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.24-win7.7z) |
-| Easy2D-v2.0.21-installer.exe | 4.96MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.21-installer.exe) |
-| Easy2D-v2.0.21.7z  | 4.92MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.21.7z) |
-| Easy2D-v2.0.21-win7-installer.exe | 4.79MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.21-win7-installer.exe) |
-| Easy2D-v2.0.21-win7.7z  | 4.76MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.21-win7.7z) |
-| Easy2D-v2.0.12-installer.exe | 5.20MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.12-installer.exe) |
-| Easy2D-v2.0.12.7z  | 5.17MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.12.7z) |
-| Easy2D-v2.0.12-win7-installer.exe | 4.78MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.12-win7-installer.exe) |
-| Easy2D-v2.0.12-win7.7z  | 4.75MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.12-win7.7z) |
-| Easy2D-v2.0.11-installer.exe | 5.20MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.11-installer.exe) |
-| Easy2D-v2.0.11.7z  | 5.17MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.11.7z) |
-| Easy2D-v2.0.11-win7-installer.exe | 4.75MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.11-win7-installer.exe) |
-| Easy2D-v2.0.11-win7.7z  | 4.72MB   | [<i class="download icon"></i>](https://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/release/easy2d-v2.0.11-win7.7z) |
 
 ## 社区交流
 
