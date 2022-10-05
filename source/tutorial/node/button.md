@@ -34,7 +34,7 @@ scene->addChild(button);
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
-回调函数的使用方法请参考 [[关于回调函数]](/tutorial/advanced.html#关于回调函数)。
+回调函数的使用方法请参考 [[关于回调函数]](/tutorial/advanced/more.html#关于回调函数)。
 </div>
 
 普通的按钮有四个状态：正常、鼠标移入、按下、禁用，你可以设置按钮在四种状态下显示不同的精灵或文本
@@ -67,5 +67,5 @@ button->setEnable(false);
 ```
 
 <div class="ui warning message"><div class="header">Warning </div>
-把精灵变为按钮后，不需要再将精灵加入到场景中，否则将产生错误。Debug 状态下引擎可以检测这种错误，在错误产生时中断程序，并在控制台中给出提示。关于控制台的使用方法请参考 [[关于控制台的使用]](/tutorial/advanced.html#关于控制台的使用)。
+把精灵变为按钮后，不需要再将精灵加入到场景中，否则将产生错误。Debug 状态下引擎可以检测这种错误，在错误产生时中断程序，并在控制台中给出提示。关于控制台的使用方法请参考 [[关于控制台]](/tutorial/advanced/console.html#控制台的使用)。
 </div>

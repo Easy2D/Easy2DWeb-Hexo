@@ -21,7 +21,10 @@ type: "tutorial"
 
 ### 进阶篇
 
-- [[进阶内容]](/tutorial/advanced.html)
+- [[节点碰撞]](/tutorial/advanced/collision.html)
+- [[垃圾回收]](/tutorial/advanced/gc.html)
+- [[关于控制台]](/tutorial/advanced/console.html)
+- [[更多]](/tutorial/advanced/more.html)
 
 ## 新手入门
 
@@ -35,4 +38,4 @@ type: "tutorial"
 
 刚刚熟悉 Easy2D 中的内容时，你会发现很多时候都只能对照教程复制粘贴代码，很难加入自己的设计。这时你需要打开思路，而不仅仅局限于从教程中寻找你想实现的功能。
 
-[[进阶内容]](/tutorial/advanced.html) 将介绍 Easy2D 的进阶知识，包括 Debug 调试和设计规范。
+[[进阶内容]](/tutorial/advanced/) 将介绍 Easy2D 的进阶知识，包括节点碰撞、程序调试和设计规范等。

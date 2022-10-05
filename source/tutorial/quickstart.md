@@ -187,7 +187,7 @@ auto scene = new Scene;
 scene->autorelease();
 ```
 
-有关垃圾回收的更多内容，请参阅 [[关于垃圾回收]](/tutorial/advanced.html#关于垃圾回收)
+有关垃圾回收的更多内容，请参阅 [[关于垃圾回收]](/tutorial/advanced/gc.html)
 
 <br/>
 
@@ -270,17 +270,5 @@ sprite->setPos(width / 2, height / 2);
 运行后的效果如下图：
 
 ![精灵居中显示](/assets/images/tutorial/anchor4.png)
-
-<br/>
-
-## 关于命名
-
-Easy2D 按照以下规律命名函数：
-
-- 小驼峰式命名法则，第一个单词小写，后面的单词首字母大写，如`Window::setTitle`
-- 所有函数均按照`动词`+`名语`形式命名，如`Logger::showConsole`
-- 获取对象的属性值：`get`+`属性名`，如`Node::getWidth`
-- 修改对象的属性值：`set`+`属性名`，如`Node::setPos`
-- 获取对象的状态(bool值)：`is`+`状态名`，如`Node::isVisiable`
 
 <br/>
