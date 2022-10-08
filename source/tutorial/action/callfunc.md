@@ -33,5 +33,5 @@ auto action = gcnew CallFunc([]() {});
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
-回调函数的使用方法请参考 [[关于回调函数]](/tutorial/advanced.html#关于回调函数)。
+回调函数的使用方法请参考 [[关于回调函数]](/tutorial/advanced/more.html#关于回调函数)。
 </div>

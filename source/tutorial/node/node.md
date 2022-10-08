@@ -74,7 +74,7 @@ auto node2 = gcnew Node;
 node1->addChild(node2);    // 添加子节点
 ```
 
-node1 和 node2 互为父子关系，node1 是 node2 的父节点，node2 是 node1 的子节点。当父节点被添加到场景中时，子节点也会一起进入场景，当父节点从场景中删除时，子节点也会消失。
+node1 和 node2 成为父子关系，node1 是 node2 的父节点，node2 是 node1 的子节点。当父节点被添加到场景中时，子节点也会一起进入场景，当父节点从场景中删除时，子节点也会消失。
 
 <div class="ui info message"><div class="header">Tips </div>
 节点的属性是向下传递的。因此，移动父节点的坐标，所有的子节点都会跟着一起移动，旋转父节点，所有的子节点会跟着一起旋转，所以你可以用 Node 实现任意形式的层次结构。
@@ -122,7 +122,7 @@ node1->addChild(node3, 1);
 
 ### 节点的更多功能
 
-节点类有一些简单的函数用来判断碰撞，`Node::isPointIn` 函数可以判断一个坐标点是否在节点内，如下所示
+节点类有一些简单的函数用来判断碰撞，`Node::containsPoint` 函数可以判断一个坐标点是否在节点内部，如下所示
 
 ```cpp
 // 假设存在节点 node
@@ -135,7 +135,7 @@ if (node->containsPoint(p))
 }
 ```
 
-`Node::isIntersectWith` 函数可以判断两个节点是否相交（碰撞），如下所示
+`Node::getBoundingBox` 函数可以获取节点的外包围盒，它可以用来判断两个节点是否相交（碰撞）
 
 ```cpp
 // 假设存在节点 node1 和 node2，判断两节点是否碰撞
@@ -148,3 +148,5 @@ if (box1.intersects(box2))
     // 两节点发生碰撞
 }
 ```
+
+有关碰撞判断的更多用法，请查阅 [节点碰撞](/tutorial/advanced/collision.html)

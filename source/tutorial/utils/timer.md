@@ -44,7 +44,7 @@ Timer::add([=]() {
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
-lambda的使用方法请参考 [[关于回调函数]](/tutorial/advanced.html#关于回调函数)。
+lambda的使用方法请参考 [[关于回调函数]](/tutorial/advanced/more.html#关于回调函数)。
 </div>
 
 `Timer::add()`函数的第二和第三个参数可以指定定时器的执行间隔和执行次数。
