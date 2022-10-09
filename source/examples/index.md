@@ -10,7 +10,7 @@ examples:
   image: /assets/images/sample/SmartClock.png
   description: 一个奇奇怪怪的时钟，感受时间在不知不觉中的流逝
   exe_url: https://gitee.com/Easy2D/SmartClock-Easy2D/releases
-  # http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/SmartClock.7z
+  # http://download.easy2d.cn/sample/SmartClock.7z
   src_url:
 - id: FlappyBird
   name: FlappyBird
@@ -18,7 +18,7 @@ examples:
   image: /assets/images/sample/FlappyBird.png
   description: 像素鸟是曾经超火的一款手机游戏，控制小鸟穿越水管，赚取更高分！
   exe_url: https://gitee.com/Easy2D/FlappyBird-Easy2D/releases
-  # http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/FlappyBird.7z
+  # http://download.easy2d.cn/sample/FlappyBird.7z
   src_url:
 - id: GreedyMonster
   name: GreedyMonster
@@ -33,7 +33,7 @@ examples:
   image: /assets/images/sample/LevelSelectExample.png
   description: 点击左右按钮切换关卡，一个有三个关卡可以选择。
   exe_url: https://gitee.com/Easy2D/LevelSelectExample-Easy2D/releases
-  # http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/LevelSelectExample.7z
+  # http://download.easy2d.cn/sample/LevelSelectExample.7z
   src_url:
 - id: PushBox
   name: 推箱子
@@ -41,7 +41,7 @@ examples:
   image: /assets/images/sample/PushBox.png
   description: 经典的推箱子游戏，一共有八关，自动保存最佳纪录，音效可以关闭。
   exe_url: https://gitee.com/Easy2D/PushBox-Easy2D/releases
-  # http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/sample/PushBox.7z
+  # http://download.easy2d.cn/sample/PushBox.7z
   src_url:
 - id: TetrisNew
   name: 俄罗斯方块

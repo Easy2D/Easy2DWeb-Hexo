@@ -16,6 +16,6 @@ type: "tutorial"
 
 ## 源码下载
 
-- [[ActionDemo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/ActionDemo.zip)
-- [[InputDemo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/InputDemo.zip)
-- [[MusicDemo]](http://easy2d-bucket.oss-cn-hangzhou.aliyuncs.com/demo/MusicDemo.zip)
+- [[ActionDemo]](http://download.easy2d.cn/demo/ActionDemo.zip)
+- [[InputDemo]](http://download.easy2d.cn/demo/InputDemo.zip)
+- [[MusicDemo]](http://download.easy2d.cn/demo/MusicDemo.zip)
