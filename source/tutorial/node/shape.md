@@ -19,40 +19,90 @@ toclinker:
 
 Shape 是节点的一种，它用于绘制一个简单的二维图形，例如矩形、圆形等。
 
-### 形状分类
-
-Easy2D 仅提供了四种简单图形，分别是
-
-- RectShape 矩形
-- RoundRectShape 圆角矩形
-- CircleShape 圆形
-- EllipseShape 椭圆形
-
-创建四种形状的方式分别为：
+Easy2D 提供了几种简单图形的创建方式：
 
 ```cpp
+// 创建一个从 (0,0) 到 (100,100) 的直线
+auto line = Shape::createLine(Point(0, 0), Point(100, 100));
 // 创建一个宽高为 (10,20) 的矩形
-auto rect = gcnew RectShape(Size(10, 20));
+auto rect = Shape::createRect(Rect(Point(), Size(10, 20)));
 // 创建一个宽高为 (10,20) ，圆角角度为 (40,20) 的圆角矩形
-auto roundRect = gcnew RoundRectShape(Size(10, 20), 40, 20);
+auto roundedRect = Shape::createRoundedRect(Rect(Point(), Size(10, 20)), Vector2(40, 20));
 // 创建一个半径为 10 的圆形
-auto circle = gcnew CircleShape(10);
+auto circle = Shape::createCircle(Point(), 10);
 // 创建一个半径为 (10,20) 的椭圆形
-auto ellipse = gcnew EllipseShape(10, 20);
+auto ellipse = Shape::createEllipse(Point(), Vector2(10, 20));
+// 创建一个多边形
+auto polygon = Shape::createPolygon({ Point(), Point(100, 100), Point(0, 100) });
 ```
 
-因为形状也是节点的一种，所以具备节点的所有性质，例如移动
+## ShapeMaker 形状生成器
+
+复杂形状可以用 ShapeMaker 来构造，如创建一个三角形：
+
+```cpp
+// 等边三角形边长
+float side = 45.f;
+
+// 使用形状生成器创建三角形三条边
+ShapeMaker maker;
+// 从三角形第一个点开始描绘形状
+maker.beginPath(Point(0, 0));
+// 添加第一条边
+maker.addLine(Point(side, 0));
+// 添加第二条边
+maker.addLine(Point(side / 2, side * math::Cos(30.0f)));
+// 闭合路线，形成第三条边
+maker.endPath(true);
+// 获取形状
+auto triangle = maker.getShape();
+```
+
+ShapeMaker 提供的形状生成方法有一下几种：
+
+```cpp
+// 添加一条边
+maker.addLine(Point());
+// 添加多条边
+maker.addLines({ Point(), Point() });
+// 添加贝塞尔曲线
+maker.addLines(
+    Point(),    // 贝塞尔曲线的第一个控制点
+    Point(),    // 贝塞尔曲线的第二个控制点
+    Point()     // 贝塞尔曲线的终点
+);
+// 添加弧线
+maker.addLines(
+    Point(),    // 弧线终点
+    Size(),     // 椭圆半径
+    120,        // 椭圆旋转角度
+    true,       // 是否顺时针
+    true        // 是否取小于 180° 的弧
+);
+```
+
+<div class="ui info message"><div class="header">Tips </div>
+形状生成必须在 `beginPath` 和 `endPath` 之间完成。
+</div>
+
+## ShapeNode 形状节点
+
+`Shape 形状` 不是节点，所以不可以直接加入到场景中，需要添加到 ShapeNode 才可以具备节点的性质，例如移动
 
 ```cpp
 // 创建一个宽高为 (10,20) 的矩形
-auto rect = gcnew RectShape(Size(10, 20));
+auto rect = Shape::createRect(Rect(Point(), Size(10, 20)));
+// 创建矩形节点
+auto shapeNode = gcnew ShapeNode(rect);
 // 移动矩形到 (100, 100) 坐标处
-rect->setPos(100, 100);
+shapeNode->setPos(100, 100);
+// 添加到场景中
+scene->addChild(shapeNode);
 ```
 
 ### 填充与轮廓
 
-所有的形状都可以设置样式，样式包括以下三种：
+所有的形状节点都可以设置样式，样式包括以下三种：
 
 ```cpp
 enum Style
@@ -67,117 +117,18 @@ enum Style
 
 ```cpp
 // 设置形状样式为，轮廓
-shape->setStyle(Shape::Style::Round);
+shapeNode->setStyle(Shape::Style::Round);
 ```
 
 所有的形状都可以设置填充色和轮廓颜色
 
 ```cpp
 // 创建一个宽高为 (10,20) 的矩形
-auto rect = gcnew RectShape(Size(10, 20));
+auto rect = gcnew ShapeNode(Shape::createRect(Rect(Point(), Size(10, 20))));
 // 设置填充颜色为红色
 rect->setFillColor(Color::Red);
 // 设置轮廓颜色为白色
-rect->setLineColor(Color::White);
+rect->setStrokeColor(Color::White);
 // 设置轮廓线条宽度为 2
 rect->setStrokeWidth(2.0);
-```
-
-### 自定义形状
-
-这部分是进阶知识，不建议初学者学习。
-
-如果 Easy2D 提供的 4 种形状不能满足需求，需要更复杂的二维图形，那么你需要学习 Direct2D 的相关知识，然后仿照已有形状的代码，实现自己的形状。
-
-例如，可以用如下代码实现一个简单的圆形：
-
-```cpp
-// 文件：MyCircle.h
-// 自定义圆形
-class MyCircle : public Shape
-{
-public:
-    // 默认构造函数
-    MyCircle();
-
-    // 指定半径的圆形
-    MyCircle(float radius);
-
-    // 获取半径
-    float getRadius() const;
-
-    // 设置半径
-    void setRadius(float radius);
-
-protected:
-    // 渲染轮廓
-    virtual void _renderLine();
-
-    // 渲染填充色
-    virtual void _renderFill();
-
-protected:
-    float _radius;
-};
-```
-
-在 cpp 文件中，写出自定义圆形的实现：
-
-```cpp
-// 文件：MyCircle.cpp
-#include "MyCircle.h"
-
-// 默认构造函数，半径为 0
-MyCircle::MyCircle()
-    : _radius(0)
-{
-    // 圆形的锚点应在中心
-    this->setAnchor(0.5, 0.5);
-}
-
-// 指定圆形的半径
-MyCircle::MyCircle(float radius)
-{
-    this->setRadius(radius);
-    this->setAnchor(0.5, 0.5);
-}
-
-// 获取圆形半径
-float MyCircle::getRadius() const
-{
-    return _radius;
-}
-
-// 设置圆形半径，注意需要同时修改父类（节点）的大小
-void MyCircle::setRadius(float radius)
-{
-    _radius = float(radius);
-    Node::setSize(radius * 2, radius * 2);
-}
-
-// 渲染轮廓，这部分需要调用 Direct2D 的原生函数 DrawEllipse
-// 先通过 Renderer::getRenderTarget() 获取 Direct2D 的 ID2D1HwndRenderTarget 对象
-// 有关该类的使用方法，请查阅微软官方文档
-// https://docs.microsoft.com/en-us/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget
-void MyCircle::_renderLine()
-{
-    Renderer::getRenderTarget()->DrawEllipse(
-        D2D1::Ellipse(D2D1::Point2F(_radius, _radius), _radius, _radius),
-        Renderer::getSolidColorBrush(),
-        _strokeWidth,
-        _strokeStyle
-    );
-}
-
-// 渲染填充色，这部分需要调用 Direct2D 的原生函数 FillEllipse
-// 先通过 Renderer::getRenderTarget() 获取 Direct2D 的 ID2D1HwndRenderTarget 对象
-// 有关该类的使用方法，请查阅微软官方文档
-// https://docs.microsoft.com/en-us/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget
-void MyCircle::_renderFill()
-{
-    Renderer::getRenderTarget()->FillEllipse(
-        D2D1::Ellipse(D2D1::Point2F(_radius, _radius), _radius, _radius),
-        Renderer::getSolidColorBrush()
-    );
-}
 ```
