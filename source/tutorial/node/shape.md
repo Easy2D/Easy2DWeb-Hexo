@@ -17,9 +17,7 @@ toclinker:
 
 ## Shape 形状
 
-Shape 是节点的一种，它用于绘制一个简单的二维图形，例如矩形、圆形等。
-
-Easy2D 提供了几种简单图形的创建方式：
+Shape 是一个二维图形，例如矩形、圆形等，Easy2D 提供了几种简单图形的创建方式：
 
 ```cpp
 // 创建一个从 (0,0) 到 (100,100) 的直线
@@ -34,6 +32,29 @@ auto circle = Shape::createCircle(Point(), 10);
 auto ellipse = Shape::createEllipse(Point(), Vector2(10, 20));
 // 创建一个多边形
 auto polygon = Shape::createPolygon({ Point(), Point(100, 100), Point(0, 100) });
+```
+
+形状具有周长、面积等属性：
+
+```cpp
+shape->getLength();     // 获取周长
+shape->computeArea();   // 计算面积
+```
+
+形状还有一些辅助方法：
+
+```cpp
+shape->getBoundingBox();            // 获取形状外包围盒
+shape->containsPoint(Point(5, 5));  // 判断点是否在形状内
+
+// 计算形状长度为 1 时点的位置和切线向量
+Point p;
+Vector2 tangent;
+shape->computePointAtLength(
+    1,          // 长度，应 >= 0 && <= getLength()
+    p,          // 返回点坐标
+    tangent     // 返回切线向量
+);
 ```
 
 ## ShapeMaker 形状生成器
