@@ -85,6 +85,29 @@ maker.addLines(
 形状生成必须在 `beginPath` 和 `endPath` 之间完成。
 </div>
 
+ShapeMaker 还可以合并两个形状
+
+```cpp
+// 创建两个形状
+auto rect = Shape::createRect(Rect(Point(), Size(10, 20)));
+auto circle = Shape::createCircle(Point(), 10);
+// 用交集方式合并
+auto shape = ShapeMaker::combine(rect, circle, ShapeMaker::CombineMode::Union);
+```
+
+ShapeMaker 支持的合并方式有一下几种
+
+```cpp
+// 形状合并方式
+enum class CombineMode
+{
+    Union,      // 并集 (A + B)
+    Intersect,  // 交集 (A + B)
+    Xor,        // 对称差集 ((A - B) + (B - A))
+    Exclude     // 差集 (A - B)
+};
+```
+
 ## ShapeNode 形状节点
 
 `Shape 形状` 不是节点，所以不可以直接加入到场景中，需要添加到 ShapeNode 才可以具备节点的性质，例如移动
