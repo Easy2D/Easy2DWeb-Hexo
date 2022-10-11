@@ -5,6 +5,64 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.0 （2022-10-11）
+
+- Refactor
+  - 重构 `Image` 类，支持设备资源重加载时自动重载
+  - 重构 `Animation` 帧动画，添加 `KeyFrame` 和 `FrameSequence`
+
+- Feature
+  - 支持设置垂直同步
+  - 支持设置帧率
+  - 为 `ShapeNode` 添加工厂方法
+
+<br />
+
+### v2.0.33 （2022-10-10）
+
+- Refactor
+  - 重构 `Shape` 类，支持创建任意形状
+  - 重构 `math Rect` 类，由 leftTop 和 rightButtom 两点描述
+
+- Feature
+  - 添加 `ShapeMaker` 构造复杂形状
+  - 添加 `ShapeNode` 类
+
+<br />
+
+### v2.0.31 （2022-10-02）
+
+- Feature
+  - 支持重载 `Node::containsPoint` 以便实现自定义形状 `Button`
+
+- Fix
+  - 游戏暂停时按钮不生效
+
+<br />
+
+### v2.0.28 （2022-02-19）
+
+- Improve
+  - 支持VS2022
+
+- Fix
+  - 游戏暂停时按钮不生效
+
+<br />
+
+### v2.0.24 （2021-05-06）
+
+- Feature
+  - `Sprite`支持设置插值模式
+
+- Improve
+  - 为Win7提供单独安装包
+
+- Fix
+  - 修复`ToggleButton`显示bug
+
+<br />
+
 ### v2.0.0 （2020-1-28）
 
 Easy2D v2.0.0 正式版发布。

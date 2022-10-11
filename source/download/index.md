@@ -6,12 +6,10 @@ type: "download"
 
 ## 下载
 
-| 文件名                  |   大小   |   链接   |
+| 文件名                  |   发布时间   |   链接   |
 | ---------------------- |:-------:|:--------:|
-| Easy2D-v2.0.33-installer.exe | 5.64MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.33-installer.exe) |
-| Easy2D-v2.0.33.7z  | 5.61MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.33.7z) |
-| Easy2D-v2.0.33-win7-installer.exe | 5.44MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.33-win7-installer.exe) |
-| Easy2D-v2.0.33-win7.7z  | 5.41MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.33-win7.7z) |
+| Easy2D-v2.1.0 | 2022-10-11   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.0-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.0.7z) |
+| Easy2D-v2.1.0 for Win7 | 2022-10-11   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.0-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.0-win7.7z) |
 
 #### 常见问题
 
@@ -21,16 +19,12 @@ type: "download"
 
 #### 旧版下载
 
-| 文件名                  |   大小   |   链接   |
+| 文件名                  |   发布时间   |   链接   |
 | ----------------------- |:--------:|:--------:|
-| Easy2D-v2.0.31-installer.exe | 5.67MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.31-installer.exe) |
-| Easy2D-v2.0.31.7z  | 5.63MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.31.7z) |
-| Easy2D-v2.0.31-win7-installer.exe | 5.47MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.31-win7-installer.exe) |
-| Easy2D-v2.0.31-win7.7z  | 5.44MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.31-win7.7z) |
-| Easy2D-v2.0.30-installer.exe | 5.67MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.30-installer.exe) |
-| Easy2D-v2.0.30.7z  | 5.63MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.30.7z) |
-| Easy2D-v2.0.30-win7-installer.exe | 5.47MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.30-win7-installer.exe) |
-| Easy2D-v2.0.30-win7.7z  | 5.44MB   | [<i class="download icon"></i>](https://download.easy2d.cn/release/easy2d-v2.0.30-win7.7z) |
+| Easy2D-v2.0.33 | 2022-10-10   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.33-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.33.7z) |
+| Easy2D-v2.0.33 for Win7 | 2022-10-10   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.33-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.33-win7.7z) |
+| Easy2D-v2.0.31 | 2022-10-02   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.31-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.31.7z) |
+| Easy2D-v2.0.31 for Win7 | 2022-10-02   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.31-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.31-win7.7z) |
 
 ## 社区交流
 

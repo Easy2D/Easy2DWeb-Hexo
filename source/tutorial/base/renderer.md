@@ -25,6 +25,8 @@ Renderer 类建议开发者的使用函数如下：
 Renderer::setBackgroundColor(Color::White);
 // 显示画面 FPS
 Renderer::showFps(true);
+// 开启或关闭垂直同步（默认开启）
+Renderer::setVSync(false);
 ```
 
 如果你确实需要实现自定义的渲染行为，例如当你需要渲染非常多的物体（一个巨大的地图或其他东西），直接使用 Sprite 会导致游戏卡顿时，可以实现一个自定义的 Sprite 类，直接调用原生函数来提升渲染速度：

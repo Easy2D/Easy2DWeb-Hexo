@@ -25,16 +25,16 @@ toclinker:
 
 ```cpp
 // 创建帧动画的序列帧，每 0.1 秒切换一帧
-auto animation = gcnew Animation(0.1);
+auto seq = gcnew FrameSequence(0.1);
 // 加载多个精灵帧
-animation->add(gcnew Image(L"第一帧.png"));
-animation->add(gcnew Image(L"第二帧.png"));
-animation->add(gcnew Image(L"第三帧.png"));
+seq->add(Image::preload(L"第一帧.png"));                                                // 无裁剪的添加一张图片
+seq->add(gcnew KeyFrame(Image::preload(L"第二帧.png")));                                // 无裁剪的指定图片为关键帧，和上一行写法没有区别
+seq->add(gcnew KeyFrame(Image::preload(L"第三帧.png"), Rect(Point(), Size(100, 50))));  // 指定图片为关键帧并进行裁剪
 
 // 创建帧动画
-auto animate = gcnew Animate(animation);
+auto animation = gcnew Animation(seq);
 // 精灵执行帧动画
-sprite->runAction(animate);
+sprite->runAction(animation);
 ```
 
 <div class="ui info warning"><div class="header">Warning </div>
@@ -45,7 +45,7 @@ sprite->runAction(animate);
 
 ```cpp
 // 把已建好的帧动画组合成循环动画
-auto action = gcnew Loop(animate);
+auto action = gcnew Loop(animation);
 // 精灵执行循环的帧动画
 sprite->runAction(action);
 ```
