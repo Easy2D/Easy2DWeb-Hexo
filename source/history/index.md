@@ -5,6 +5,20 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.1 （2022-10-12）
+
+- Feature
+  - 添加 `DrawingStyle`
+  - 添加 `TextStyle`
+  - 添加 `TextLayout`，保存绘图无关的文本布局
+  - 添加 `Color::Transparent`
+
+- Refactor
+  - 重构 `Text`，封装 `TextLayout` 和 `DrawingStyle`
+  - 重构 `ShapeNode`，封装 `Shape` 和 `DrawingStyle`
+
+<br />
+
 ### v2.1.0 （2022-10-11）
 
 - Refactor

@@ -14,5 +14,6 @@ type: "tutorial"
 - [KeyCode 键值](/tutorial/common/keycode.html)
 - [Image 图片](/tutorial/common/image.html)
 - [Font 字体](/tutorial/common/font.html)
+- [DrawingStyle 绘图样式](/tutorial/common/drawing-style.html),
 - [Listener 监听器](/tutorial/common/listener.html)
 - [Function 函数包装器](/tutorial/common/function.html)

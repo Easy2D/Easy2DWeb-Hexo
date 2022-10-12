@@ -146,25 +146,23 @@ scene->addChild(shapeNode);
 
 ### 填充与轮廓
 
-所有的形状节点都可以设置样式，样式包括以下三种：
+`ShapeNode` 支持设置 `DrawingStyle` 绘图样式，以设置填充颜色、描边颜色等，详情请参阅 [DrawingStyle](/tutorial/common/drawing-style.html)。
 
 ```cpp
-enum Style
-{
-    Solid,  /* 填充 */
-    Round,  /* 轮廓 */
-    Fill,   /* 轮廓 + 填充 */
-};
+// 创建绘图样式
+DrawingStyle style;
+style.mode = DrawingStyle::Mode::Solid; // 绘图模式为填充
+style.fillColor = Color::White;         // 填充色
+style.strokeColor = Color::Red;         // 描边色
+style.strokeWidth = 2.0;                // 描边宽度为 2.0
+style.lineJoin = LineJoin::Miter;       // 线条相交样式
+
+// 设置绘图样式
+auto shapeNode = ShapeNode::createRect(Size(10, 10));
+shapeNode->setDrawingStyle(style);
 ```
 
-例如，设置一个形状仅显示轮廓，不显示填充颜色：
-
-```cpp
-// 设置形状样式为，轮廓
-shapeNode->setStyle(Shape::Style::Round);
-```
-
-所有的形状都可以设置填充色和轮廓颜色
+也可以单独设置某一项样式
 
 ```cpp
 // 创建一个宽高为 (10,20) 的矩形
