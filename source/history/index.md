@@ -11,7 +11,7 @@ type: "history"
   - 添加 `Canvas` 和 `CanvasBrush`
 
 - Refactor
-  - `Image::load` 改名 `Image::load`
+  - `Image::preload` 改名 `Image::load`
   - 重构 `Renderer` 文字渲染
 
 <br />
