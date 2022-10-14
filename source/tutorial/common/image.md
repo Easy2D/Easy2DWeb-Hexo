@@ -29,10 +29,10 @@ toclinker:
 
 Image 的另一个作用就是创建`Animation(帧动画)`，这个部分在动画教程中讲解。
 
-将图片资源复制到内存中需要耗费一定的时间，为了避免在游戏过程中因为加载图片产生卡顿，你可以在游戏开始前调用 `Image::preload` 函数来提前将游戏中用到的图片加载到内存中。
+将图片资源复制到内存中需要耗费一定的时间，为了避免在游戏过程中因为加载图片产生卡顿，你可以在游戏开始前调用 `Image::load` 函数来提前将游戏中用到的图片加载到内存中。
 
 ```cpp
-Image::preload(L"图片1.png");
-Image::preload(L"图片2.png");
-Image::preload(L"图片3.png");
+Image::load(L"图片1.png");
+Image::load(L"图片2.png");
+Image::load(L"图片3.png");
 ```

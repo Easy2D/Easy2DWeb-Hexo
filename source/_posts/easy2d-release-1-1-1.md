@@ -8,7 +8,7 @@ button_url: https://gitee.com/werelone/Easy2D/attach_files/download?i=98100&u=ht
 
 此次版本更新的内容有：
 
-- `新增` Image::preload 函数实现图片的预加载
+- `新增` Image::load 函数实现图片的预加载
 - `新增` Math类和random函数，可以获取任意范围内的随机数
 - `新增` 对监听器、定时器和动画加入了等待和唤醒机制
 - `新增` BatchSprite::addAction函数，使所有精灵同时执行同一个动画

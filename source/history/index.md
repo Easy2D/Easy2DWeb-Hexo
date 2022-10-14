@@ -5,6 +5,17 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.3 （2022-10-14）
+
+- Feature
+  - 添加 `Canvas` 和 `CanvasBrush`
+
+- Refactor
+  - `Image::load` 改名 `Image::load`
+  - 重构 `Renderer` 文字渲染
+
+<br />
+
 ### v2.1.1 （2022-10-12）
 
 - Feature
@@ -263,7 +274,7 @@ Easy2D v2.0.0 正式版发布。
 
 ### v1.1.1（2017-10-8）
 
-- `新增` Image::preload 函数实现图片的预加载
+- `新增` Image::load 函数实现图片的预加载
 - `新增` Math类和random函数，可以获取任意范围内的随机数
 - `新增` 对监听器、定时器和动画加入了等待和唤醒机制
 - `新增` BatchSprite::addAction函数，使所有精灵同时执行同一个动画

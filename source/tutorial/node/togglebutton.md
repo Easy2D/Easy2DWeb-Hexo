@@ -5,17 +5,18 @@ icon: idea
 type: "tutorial"
 toclinker: 
     [
-        [Node 节点类,/tutorial/node/node.html],
-        [Text 文本类,/tutorial/node/text.html],
-        [Sprite 精灵类,/tutorial/node/sprite.html],
-        [Button 按钮类,/tutorial/node/button.html],
-        [ToggleButton 开关按钮类,/tutorial/node/togglebutton.html],
-        [Menu 菜单类,/tutorial/node/menu.html],
-        [Shape 形状类,/tutorial/node/shape.html]
+        [Node 节点,/tutorial/node/node.html],
+        [Text 文本,/tutorial/node/text.html],
+        [Sprite 精灵,/tutorial/node/sprite.html],
+        [Button 按钮,/tutorial/node/button.html],
+        [ToggleButton 开关按钮,/tutorial/node/togglebutton.html],
+        [Menu 菜单,/tutorial/node/menu.html],
+        [Shape 形状,/tutorial/node/shape.html],
+        [Canvas 画布,/tutorial/node/canvas.html]
     ]
 ---
 
-## ToggleButton 开关按钮类
+## ToggleButton 开关按钮
 
 开关按钮用来实现有 “开” 和 “关” 两种状态的按钮，所以它比普通按钮的状态更多，它可以有 “开” 状态的正常、鼠标移入、按下、禁用，以及 “关” 状态的正常、鼠标移入、按下、禁用。
 

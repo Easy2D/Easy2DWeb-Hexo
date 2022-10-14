@@ -5,16 +5,17 @@ icon: idea
 type: "tutorial"
 toclinker: 
     [
-        [Node 节点类,/tutorial/node/node.html],
-        [Text 文本类,/tutorial/node/text.html],
-        [Sprite 精灵类,/tutorial/node/sprite.html],
-        [Button 按钮类,/tutorial/node/button.html],
-        [ToggleButton 开关按钮类,/tutorial/node/togglebutton.html],
-        [Menu 菜单类,/tutorial/node/menu.html],
-        [Shape 形状类,/tutorial/node/shape.html]
+        [Node 节点,/tutorial/node/node.html],
+        [Text 文本,/tutorial/node/text.html],
+        [Sprite 精灵,/tutorial/node/sprite.html],
+        [Button 按钮,/tutorial/node/button.html],
+        [ToggleButton 开关按钮,/tutorial/node/togglebutton.html],
+        [Menu 菜单,/tutorial/node/menu.html],
+        [Shape 形状,/tutorial/node/shape.html],
+        [Canvas 画布,/tutorial/node/canvas.html]
     ]
 ---
-## Button 按钮类
+## Button 按钮
 
 Button 表示一个按钮，你可以把一段文字或者一个精灵变成按钮，它的使用方式很简单
 
