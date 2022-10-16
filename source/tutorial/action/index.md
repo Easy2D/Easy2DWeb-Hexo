@@ -13,16 +13,18 @@ type: "tutorial"
 
 目前普通动画有：
 
-- `MoveTo` （在一段时间内移动到指定位置）
-- `MoveBy` （在一段时间内移动到相对于当前位置的某个位置）
-- `ScaleTo` （在一段时间内缩放到指定大小）
-- `ScaleBy` （在一段时间内缩放到相对于当前大小的某个大小）
-- `OpacityTo` （在一段时间内透明度渐变到指定值）
-- `OpacityBy` （在一段时间内透明度渐变到相对于当前透明度的某个值）
-- `FadeIn` （在一段时间内透明度渐变到完全显示）
-- `FadeOut` （在一段时间内透明度渐变到完全消失）
-- `RotateTo` （在一段时间内旋转到到指定角度）
-- `RotateBy` （在一段时间内旋转到相对于当前角度的某个角度）
+- `MoveTo` （移动到指定位置）
+- `MoveBy` （移动到相对于当前位置的某个位置）
+- `ScaleTo` （缩放到指定大小）
+- `ScaleBy` （缩放到相对于当前大小的某个大小）
+- `OpacityTo` （透明度渐变到指定值）
+- `OpacityBy` （透明度渐变到相对于当前透明度的某个值）
+- `FadeIn` （透明度渐变到完全显示）
+- `FadeOut` （透明度渐变到完全消失）
+- `RotateTo` （旋转到到指定角度）
+- `RotateBy` （旋转到相对于当前角度的某个角度）
+- `JumpTo` （跳跃到到指定位置）
+- `JumpBy` （跳跃到相对于当前位置的某个位置）
 - `Delay` （等待一段时间）
 - `Animation` （帧动画，只有 Sprite 可以执行该动画）
 - `CallFunc` （立即执行指定的回调函数）
@@ -43,6 +45,7 @@ Action 不是节点，它只是描述了节点需要执行的动画的过程。
 - [透明度渐变动画](/tutorial/action/opacity.html)
 - [缩放动画](/tutorial/action/scale.html)
 - [旋转动画](/tutorial/action/rotate.html)
+- [跳跃动画](/tutorial/action/jump.html)
 - [帧动画](/tutorial/action/animation.html)
 - [在动画中执行函数](/tutorial/action/callfunc.html)
 - [动画中的延时](/tutorial/action/delay.html)

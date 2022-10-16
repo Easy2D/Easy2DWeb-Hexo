@@ -8,6 +8,7 @@ toclinker:
     [透明度渐变动画,/tutorial/action/opacity.html],
     [缩放动画,/tutorial/action/scale.html],
     [旋转动画,/tutorial/action/rotate.html],
+    [跳跃动画,/tutorial/action/jump.html],
     [帧动画,/tutorial/action/animation.html],
     [在动画中执行函数,/tutorial/action/callfunc.html],
     [动画中的延时,/tutorial/action/delay.html],
