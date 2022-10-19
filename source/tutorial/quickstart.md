@@ -195,7 +195,7 @@ scene->autorelease();
 
 Easy2D 使用左手坐标空间，坐标系原点在屏幕的左上角，x 轴向右为正，y 轴向下为正。
 
-为了研究 Easy2D 的坐标系，我们将一张图片复制到工程目录下，并把它转化为`精灵(Sprite)`。
+为了研究 Easy2D 的坐标系，我们将一张图片复制到工程目录下（一般是.vcxproj文件所在目录），并把它转化为`精灵(Sprite)`。
 
 <div class="ui info message"><div class="header">Tips </div>
 精灵代表了一张图片，它可以进行移动、旋转、放大缩小等等操作。
