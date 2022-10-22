@@ -18,22 +18,48 @@ toclinker:
 
 ## ToggleButton 开关按钮
 
-开关按钮用来实现有 “开” 和 “关” 两种状态的按钮，所以它比普通按钮的状态更多，它可以有 “开” 状态的正常、鼠标移入、按下、禁用，以及 “关” 状态的正常、鼠标移入、按下、禁用。
+原 `ToggleButton` 类已弃用，下面介绍开关按钮功能的实现方法。
 
-使用`ToggleButton::setState`函数可以切换开关的 “开” 和 “关” 状态。
-
-```cpp
-// 把按钮的状态设为关闭
-button->setState(false);
-```
-
-使用`ToggleButton::getState`函数可以获取开关的 “开” 和 “关” 状态。
-
-```cpp
-bool state = button->getState();
-```
+开关按钮用来实现有 “开” 和 “关” 两种状态的按钮，例如背景音乐的开关等，`ToggleButtonListener` 开关按钮事件监听器提供了开关按钮功能，它可以添加到任何一个节点上。
 
 例如，下面的代码创建了一个可以控制音乐的播放与停止的按钮
+
+```cpp
+// 假设有一个精灵 sprite，把它变成控制音乐播放的按钮
+// 创建点击按钮后的回调函数
+auto callback = [](ButtonEvent evt, bool state)
+{
+    if (evt == ButtonEvent::Clicked)
+    {
+        // 点击了按钮
+        if (state)
+        {
+            // 按钮现在是打开状态，播放音乐
+            MusicPlayer::resume(L"music.wav");
+        }
+        else
+        {
+            // 按钮现在是关闭状态，停止音乐
+            MusicPlayer::pause(L"music.wav");
+        }
+    }
+};
+
+// 给 sprite 添加监听器
+auto lis = gcnew ToggleButtonListener(true /* 默认是打开状态 */, callback);
+sprite->addListener(lis);
+
+// 游戏暂停时，让这个按钮继续工作
+lis->ignoreGamePaused();
+```
+
+<div class="ui info message"><div class="header">Tips </div>
+回调函数的使用方法请参考 [[关于回调函数]](/tutorial/advanced/more.html#关于回调函数)。
+</div>
+
+### 旧版 ToggleButton
+
+下面的代码创建了一个可以控制音乐的播放与停止的按钮
 
 ```cpp
 auto btnTextOn = gcnew Text(L"开");   // 创建开状态文字
@@ -48,6 +74,19 @@ button->setClickFunc([=]() {
         MusicPlayer::pause(L"music.wav");   // 关闭状态下，暂停音乐
     }
 });
+```
+
+使用`ToggleButton::setState`函数可以切换开关的 “开” 和 “关” 状态。
+
+```cpp
+// 把按钮的状态设为关闭
+button->setState(false);
+```
+
+使用`ToggleButton::getState`函数可以获取开关的 “开” 和 “关” 状态。
+
+```cpp
+bool state = button->getState();
 ```
 
 <div class="ui info message"><div class="header">Tips </div>

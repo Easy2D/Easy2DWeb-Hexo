@@ -5,6 +5,21 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.5 （2022-10-22）
+
+- Fix
+  - `Sprite` 加载无裁剪矩形的 `KeyFrame` 时显示问题
+
+- Feature
+  - 添加 `ButtonListener` 和 `ToggleButtonListener`
+
+- Refactor
+  - 重构 `Node` 属性字段但无功能变化
+  - 重构 `Listener` 但无功能变化
+  - 重构 `Button` 和 `ToggleButton` 并且已弃用
+
+<br />
+
 ### v2.1.3 （2022-10-14）
 
 - Feature
