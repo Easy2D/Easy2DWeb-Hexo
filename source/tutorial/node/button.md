@@ -66,7 +66,7 @@ Button 表示一个按钮，你可以把一段文字或者一个精灵变成按�
 
 ```cpp
 // 创建一个精灵
-auto btnSprite = gcnew Sprite(L"按钮图片.png");
+auto btnSprite = gcnew Sprite("按钮图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() 
 {
@@ -83,9 +83,9 @@ scene->addChild(button);
 
 ```cpp
 // 创建一个精灵，按钮普通状态显示
-auto btnNormal = gcnew Sprite(L"按钮图片.png");
+auto btnNormal = gcnew Sprite("按钮图片.png");
 // 创建一个精灵，按钮按下状态显示
-auto btnSelect = gcnew Sprite(L"按下时图片.png");
+auto btnSelect = gcnew Sprite("按下时图片.png");
 // 创建点击按钮后的回调函数
 auto callback = []() 
 {

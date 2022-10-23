@@ -72,7 +72,7 @@ int main()
 
 ```cpp
 // 修改窗口标题
-Window::setTitle(L"Demo");
+Window::setTitle("Demo");
 // 修改窗口大小
 Window::setSize(300, 300);
 ```
@@ -89,7 +89,7 @@ float width = Window::getWidth();
 float height = Window::getHeight();
 
 // 将窗口的宽高输出在控制台上
-printf(L"%.1f %.1f\n", width, height);
+printf("%.1f %.1f\n", width, height);
 ```
 
 <br/>
@@ -122,7 +122,7 @@ Easy2D 提供了许多游戏中常用的节点，比如`Text(文本)`、`Sprite(
 
 ```cpp
 // 创建一个文本节点
-auto text = new Text(L"Hello Easy2D");
+auto text = new Text("Hello Easy2D");
 ```
 
 将创建好的节点加入到场景中，它将显示在画面上
@@ -150,7 +150,7 @@ int main()
         SceneManager::enter(scene);
 
         // 创建一个文本节点
-        auto text = new Text(L"Hello Easy2D");
+        auto text = new Text("Hello Easy2D");
         // 将文本添加到场景中
         scene->addChild(text);
 
@@ -175,7 +175,7 @@ Easy2D 支持垃圾内存的自动回收，要使用这个功能，你需要使�
 // 创建一个自动回收的场景
 auto scene = gcnew Scene;
 // 创建一个自动回收的文本
-auto text = gcnew Text(L"Hello Easy2D");
+auto text = gcnew Text("Hello Easy2D");
 ```
 
 使用 new 运算符创建的对象也可以手动调用 `autorelease` 函数，使其可以自动被回收。
@@ -207,7 +207,7 @@ Easy2D 使用左手坐标空间，坐标系原点在屏幕的左上角，x 轴�
 // 创建一个场景
 auto scene = gcnew Scene;
 // 创建一个精灵
-auto sprite = gcnew Sprite(L"图片名.png");
+auto sprite = gcnew Sprite("图片名.png");
 // 把精灵添加到场景中
 scene->addChild(sprite);
 ```

@@ -20,7 +20,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Rotating Text");
+        Window::setTitle("Rotating Text");
         Window::setSize(300, 300);
 
         /* 设计游戏内容 */
@@ -46,7 +46,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Rotating Text");
+        Window::setTitle("Rotating Text");
         Window::setSize(300, 300);
 
         // 创建场景
@@ -55,7 +55,7 @@ int main()
         SceneManager::enter(scene);
 
         // 创建一个 Text 对象
-        auto test = gcnew Text(L"Hello Easy2D!");
+        auto test = gcnew Text("Hello Easy2D!");
         // 将 Text 添加到场景中
         scene->addChild(test);
 
@@ -78,7 +78,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Rotating Text");
+        Window::setTitle("Rotating Text");
         Window::setSize(300, 300);
 
         // 创建场景
@@ -87,7 +87,7 @@ int main()
         SceneManager::enter(scene);
 
         // 创建一个 Text 对象
-        auto text = gcnew Text(L"Hello Easy2D!");
+        auto text = gcnew Text("Hello Easy2D!");
         // 将 Text 添加到场景中
         scene->addChild(text);
 
@@ -167,7 +167,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Rotating Text");
+        Window::setTitle("Rotating Text");
         Window::setSize(300, 300);
 
         // 创建场景
@@ -176,7 +176,7 @@ int main()
         SceneManager::enter(scene);
 
         // 创建一个 Text 对象
-        auto text = gcnew Text(L"Hello Easy2D!");
+        auto text = gcnew Text("Hello Easy2D!");
         // 将 Text 添加到场景中
         scene->addChild(text);
 

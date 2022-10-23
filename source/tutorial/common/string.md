@@ -21,19 +21,19 @@ toclinker:
 
 ## String 字符串
 
-String 类是储存字符串内容的容器，是 std::wstring 类型的别名。
+String 类是储存字符串内容的容器，是 std::string 类型的别名。
 
-它曾经是 Easy2D 中实现的一种同时支持 char* 和 wchar_t* 的字符串类型，后来为了程序的兼容性，Easy2D 抛弃了这种方式，而选择 C++ 标准库提供的 std::wstring。
+它曾经是 Easy2D 中实现的一种同时支持 char* 和 wchar_t* 的字符串类型，后来为了程序的兼容性，Easy2D 抛弃了这种方式，而选择 C++ 标准库提供的字符串类型。
 
-因为 String 只是简单的给 std::wstring 起了个别名，所以有关 String 的用法你都可以在各大学习网站上找到。
+因为 String 只是简单的给 std::string 起了个别名，所以有关 String 的用法你都可以在各大学习网站上找到。
 
 在本教程中，只简单解答一下新手使用 String 时的疑问：
 
 ---
 
-**Q:** 为什么Easy2D中所有的字符串都以 L 开头？以 L 开头的字符串有什么不同？  
+**Q:** 我的代码需要用到 `wchar_t*/WCHAR*/PWSTR` 类型的字符串，如何从 Easy2D String 转换？  
 **A:**  
-C++中以双引号括起来的字符串类型为 `const char*`，其中的字符都是 ASCII 码；以 L 开头的字符串类型为 `const wchar_t*`，其中的字符都是 Unicode 字符；在 Windows 编程中，推荐在代码中使用 Unicode 字符。
+Easy2D 提供了 `NarrowToWide` 和 `WideToNarrow` 函数可以将字符串在 ASCII（std::string） 和 Unicode（std::wstring） 之间进行转换。
 
 ---
 

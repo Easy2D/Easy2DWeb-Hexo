@@ -53,10 +53,10 @@ void MyDrawing(CanvasBrush* brush)
     // 设置填充色为橘红色
     brush->setFillColor(Color::OrangeRed);
     // 写文字
-    brush->drawText(L"Hello", Point(), Font(L"", 22, Font::Weight::Bold));
+    brush->drawText("Hello", Point(), Font("", 22, Font::Weight::Bold));
 
     // 画一张图片
-    brush->drawImage(Image::load(L"image.png"));
+    brush->drawImage(Image::load("image.png"));
 }
 ```
 

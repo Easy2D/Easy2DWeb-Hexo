@@ -26,7 +26,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Moving Man");
+        Window::setTitle("Moving Man");
         Window::setSize(640, 480);
 
         /* 设计游戏内容 */
@@ -59,7 +59,7 @@ public:
     Man()
     {
         // 加载图片
-        this->open(L"man.png");
+        this->open("man.png");
     }
 };
 ```
@@ -79,7 +79,7 @@ public:
     Man()
     {
         // 加载图片
-        this->open(L"man.png");
+        this->open("man.png");
     }
 };
 
@@ -88,7 +88,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Moving Man");
+        Window::setTitle("Moving Man");
         Window::setSize(640, 480);
 
         // 创建场景
@@ -119,7 +119,7 @@ public:
     Man()
     {
         // 加载图片
-        this->open(L"man.png");
+        this->open("man.png");
         // 居中显示在屏幕上
         this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
@@ -142,7 +142,7 @@ public:
     Man()
     {
         // 加载图片
-        this->open(L"man.png");
+        this->open("man.png");
         // 居中显示在屏幕上
         this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
@@ -278,7 +278,7 @@ public:
     Man()
     {
         // 加载图片
-        this->open(L"man.png");
+        this->open("man.png");
         // 居中显示在屏幕上
         this->setAnchor(0.5f, 0.5f);
         this->setPos(Window::getWidth() / 2, Window::getHeight() / 2);
@@ -315,7 +315,7 @@ int main()
     if (Game::init())
     {
         // 设置窗口标题和窗口大小
-        Window::setTitle(L"Moving Man");
+        Window::setTitle("Moving Man");
         Window::setSize(640, 480);
 
         // 创建场景

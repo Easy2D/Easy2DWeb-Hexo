@@ -28,9 +28,9 @@ toclinker:
 // 创建帧动画的序列帧，每 0.1 秒切换一帧
 auto seq = gcnew FrameSequence(0.1);
 // 加载多个精灵帧
-seq->add(Image::load(L"第一帧.png"));                                                // 无裁剪的添加一张图片
-seq->add(gcnew KeyFrame(Image::load(L"第二帧.png")));                                // 无裁剪的指定图片为关键帧，和上一行写法没有区别
-seq->add(gcnew KeyFrame(Image::load(L"第三帧.png"), Rect(Point(), Size(100, 50))));  // 指定图片为关键帧并进行裁剪
+seq->add(Image::load("第一帧.png"));                                                // 无裁剪的添加一张图片
+seq->add(gcnew KeyFrame(Image::load("第二帧.png")));                                // 无裁剪的指定图片为关键帧，和上一行写法没有区别
+seq->add(gcnew KeyFrame(Image::load("第三帧.png"), Rect(Point(), Size(100, 50))));  // 指定图片为关键帧并进行裁剪
 
 // 创建帧动画
 auto animation = gcnew Animation(seq);

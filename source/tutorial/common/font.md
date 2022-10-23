@@ -28,11 +28,11 @@ Font 不是节点，因为它仅仅描述了文本的样式。Font 不能显示�
 </div>
 
 ```cpp
-auto text = gcnew Text(L"Hello Easy2D!");
+auto text = gcnew Text("Hello Easy2D!");
 
 // 创建一个字体，宋体、字号40、粗体、斜体
 Font font = Font();
-font.family = L"宋体";
+font.family = "宋体";
 font.size = 40;
 font.weight = Font::Weight::Bold;
 font.italic = true;
@@ -47,7 +47,7 @@ text->setFont(font);
 
 ```cpp
 // 在创建文本的同时指定它的字体样式
-auto text = gcnew Text(L"Hello Easy2D!", Font(L"宋体", 40, Font::Weight::Bold));
+auto text = gcnew Text("Hello Easy2D!", Font("宋体", 40, Font::Weight::Bold));
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
@@ -59,7 +59,7 @@ auto text = gcnew Text(L"Hello Easy2D!", Font(L"宋体", 40, Font::Weight::Bold)
 text1 和 text2 在内部会各自拷贝一份 Font，所以创建文字后再修改 font 不会影响 text1 和 text2。
 
 ```cpp
-Font font = Font(L"", 40);                  // 系统默认字体、字号40
-auto text1 = gcnew Text(L"Hello", font);    // text1 使用 font
-auto text2 = gcnew Text(L"Easy2D", font);   // text2 也使用 font
+Font font = Font("", 40);                  // 系统默认字体、字号40
+auto text1 = gcnew Text("Hello", font);    // text1 使用 font
+auto text2 = gcnew Text("Easy2D", font);   // text2 也使用 font
 ```

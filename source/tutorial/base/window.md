@@ -24,7 +24,7 @@ Window 类的常用函数如下：
 // 修改窗口大小为 1000x800
 Window::setSize(1000, 800);
 // 修改窗口标题为 Hello
-Window::setTitle(L"Hello");
+Window::setTitle("Hello");
 // 设置鼠标样式为“手指针”
 Window::setCursor(Window::Cursor::Hand);
 // 获取窗口宽度
@@ -48,9 +48,9 @@ Window 类还封装了弹窗提示的函数，类似于 MessageBox：
 
 ```cpp
 // 弹出一个提示窗口
-Window::info(L"这是一条提示", L"提示标题");
+Window::info("这是一条提示", "提示标题");
 // 弹出一个警告窗口
-Window::warning(L"这是一条警告", L"警告标题");
+Window::warning("这是一条警告", "警告标题");
 // 弹出一个错误窗口
-Window::error(L"这是一条错误", L"错误标题");
+Window::error("这是一条错误", "错误标题");
 ```

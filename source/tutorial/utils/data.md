@@ -18,9 +18,9 @@ toclinker:
 
 ```cpp
 // 保存数据到本地
-void Data::saveInt(L"data1", 2);           // 保存 int 型的值
-void Data::saveDouble(L"data2", 2.2f);      // 保存 float 型的值
-void Data::saveString(L"data3", L"test");  // 保存 字符串 型的值
+void Data::saveInt("data1", 2);           // 保存 int 型的值
+void Data::saveDouble("data2", 2.2f);      // 保存 float 型的值
+void Data::saveString("data3", "test");  // 保存 字符串 型的值
 ```
 
 <div class="ui warning message"><div class="header">Warning </div>
@@ -31,9 +31,9 @@ void Data::saveString(L"data3", L"test");  // 保存 字符串 型的值
 
 ```cpp
 // 读取
-int data1 = Data::getInt(L"data1", 1);             // 获取 int 型的值
-float data2 = Data::getDouble(L"data2", 1);         // 获取 float 型的值
-String data3 = Data::getString(L"data3", L"");    // 获取 字符串 型的值
+int data1 = Data::getInt("data1", 1);             // 获取 int 型的值
+float data2 = Data::getDouble("data2", 1);         // 获取 float 型的值
+String data3 = Data::getString("data3", "");    // 获取 字符串 型的值
 ```
 
 函数的第二个参数指定了关键字不存在时，函数默认的返回值。

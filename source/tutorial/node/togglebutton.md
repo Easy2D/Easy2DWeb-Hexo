@@ -35,12 +35,12 @@ auto callback = [](ButtonEvent evt, bool state)
         if (state)
         {
             // 按钮现在是打开状态，播放音乐
-            MusicPlayer::resume(L"music.wav");
+            MusicPlayer::resume("music.wav");
         }
         else
         {
             // 按钮现在是关闭状态，停止音乐
-            MusicPlayer::pause(L"music.wav");
+            MusicPlayer::pause("music.wav");
         }
     }
 };
@@ -62,16 +62,16 @@ lis->ignoreGamePaused();
 下面的代码创建了一个可以控制音乐的播放与停止的按钮
 
 ```cpp
-auto btnTextOn = gcnew Text(L"开");   // 创建开状态文字
-auto btnTextOff = gcnew Text(L"关");  // 创建关状态文字
+auto btnTextOn = gcnew Text("开");   // 创建开状态文字
+auto btnTextOff = gcnew Text("关");  // 创建关状态文字
 auto button = gcnew ToggleButton(btnTextOn, btnTextOff); // 创建开关按钮
 /* 设置点击按钮的回调函数 */
 button->setClickFunc([=]() {
     if (button->getState()) {               // 获取按钮是打开还是关闭
-        MusicPlayer::resume(L"music.wav");  // 打开状态下，继续播放音乐
+        MusicPlayer::resume("music.wav");  // 打开状态下，继续播放音乐
     }
     else {
-        MusicPlayer::pause(L"music.wav");   // 关闭状态下，暂停音乐
+        MusicPlayer::pause("music.wav");   // 关闭状态下，暂停音乐
     }
 });
 ```

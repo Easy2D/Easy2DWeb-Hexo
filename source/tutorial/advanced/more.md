@@ -104,23 +104,21 @@ button->setCallback(callback);
 调用 `Game::pause` 和 `Game::resume` 函数可以控制游戏的暂停和继续，暂停后动画、定时器将全部停止工作，只有按钮正常运行，所以你可以在按钮的回调函数中控制游戏暂停。
 <br/>
 
-## 关于AppName
+## 关于 UniqueName
 
-`AppName` 是你游戏的唯一标识，它的默认值和你的窗口名称相同，用于区别其他人做的同类游戏。
+`UniqueName` 是你游戏的唯一标识，它的默认值为空，用于区别其他人做的同类游戏。
 
-比如，你做了 “推箱子” 这个游戏而没有设置 AppName 的话，其他人的推箱子游戏就有可能覆盖你保存的游戏数据。
+比如，你做了 “推箱子” 这个游戏而没有设置 UniqueName 的话，其他人的推箱子游戏就有可能覆盖你保存的游戏数据。
 
-`Game::init` 函数的第一个参数用于设置游戏的 AppName（所以它只能被设置一次），推荐使用 作者名 + 游戏名 的方式命名
+`Game::init` 函数的第四个参数用于设置游戏的 UniqueName（所以它只能被设置一次），推荐使用 作者名 + 游戏名 的方式命名
 
 ```cpp
-// 设置游戏的 AppName 为 my-pushbox
-Game::init(L"my-pushbox", 640, 480);
-// 此时窗口名也为 my-pushbox，需要手动修改窗口标题
-Window::setTitle(L"My Game");
+// 设置游戏的 UniqueName 为 nomango-pushbox
+Game::init("推箱子", 640, 480, "nomango-pushbox");
 ```
 
 <div class="ui warning message"><div class="header">Warning </div>
-不要在 AppName 中设置特殊字符，也尽量不使用中文，防止字符集问题导致错误。
+不要在 UniqueName 中设置特殊字符，也尽量不使用中文，防止字符集问题导致错误。
 </div>
 
 <br/>

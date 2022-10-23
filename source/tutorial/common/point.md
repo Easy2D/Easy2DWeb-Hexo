@@ -37,7 +37,7 @@ Point p2 = Point(0, -5);
 Point p3 = p1 + p2;
 // 输出 p3 的坐标
 // 输出结果为 (10, 15)
-Logger::messageln(L"(%f, %f)", p3.x, p3.y);
+Logger::messageln("(%f, %f)", p3.x, p3.y);
 ```
 
 Point 提供了计算两点间距离的函数

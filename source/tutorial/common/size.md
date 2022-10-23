@@ -37,5 +37,5 @@ Size size2 = Size(0, -5);
 Size size3 = size1 + size2;
 // 输出 size3 的宽高
 // 输出结果为 (10, 15)
-Logger::messageln(L"(%f, %f)", size3.width, size3.height);
+Logger::messageln("(%f, %f)", size3.width, size3.height);
 ```

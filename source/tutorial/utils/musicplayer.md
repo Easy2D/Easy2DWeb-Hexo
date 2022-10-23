@@ -20,18 +20,18 @@ toclinker:
 
 ```cpp
 // 预加载音乐文件
-MusicPlayer::preload(L"音乐文件名.wav");
+MusicPlayer::preload("音乐文件名.wav");
 ```
 
 添加音乐文件后，可以用 `MusicPlayer::play` 函数播放这个音乐。
 
 ```cpp
 // 播放音乐文件
-MusicPlayer::play(L"音乐文件名.wav");
+MusicPlayer::play("音乐文件名.wav");
 // 播放音乐文件，并循环 3 次
-MusicPlayer::play(L"音乐文件名.wav", 3);
+MusicPlayer::play("音乐文件名.wav", 3);
 // 播放音乐文件，并循环播放
-MusicPlayer::play(L"音乐文件名.wav", -1);
+MusicPlayer::play("音乐文件名.wav", -1);
 ```
 
 `MusicPlayer` 类的 `play`、`pause`、`resume`、`stop`这四个函数分别控制音乐的播放、暂停、继续、停止。
@@ -47,7 +47,7 @@ MusicPlayer::play(L"音乐文件名.wav", -1);
 
 ```cpp
 // 获取音乐对象
-auto music = MusicPlayer::preload(L"音乐文件名.wav");
+auto music = MusicPlayer::preload("音乐文件名.wav");
 ```
 
 music 是一个 `Music` 类型的指针，`Music::play` 函数用来播放这个音乐。
@@ -68,7 +68,7 @@ music->play(-1);    // 循环播放音乐
 
 ```cpp
 // 获取音乐对象
-auto music = MusicPlayer::preload(L"音乐文件名.wav");
+auto music = MusicPlayer::preload("音乐文件名.wav");
 // 判断指针是否为空
 if (music)
 {

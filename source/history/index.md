@@ -5,6 +5,15 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.12 （2022-10-23）
+
+- Refactor
+  - 新的 Logo
+  - 使用 ASCII 字符串
+  - 添加 UniqueName
+
+<br />
+
 ### v2.1.5 （2022-10-22）
 
 - Fix

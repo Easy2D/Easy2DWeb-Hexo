@@ -35,7 +35,7 @@ Game::init 函数默认会创建一个 640x480 大小的窗口，初始化时也
 
 ```cpp
 // 创建标题为 Hello，大小为 1000x800 的窗口
-if (Game::init(L"Hello", 1000, 800))
+if (Game::init("Hello", 1000, 800))
 {
     // 初始化成功
 }

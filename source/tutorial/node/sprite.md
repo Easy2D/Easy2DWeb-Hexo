@@ -23,7 +23,7 @@ Sprite 可以说是引擎中最常见的类，它通常是一张图片，用来�
 
 ```cpp
 auto sprite = gcnew Sprite;
-sprite->open(L"本地图片.png"); // 从本地图片加载
+sprite->open("本地图片.png"); // 从本地图片加载
 ```
 
 ![Sprite示意图](/assets/images/tutorial/sprite1.png)
@@ -42,7 +42,7 @@ sprite->crop(Rect(20, 10, 60, 80));
 
 ```cpp
 // 从本地图片加载精灵，并对图片进行裁剪
-auto sprite = gcnew Sprite(L"本地图片.png", Rect(20, 10, 60, 80));
+auto sprite = gcnew Sprite("本地图片.png", Rect(20, 10, 60, 80));
 ```
 
 你可以更灵活的运用 `crop` 函数，比如下面的代码把精灵裁剪成了原来的一半

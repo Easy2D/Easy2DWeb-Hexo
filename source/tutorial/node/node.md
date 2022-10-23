@@ -50,7 +50,7 @@ Point p2(10, 10);  // 创建一个 (10, 10) 坐标
 有时也许你需要区分不同的节点，那么可以设置它的名称
 
 ```cpp
-node->setName(L"name_test");    // 设置节点名称
+node->setName("name_test");    // 设置节点名称
 String name = node->getName();  // 获取节点名称
 ```
 

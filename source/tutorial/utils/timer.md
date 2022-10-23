@@ -60,12 +60,12 @@ Timer::add(MoveSprite, 0.5f, 5);   // 每 0.5 秒执行一次，且执行 5 次�
 `Timer::add()` 的第四个参数可以指定创建的定时器是否是暂停状态，第五个参数可以给定时器命名，有了名称的定时器可以管理其启动和暂停。
 
 ```cpp
-Timer::add(MoveSprite, 0.5f, 5, false, L"move_timer");   // 启动后不暂停，且定时器名称为 move_timer
+Timer::add(MoveSprite, 0.5f, 5, false, "move_timer");   // 启动后不暂停，且定时器名称为 move_timer
 ```
 
 <div class="ui info message"><div class="header">Tips </div>
 `Timer` 可以控制全局的定时器，例如使用下面的代码停止一个指定的定时器
 ```cpp
-Timer::stop(L"move_timer");   // 停止所有名称为 move_timer 的定时器
+Timer::stop("move_timer");   // 停止所有名称为 move_timer 的定时器
 ```
 </div>

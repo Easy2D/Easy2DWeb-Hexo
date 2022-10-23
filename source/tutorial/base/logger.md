@@ -31,11 +31,11 @@ Logger 提供了三种日志等级，分别是 message（消息）、warning（�
 
 ```cpp
 // 输出一行消息
-Logger::messageln(L"这是一条消息，同时输出一个数字 %d", 123);
+Logger::messageln("这是一条消息，同时输出一个数字 %d", 123);
 // 输出一行警告
-Logger::warningln(L"这是一条警告，同时输出一个浮点数 %.2f", 1.23);
+Logger::warningln("这是一条警告，同时输出一个浮点数 %.2f", 1.23);
 // 输出一行错误
-Logger::errorln(L"这是一条错误，同时输出一个字符串 %s", L"字符串");
+Logger::errorln("这是一条错误，同时输出一个字符串 %s", "字符串");
 ```
 
 ### 关于控制台

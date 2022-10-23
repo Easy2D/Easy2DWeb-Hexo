@@ -152,13 +152,13 @@ auto lis = gcnew Listener();
 node->addListener(lis);
 
 // 设置监听器的名称
-lis->setName(L"my_listener");
+lis->setName("my_listener");
 // 启动名称为 my_listener 的监听器
-node->startListener(L"my_listener");
+node->startListener("my_listener");
 // 暂停名称为 my_listener 的监听器
-node->stopListener(L"my_listener");
+node->stopListener("my_listener");
 // 移除名称为 my_listener 的监听器
-node->removeListener(L"my_listener");
+node->removeListener("my_listener");
 ```
 
 也可以启动、暂停、移除一个节点上的所有监听器

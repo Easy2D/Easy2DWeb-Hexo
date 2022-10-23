@@ -39,11 +39,11 @@ action->stop();
 ```cpp
 // 假设存在动画 action 和精灵 sprite
 // 设置动画的名称
-action->setName(L"旋转动画");
+action->setName("旋转动画");
 // 执行动画
 sprite->runAction(action);
 // 停止 sprite 的“旋转动画”
-sprite->stopAction(L"旋转动画");
+sprite->stopAction("旋转动画");
 ```
 
 你也可以直接停止、暂停或继续一个节点的所有动画

@@ -21,7 +21,7 @@ toclinker:
 Text 是节点的一种，它包含了一段文字，这样可以把每段文字都当做一个对象进行处理。
 
 ```cpp
-auto text = gcnew Text(L"Hello Easy2D!");
+auto text = gcnew Text("Hello Easy2D!");
 ```
 
 ![Text示意图](/assets/images/tutorial/text1.png)
@@ -50,7 +50,7 @@ text->setOpacity(0.5f);
 ```cpp
 // 创建文字样式
 TextStyle style;
-style.font = Font(L"宋体");         // 设置字体
+style.font = Font("宋体");         // 设置字体
 style.alignment = TextAlign::Left;  // 左对齐
 style.wrapping = true;              // 开启自动换行
 style.wrappingWidth = 70;           // 文字自动换行的宽度
@@ -59,7 +59,7 @@ style.hasUnderline = true;          // 下划线
 style.hasStrikethrough = true;      // 删除线
 
 // 设置文字样式
-auto text = gcnew Text(L"Hello Easy2D!");
+auto text = gcnew Text("Hello Easy2D!");
 text->setTextStyle(style);
 ```
 
@@ -70,7 +70,7 @@ Font 文字控制文字的字体、字号、粗细等等，详情请参阅 [Font
 可以单独设置某一项样式，例如文字比较多，你可以设置它自动换行：
 
 ```cpp
-auto text = gcnew Text(L"Hello Easy2D!");
+auto text = gcnew Text("Hello Easy2D!");
 text->setWordWrappingEnable(true);  // 开启自动换行
 text->setWordWrappingWidth(70);     // 设置文字自动换行的宽度
 ```
@@ -91,6 +91,6 @@ style.strokeWidth = 2.0;                // 文字描边宽度为 2.0
 style.lineJoin = LineJoin::Miter;       // 线条相交样式
 
 // 设置绘图样式
-auto text = gcnew Text(L"Hello Easy2D!");
+auto text = gcnew Text("Hello Easy2D!");
 text->setDrawingStyle(style);
 ```
