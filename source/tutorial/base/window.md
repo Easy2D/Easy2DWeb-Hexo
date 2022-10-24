@@ -54,3 +54,24 @@ Window::warning("这是一条警告", "警告标题");
 // 弹出一个错误窗口
 Window::error("这是一条错误", "错误标题");
 ```
+
+Window 类还可以设置自定义鼠标指针，例如将一个 Sprite 精灵作为指针渲染
+
+```cpp
+// 假设有 sprite 对象，把它作为指针
+Window::setCustomCursor(sprite);
+
+// 可以根据不同的指针类型渲染不同内容
+Window::setCustomCursor([](Window::Cursor cursor) -> Node* {
+    if (cursor == Window::Cursor::Normal) {
+        // 普通指针
+        return gcnew Sprite("cursor_normal.png");
+    }
+    if (cursor == Window::Cursor::Hand) {
+        // 手掌指针
+        return gcnew Sprite("cursor_hand.png");
+    }
+    // 其他情况使用系统默认指针
+    return nullptr;
+});
+```
