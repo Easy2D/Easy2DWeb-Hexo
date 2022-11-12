@@ -68,7 +68,7 @@ examples:
   name: 小画家
   author: 白马王子
   image: /assets/images/sample/LittlePainter.png
-  description: 控制飞机躲避子弹，是男人就撑过20秒！
+  description: 一个简易的画图工具
   exe_url: https://gitee.com/Easy2D/LittlePainter-Easy2D/releases
   src_url:
 ---
