@@ -5,6 +5,13 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.15 （2022-11-12）
+
+- Fix
+  -修复 Node::removeChildren 导致程序中断的BUG
+
+<br />
+
 ### v2.1.14 （2022-10-24）
 
 - Feature
