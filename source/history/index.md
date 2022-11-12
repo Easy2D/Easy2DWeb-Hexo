@@ -7,6 +7,8 @@ type: "history"
 
 ### v2.1.15 （2022-11-12）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.15-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.15.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.15-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.15-win7.7z)
+
 - Fix
   -修复 Node::removeChildren 导致程序中断的BUG
 
@@ -14,12 +16,16 @@ type: "history"
 
 ### v2.1.14 （2022-10-24）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.14-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.14.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.14-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.14-win7.7z)
+
 - Feature
   - 支持自定义鼠标指针
 
 <br />
 
 ### v2.1.12 （2022-10-23）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.12-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.12.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.12-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.12-win7.7z)
 
 - Refactor
   - 新的 Logo
@@ -29,6 +35,8 @@ type: "history"
 <br />
 
 ### v2.1.5 （2022-10-22）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.5-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.5.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.5-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.5-win7.7z)
 
 - Fix
   - `Sprite` 加载无裁剪矩形的 `KeyFrame` 时显示问题
@@ -45,6 +53,8 @@ type: "history"
 
 ### v2.1.3 （2022-10-14）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.3-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.3.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.3-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.3-win7.7z)
+
 - Feature
   - 添加 `Canvas` 和 `CanvasBrush`
 
@@ -55,6 +65,8 @@ type: "history"
 <br />
 
 ### v2.1.1 （2022-10-12）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.1-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.1.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.1-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.1-win7.7z)
 
 - Feature
   - 添加 `DrawingStyle`
@@ -70,6 +82,8 @@ type: "history"
 
 ### v2.1.0 （2022-10-11）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.0-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.0.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.0-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.0-win7.7z)
+
 - Refactor
   - 重构 `Image` 类，支持设备资源重加载时自动重载
   - 重构 `Animation` 帧动画，添加 `KeyFrame` 和 `FrameSequence`
@@ -83,6 +97,8 @@ type: "history"
 
 ### v2.0.33 （2022-10-10）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.33-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.33.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.33-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.33-win7.7z)
+
 - Refactor
   - 重构 `Shape` 类，支持创建任意形状
   - 重构 `math Rect` 类，由 leftTop 和 rightButtom 两点描述
@@ -95,6 +111,8 @@ type: "history"
 
 ### v2.0.31 （2022-10-02）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.31-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.31.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.31-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.31-win7.7z)
+
 - Feature
   - 支持重载 `Node::containsPoint` 以便实现自定义形状 `Button`
 
@@ -105,6 +123,8 @@ type: "history"
 
 ### v2.0.28 （2022-02-19）
 
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.28-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.28.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.28-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.28-win7.7z)
+
 - Improve
   - 支持VS2022
 
@@ -114,6 +134,8 @@ type: "history"
 <br />
 
 ### v2.0.24 （2021-05-06）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.24-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.24.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.24-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.0.24-win7.7z)
 
 - Feature
   - `Sprite`支持设置插值模式
@@ -127,6 +149,8 @@ type: "history"
 <br />
 
 ### v2.0.0 （2020-1-28）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.0.0-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.0.0.7z)
 
 Easy2D v2.0.0 正式版发布。
 
