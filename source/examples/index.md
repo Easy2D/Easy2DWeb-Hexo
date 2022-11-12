@@ -64,4 +64,11 @@ examples:
   description: 控制飞机躲避子弹，是男人就撑过20秒！
   exe_url: https://gitee.com/Easy2D/TinyPlane-Easy2D/releases
   src_url:
+- id: LittlePainter
+  name: 小画家
+  author: 白马王子
+  image: /assets/images/sample/LittlePainter.png
+  description: 控制飞机躲避子弹，是男人就撑过20秒！
+  exe_url: https://gitee.com/Easy2D/LittlePainter-Easy2D/releases
+  src_url:
 ---
