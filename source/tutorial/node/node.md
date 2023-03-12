@@ -107,8 +107,17 @@ node1->addChild(node3);
 你可以在添加节点时指定它的渲染顺序。例如下面的代码，虽然 node3 在 node2 后面添加，但是 node2 的顺序为 2，比 node3 大，所以屏幕上 node2 将遮挡 node3。
 
 ```cpp
-node1->addChild(node2, 2);
+node1->addChild(node2, 2); // 渲染顺序为 2 的节点会显示在 1 的上方
 node1->addChild(node3, 1);
+```
+
+当然也可以直接设置节点的渲染顺序：
+
+```cpp
+node2->setOrder(2);
+node3->setOrder(1);
+
+node1->addChildren({ node2, node3 });
 ```
 
 **根节点**是树型模型最顶端的节点，场景包含了根节点，所以屏幕上所有的节点都是它的子节点。将一个精灵添加入场景，其实是把精灵加入了场景的树型模型中。Easy2D 会遍历场景的树，对树上的所有节点做出处理。
