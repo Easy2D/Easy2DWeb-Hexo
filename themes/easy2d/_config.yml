@@ -14,8 +14,8 @@ menu:
 index:
   subtitle: 快速开发高质量的 2D 小游戏
   button:
-    latest_version: v2.1.15
-    update_date: "2022-11-12"
+    latest_version: v2.1.16
+    update_date: "2023-03-12"
     more: 历史版本
   examples:
   - name: Flappy Bird

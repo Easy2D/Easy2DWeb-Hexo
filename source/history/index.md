@@ -5,6 +5,15 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.16 （2023-03-12）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.16-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.16.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.16-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.16-win7.7z)
+
+- Fix
+  -修复节点渲染顺序的 BUG
+
+<br />
+
 ### v2.1.15 （2022-11-12）
 
 [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.15-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.15.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.15-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.15-win7.7z)
