@@ -36,9 +36,9 @@ Input 不止可以获取正在按下的状态，还可以判断按键是否刚�
 
 ```cpp
 // 判断字母 A 键是否刚刚按下
-bool isPress = Input::isPress(KeyCode::A);
+bool isPressed = Input::isPressed(KeyCode::A);
 // 判断字母 A 键是否刚刚抬起
-bool isRelease = Input::isRelease(KeyCode::A);
+bool isReleased = Input::isReleased(KeyCode::A);
 ```
 
 Input 类可以直接获取鼠标的当前位置：

@@ -5,6 +5,13 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.19 （2023-03-26）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.19-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.19.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.19-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.19-win7.7z)
+
+- Feature
+  - 支持 LCtrl/RCtrl/LShift/RShift/LAlt/RAlt 键值
+
 ### v2.1.16 （2023-03-12）
 
 [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.16-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.16.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.16-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.16-win7.7z)
