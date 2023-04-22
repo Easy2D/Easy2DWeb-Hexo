@@ -80,7 +80,7 @@ maker.endPath(true);
 auto triangle = maker.getShape();
 ```
 
-ShapeMaker 提供的形状生成方法有一下几种：
+ShapeMaker 提供的形状生成方法有以下几种：
 
 ```cpp
 // 添加一条边
@@ -117,7 +117,7 @@ auto circle = Shape::createCircle(Point(), 10);
 auto shape = ShapeMaker::combine(rect, circle, ShapeMaker::CombineMode::Union);
 ```
 
-ShapeMaker 支持的合并方式有一下几种
+ShapeMaker 支持的合并方式有以下几种
 
 ```cpp
 // 形状合并方式
