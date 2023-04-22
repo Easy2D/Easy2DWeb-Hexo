@@ -88,13 +88,13 @@ maker.addLine(Point());
 // 添加多条边
 maker.addLines({ Point(), Point() });
 // 添加贝塞尔曲线
-maker.addLines(
+maker.addBezier(
     Point(),    // 贝塞尔曲线的第一个控制点
     Point(),    // 贝塞尔曲线的第二个控制点
     Point()     // 贝塞尔曲线的终点
 );
 // 添加弧线
-maker.addLines(
+maker.addArc(
     Point(),    // 弧线终点
     Size(),     // 椭圆半径
     120,        // 椭圆旋转角度
