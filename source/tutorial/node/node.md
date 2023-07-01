@@ -41,10 +41,12 @@ float posY = node->getPosY();
 
 <div class="ui info message"><div class="header">Tips </div>
 `Point`是一个结构体，它表示一个坐标，它有 x 和 y 两个成员变量。
+
 ```cpp
 Point p1;          // 创建一个 (0, 0) 坐标
 Point p2(10, 10);  // 创建一个 (10, 10) 坐标
 ```
+
 </div>
 
 有时也许你需要区分不同的节点，那么可以设置它的名称
