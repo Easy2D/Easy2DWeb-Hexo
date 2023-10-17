@@ -27,4 +27,4 @@ jobs:
         access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
 
     - name: upload files
-      run: ossutil cp -rfu ./public oss://easy2d-website/
+      run: ossutil sync --force --update ./public oss://easy2d-website/
