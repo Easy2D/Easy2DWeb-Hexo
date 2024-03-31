@@ -9,7 +9,7 @@ coders:
   join_date: 2016.12
   description: 非游戏从业，单纯用爱发电
   blog: Nomango 的博客
-  blog_url: https://nomango.dev
+  blog_url: https://nomx.dev
 - name: 益文友 Allen
   avatar: /assets/images/avatar/Allen.jpg
   role: 引擎测试
