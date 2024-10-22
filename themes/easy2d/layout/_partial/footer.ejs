@@ -40,8 +40,10 @@
 		<div class="ui inverted small link list">
 			<p class="item" >&copy; 2016 - <%- date(Date.now(), "YYYY") %></p>
 		</div>
+		<% if (theme.ICP) { %>
 		<div class="ui inverted small link list">
 			<a class="item" href="https://beian.miit.gov.cn/" target="_blank"><%- theme.ICP %></a>
 		</div>
+		<% } %>
 	</div>
 </div>
