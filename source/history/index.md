@@ -5,6 +5,14 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.20 （2024-11-03）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.20-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.20.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.20-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.20-win7.7z)
+
+- Feature
+  - 添加 Node body shape，支持判断节点相交关系
+  - 调整 Shape 和 ShapeNode 构造方式
+
 ### v2.1.19 （2023-03-26）
 
 [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.19-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.19.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.19-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.19-win7.7z)

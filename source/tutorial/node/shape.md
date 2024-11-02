@@ -22,17 +22,17 @@ Shape 是一个二维图形，例如矩形、圆形等，Easy2D 提供了几种�
 
 ```cpp
 // 创建一个从 (0,0) 到 (100,100) 的直线
-auto line = Shape::createLine(Point(0, 0), Point(100, 100));
+auto line = gcnew Shape(Shape::Line, Point(0, 0), Point(100, 100));
 // 创建一个宽高为 (10,20) 的矩形
-auto rect = Shape::createRect(Rect(Point(), Size(10, 20)));
+auto rect = gcnew Shape(Shape::Rect, Rect(Point(), Size(10, 20)));
 // 创建一个宽高为 (10,20) ，圆角角度为 (40,20) 的圆角矩形
-auto roundedRect = Shape::createRoundedRect(Rect(Point(), Size(10, 20)), Vector2(40, 20));
+auto roundedRect = gcnew Shape(Shape::RoundedRect, Rect(Point(), Size(10, 20)), Vector2(40, 20));
 // 创建一个半径为 10 的圆形
-auto circle = Shape::createCircle(Point(), 10);
+auto circle = gcnew Shape(Shape::Circle, Point(), 10);
 // 创建一个半径为 (10,20) 的椭圆形
-auto ellipse = Shape::createEllipse(Point(), Vector2(10, 20));
+auto ellipse = gcnew Shape(Shape::Ellipse, Point(), Vector2(10, 20));
 // 创建一个多边形
-auto polygon = Shape::createPolygon({ Point(), Point(100, 100), Point(0, 100) });
+auto polygon = gcnew Shape(Shape::Polygon, { Point(), Point(100, 100), Point(0, 100) });
 ```
 
 形状具有周长、面积等属性：
@@ -111,8 +111,8 @@ ShapeMaker 还可以合并两个形状
 
 ```cpp
 // 创建两个形状
-auto rect = Shape::createRect(Rect(Point(), Size(10, 20)));
-auto circle = Shape::createCircle(Point(), 10);
+auto rect = gcnew Shape(Shape::Rect, Rect(Point(), Size(10, 20)));
+auto circle = gcnew Shape(Shape::Circle, Point(), 10);
 // 用交集方式合并
 auto shape = ShapeMaker::combine(rect, circle, ShapeMaker::CombineMode::Union);
 ```
@@ -136,7 +136,7 @@ enum class CombineMode
 
 ```cpp
 // 创建一个宽高为 (10,20) 的矩形
-auto rect = Shape::createRect(Rect(Point(), Size(10, 20)));
+auto rect = gcnew Shape(Shape::Rect, Rect(Point(), Size(10, 20)));
 // 创建矩形节点
 auto shapeNode = gcnew ShapeNode(rect);
 // 移动矩形到 (100, 100) 坐标处
@@ -166,8 +166,8 @@ shapeNode->setDrawingStyle(style);
 也可以单独设置某一项样式
 
 ```cpp
-// 创建一个宽高为 (10,20) 的矩形
-auto rect = gcnew ShapeNode(Shape::createRect(Rect(Point(), Size(10, 20))));
+// 创建一个宽高为 (10, 20) 的矩形
+auto rect = gcnew ShapeNode(Shape::Rect, Size(10, 20));
 // 设置填充颜色为红色
 rect->setFillColor(Color::Red);
 // 设置轮廓颜色为白色

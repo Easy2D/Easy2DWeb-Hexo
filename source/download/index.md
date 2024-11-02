@@ -8,8 +8,8 @@ type: "download"
 
 | 文件名                  |   发布时间   |   链接   |
 | ---------------------- |:-------:|:--------:|
-| Easy2D-v2.1.19 | 2023-03-26   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.19-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.19.7z) |
-| Easy2D-v2.1.19 for Win7 | 2023-03-26   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.19-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.19-win7.7z) |
+| Easy2D-v2.1.20 | 2024-11-03   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.20-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.20.7z) |
+| Easy2D-v2.1.20 for Win7 | 2024-11-03   | [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.20-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.20-win7.7z) |
 
 #### 常见问题
 
