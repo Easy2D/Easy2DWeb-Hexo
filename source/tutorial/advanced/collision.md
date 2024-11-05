@@ -39,7 +39,7 @@ if (box1.intersects(box2))
 node1->setBodyShape(gcnew Shape(Shape::Rect, Rect(Point(), Size(60, 60))));
 // 为 node2 设置圆形碰撞体（半径为 10）
 float radius = 10.f;
-node1->setBodyShape(gcnew Shape(Shape::Circle, Point(radius, radius), radius));
+node2->setBodyShape(gcnew Shape(Shape::Circle, Point(radius, radius), radius));
 
 // 判断两节点之间的关系
 BodyRelation rel = node1->compareWithBody(node2);
@@ -58,4 +58,14 @@ case BodyRelation::Overlap:
     E2D_LOG("node1 和 node2 相交，但不包含");
     break;
 }
+```
+
+为了方便调试 Body 形状，可以打开 Body 渲染开关
+
+```cpp
+// 在 main 函数任意位置打开 Body 渲染开关
+Renderer::showBodyShapes();
+
+// 对指定节点显示 Body
+node1->showBodyShape();
 ```
