@@ -5,6 +5,13 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.22 （2024-11-16）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.22-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.22.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.22-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.22-win7.7z)
+
+- Fix
+  - `removeFromTarget` 更改为 `removeSelfInNextUpdate` 以便安全的自我删除
+
 ### v2.1.21 （2024-11-05）
 
 [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.21-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.21.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.21-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.21-win7.7z)
