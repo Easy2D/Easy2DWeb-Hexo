@@ -1,0 +1,30 @@
+name: Deploy to Tencent Cloud COS
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16
+
+    - name: build
+      run: |
+        npm install
+        npm run build
+
+    - name: Upload
+      uses: zkqiang/tencent-cos-action@v0.1.0
+      with:
+        args: upload -rf --sync --delete -y ./dist/ /
+        secret_id: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+        secret_key: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+        bucket: easy2d-website-1252696634
+        region: ap-guangzhou
