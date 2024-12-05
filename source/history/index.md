@@ -5,6 +5,17 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.26 （2024-12-05）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.26-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.26.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.26-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.26-win7.7z)
+
+- Feature
+  - `Timer` 增加 `bind` 函数，绑定定时器到 node
+  - `Canvas` 增加 `clear` 函数
+- Fix
+  - 移除已弃用的 `Button` `ToggleButton` 和 `Menu`
+  - 修复 Sprite 设置和之前相同的图片时，重置裁剪不生效的问题
+
 ### v2.1.22 （2024-11-16）
 
 [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.22-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.22.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.22-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.22-win7.7z)

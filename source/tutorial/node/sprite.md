@@ -9,8 +9,6 @@ toclinker:
         [Text 文本,/tutorial/node/text.html],
         [Sprite 精灵,/tutorial/node/sprite.html],
         [Button 按钮,/tutorial/node/button.html],
-        [ToggleButton 开关按钮,/tutorial/node/togglebutton.html],
-        [Menu 菜单,/tutorial/node/menu.html],
         [Shape 形状,/tutorial/node/shape.html],
         [Canvas 画布,/tutorial/node/canvas.html]
     ]

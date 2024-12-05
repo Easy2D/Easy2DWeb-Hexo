@@ -9,8 +9,6 @@ toclinker:
         [Text 文本,/tutorial/node/text.html],
         [Sprite 精灵,/tutorial/node/sprite.html],
         [Button 按钮,/tutorial/node/button.html],
-        [ToggleButton 开关按钮,/tutorial/node/togglebutton.html],
-        [Menu 菜单,/tutorial/node/menu.html],
         [Shape 形状,/tutorial/node/shape.html],
         [Canvas 画布,/tutorial/node/canvas.html]
     ]
@@ -43,7 +41,7 @@ void MyDrawing(CanvasBrush* brush)
     // 设置画笔绘图模式为填充
     brush->setDrawingMode(DrawingStyle::Mode::Solid);
     // 画矩形
-    brush->drawShape(Shape::createRect(Rect(Point(), Size(300, 200))));
+    brush->drawShape(gcnew Shape(Shape::Rect, Rect(Point(), Size(300, 200))));
 
     // 写一段文字
     // 移动一下画笔
