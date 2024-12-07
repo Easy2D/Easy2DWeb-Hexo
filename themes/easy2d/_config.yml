@@ -3,8 +3,8 @@ menu:
   home: /
   download: /download
   history: /history
-  start: /start
-  tutorial: /tutorial
+  start: https://docs.easy2d.cn
+  tutorial: https://docs.easy2d.cn
   examples: /examples
   document: /doc
   news: /archives
