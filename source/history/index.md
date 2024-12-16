@@ -5,6 +5,15 @@ type: "history"
 ---
 ## 更新日志
 
+### v2.1.32 （2024-12-16）
+
+[<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.32-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.32.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.32-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.32-win7.7z)
+
+- Changes
+  - 优化 Event Dispatch，仅分发给当前有 Listener 的节点
+- Fix
+  - Action 遍历时访问野指针问题
+
 ### v2.1.26 （2024-12-05）
 
 [<i class="download icon"></i>exe](https://download.easy2d.cn/release/easy2d-v2.1.26-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z](https://download.easy2d.cn/release/easy2d-v2.1.26.7z)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>exe (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.26-win7-installer.exe)&nbsp;&nbsp;&nbsp;&nbsp;[<i class="download icon"></i>7z (Win7)](https://download.easy2d.cn/release/easy2d-v2.1.26-win7.7z)
@@ -239,7 +248,7 @@ Easy2D v2.0.0 正式版发布。
   - 增加 `Path::exists` 方法，用于检测文件夹或文件是否存在
   - 增加 `Path::extractResource` 方法，提取资源文件
 
-- Trim
+- Changes
   - `Game::init` 方法不再设置窗口标题和大小
   - `Game::start` 方法可设置参数使游戏结束时自动回收资源
   - 不再默认关闭控制台，允许手动关闭
@@ -270,7 +279,7 @@ Easy2D v2.0.0 正式版发布。
   - 修复了暂停游戏后，`Action` 和 `Timer` 执行混乱的BUG
   - 修复无效的倒转动作
 
-- Remove
+- Removed
   - 移除了 `TimerManager` 类
   - 移除了 `MusicManager` 类
   - 移除了 `ASSERT` 宏
@@ -287,7 +296,7 @@ Easy2D v2.0.0 正式版发布。
   - 添加 `Listener` 类和 `Input::add` 函数，用于监听用户输入
   - `Data` 类储存数据方法增加字段属性
 
-- Trim
+- Changes
   - `File` 类更名为 `Path` 类
   - 空场景运行时不再创建默认场景
   - 所有节点都包含一个默认形状（矩形）
@@ -298,7 +307,7 @@ Easy2D v2.0.0 正式版发布。
   - 修复了VS2012对 std::function 支持不完全造成的问题
   - 修复了 `String` 字符串操作时的一些问题
 
-- Remove
+- Removed
   - 移除了 `String::append` 函数
 
 <br />
@@ -312,7 +321,7 @@ Easy2D v2.0.0 正式版发布。
   - `Timer` 类更新，使操作更简易
   - `Action` 类新增 Name 属性
 
-- Trim
+- Changes
   - 取消 VS2010 的支持
   - 所有API的float类型参数均改为double
 
